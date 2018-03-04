@@ -4,7 +4,7 @@
 
 body {
     font-family: Arial, serif;
-    padding: 10px;
+    padding: 0 10px 10px 10px;
     background: #f1f1f1;
 }
 
@@ -12,7 +12,7 @@ body {
 .header {
     padding: 30px;
     text-align: center;
-    background: white;
+    background: url('../img/head.png') repeat;
 }
 
 .header h1 {
@@ -50,6 +50,9 @@ body {
 
 /* Right column */
 .rightcolumn {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
     float: left;
     width: 25%;
     background-color: #f1f1f1;
@@ -81,7 +84,7 @@ body {
 footer {
     padding: 20px;
     text-align: center;
-    background: #ddd;
+    background: #bababa;
     margin-top: 20px;
 }
 
