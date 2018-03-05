@@ -15,10 +15,11 @@ import java.util.Objects;
 public class IndexClass {
 
     private String WEBSITE_NAME = "Online Shop";
-    private String WEBSITE_DESCRIPTION="fast and safe shop with us";
+    private String WEBSITE_DESCRIPTION="fast and safe shop with us, by FahamuTech";
     private String BASE_DIR;
 
     public IndexClass(){
+
     }
 
     public ArrayList<File> getSlideShowResources(String baseDir) {
