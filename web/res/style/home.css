@@ -4,7 +4,6 @@
 
 body {
     font-family: Arial, serif;
-    padding: 0 10px 10px 10px;
     background: #f1f1f1;
 }
 
@@ -23,6 +22,12 @@ body {
 .topnav {
     overflow: hidden;
     background-color: #333;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    /*max-height: 50px;*/
+    z-index: 5;
+    box-shadow: 0 0 8px black;
 }
 
 /* Style the topnav links */
@@ -52,9 +57,10 @@ body {
 .rightcolumn {
     position: -webkit-sticky;
     position: sticky;
-    top: 0;
+    top: 40px;
     float: left;
     width: 25%;
+    z-index: 0;
     background-color: #f1f1f1;
     padding-left: 20px;
 }
@@ -67,10 +73,19 @@ body {
 }
 
 /* Add a card effect for articles */
-.card {
+.cardMain {
     background-color: white;
     padding: 20px;
     margin-top: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.cardCategories {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+    margin-right: 30px;
 }
 
 /* Clear floats after the columns */
@@ -83,8 +98,9 @@ body {
 /* Footer */
 footer {
     padding: 20px;
+    width: 100%;
     text-align: center;
-    background: #bababa;
+    background: black;
     margin-top: 20px;
 }
 
@@ -106,6 +122,13 @@ footer {
         width: 100%;
         padding: 0;
     }
+    .cardCategories, .cardMain{
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+    .topnav{
+        position: relative;
+    }
 }
 
 /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
@@ -113,5 +136,13 @@ footer {
     .topnav a {
         float: none;
         width: 100%;
+    }
+    .topnav{
+        position: relative;
+    }
+
+    .cardCategories, .cardMain{
+        margin-right: 20px;
+        margin-left: 20px;
     }
 }
