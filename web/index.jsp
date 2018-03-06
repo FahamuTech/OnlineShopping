@@ -1,21 +1,23 @@
-<%@ page import="indexJava.IndexClass" %>
+<%@ page import="indexJava.Main" %>
 <%@ page import="java.io.File" %>
 <%@ page import="java.util.ArrayList" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
-<%!private IndexClass indexClass = new IndexClass();%>
+<%!private Main main = new Main();%>
 <%!private String baseDir;%>
 <%!private ArrayList<File> slideResources;%>
 <%!private ArrayList<String> navMenus;%>
-
+<%!private ArrayList<String> rowContents;%>
 
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <%
         baseDir = getServletConfig().getServletContext().getRealPath("/").replace('\\', '/');
-        indexClass.setBASE_DIR(baseDir);
-        slideResources = indexClass.getSlideShowResources(baseDir);
-        navMenus = indexClass.getNavMenuHeads();
+        main.setBASE_DIR(baseDir);
+        slideResources = main.getSlideShowResources(baseDir);
+        navMenus = main.getNavMenuHeads();
+        rowContents=main.getRowContents();
     %>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
@@ -25,41 +27,25 @@
     <link rel="stylesheet" href="res/style/home.css">
     <!--slide show style-->
     <link rel="stylesheet" href="res/style/slide.css">
-
+    <link rel="stylesheet" href="res/style/horizontalMenu.css">
 
 </head>
-
 <!--main body-->
 <body>
 
 <!--head-->
 <div class="header">
-    <h1><%=indexClass.getWebsiteName()%>
+    <h1><%=main.getWebsiteName()%>
     </h1>
-    <p><%=indexClass.getWEBSITE_DESCRIPTION()%>
+    <p><%=main.getWEBSITE_DESCRIPTION()%>
     </p>
 </div>
 
-<%--<div class="topnav">--%>
-<%--<a href="#recent">Recent Added</a>--%>
-<%--<a href="#">Popular</a>--%>
-<%--<a href="#">News</a>--%>
-<%--<a href="#" style="float:right" data-toggle="modal" data-target="#myModal">--%>
-<%--<i class="fa fa-user-circle-o" style="font-size:30px;color:red"></i>--%>
-<%--</a>--%>
-
-<%--&lt;%&ndash;<a  style="float: right;" class="btn btn-default btn-sm"&ndash;%&gt;--%>
-<%--&lt;%&ndash;data-toggle="modal"&ndash;%&gt;--%>
-<%--&lt;%&ndash;data-target="#myModal">&ndash;%&gt;--%>
-<%--&lt;%&ndash;<span class="glyphicon glyphicon-user"></span> Log In/Register&ndash;%&gt;--%>
-<%--&lt;%&ndash;</a>&ndash;%&gt;--%>
-<%--<a href="#" style="float: right">+Post Your Ads</a>--%>
-<%--</div>--%>
 <nav class="navbar navbar-inverse"
      style="position: sticky; position: -webkit-sticky; top: 0; z-index: 5; box-shadow: black 0 0 8px; border-radius: 0">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand" href="#"><%=indexClass.getWebsiteName()%>
+            <a class="navbar-brand" href="#"><%=main.getWebsiteName()%>
             </a>
         </div>
         <ul class="nav navbar-nav">
@@ -94,28 +80,14 @@
             <div class="slideshow-container">
 
                 <%for (int i = 0; i < slideResources.size(); i++) {%>
-
                 <div class="mySlides fadeAnimation">
-                    <div class="numbertext"><%=(i+1)+"/"+slideResources.size()%></div>
+                    <div class="numbertext"><%=(i + 1) + "/" + slideResources.size()%>
+                    </div>
                     <img src="res/img/homeAnimation/<%=slideResources.get(i).getName()%>"
                          style="width:100%; height: auto">
                     <div class="text">Click Me</div>
                 </div>
                 <%}%>
-
-                <%--<div class="mySlides fade">--%>
-                <%--<div class="numbertext">2 / 3</div>--%>
-                <%--<img src="res/img/homeAnimation/<%=arrayList.get(1).getName()%>"--%>
-                <%--style="width:100%; height: auto;">--%>
-                <%--<div class="text">Caption Two</div>--%>
-                <%--</div>--%>
-
-                <%--<div class="mySlides fade">--%>
-                <%--<div class="numbertext">3 / 3</div>--%>
-                <%--<img src="res/img/homeAnimation/<%=arrayList.get(2).getName()%>"--%>
-                <%--style="width:100%">--%>
-                <%--<div class="text">Caption Three</div>--%>
-                <%--</div>--%>
 
                 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
                 <a class="next" onclick="plusSlides(1)">&#10095;</a>
@@ -126,38 +98,40 @@
                 <%for (int i = 0; i < slideResources.size(); i++) {%>
                 <span class="dot" onclick="currentSlide(1)"></span>
                 <%}%>
-
-                <%--<span class="dot" onclick="currentSlide(2)"></span>--%>
-                <%--<span class="dot" onclick="currentSlide(3)"></span>--%>
             </div>
             <script src="res/script/slide.js"></script>
 
         </div>
 
-        <!--current added item-->
-        <div class="cardMain" id="recent">
-            <h2>RECENT ADDED</h2>
-            <h5>Title description, Dec 7, 2017</h5>
-            <div class="fakeimg" style="height:200px;">Image</div>
-            <p>Some text..</p>
-            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                ullamco.</p>
+        <!--row contents-->
+        <%for (String rowContent : rowContents) {%>
+            <div class="cardMain" id="<%=rowContent%>">
+            <h2><%=rowContent%>
+            </h2>
+            <div class="itemContainerHorizontal" id="MyDivName" onmouseover="pauseDiv()" onmouseleave="resumeDiv()">
+                <%for (int j = 0; j < 10; j++) {%>
+                <a href="#">
+                    <div class="itemCard" onclick="">
+                        <!--sample item-->
+                        <img class="imageView" src="res/img/item.png">
+                        <p class="itemDescription">
+                            Name: xxxx<br>
+                            Cost: xxxx<br>
+                    </div>
+                </a>
+                <%}%>
+            </div>
+            <script src="res/script/autoScrollDiv.js"></script>
+            <ul class="pager">
+                <li><a href="#">Previous</a></li>
+                <li><a href="#">Next</a></li>
+            </ul>
         </div>
+        <%}%>
 
-        <!--popular items-->
-        <div class="cardMain">
-            <h2>POPULAR ITEMS</h2>
-            <h5>Title description, Sep 2, 2017</h5>
-            <div class="fakeimg" style="height:200px;">Image</div>
-            <p>Some text..</p>
-            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                ullamco.</p>
-        </div>
     </div>
-    <div class="rightcolumn">
 
+    <div class="rightcolumn">
         <div class="cardCategories">
             <h2>CATEGORY</h2>
             <p style="overflow: hidden">
@@ -170,11 +144,11 @@
                 oiryg80trpecw8tgioert
             </p>
         </div>
-
     </div>
+
 </div>
 
-<div class="footer">
+<div class="cardMain">
     <h2>Footer</h2>
     <p>this is the footer</p>
 </div>

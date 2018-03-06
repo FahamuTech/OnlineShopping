@@ -3,24 +3,23 @@ package indexJava;
 import javax.servlet.jsp.JspWriter;
 import java.io.File;
 import java.io.IOException;
-import java.net.URISyntaxException;
-import java.net.URL;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Date;
 import java.util.Objects;
 
-public class IndexClass {
+public class Main {
 
     private String WEBSITE_NAME = "Online Shop";
     private String WEBSITE_DESCRIPTION="fast and safe shop with us, by FahamuTech";
     private String BASE_DIR;
+    private int row=5;
 
-    public IndexClass(){
+    public Main(){
 
     }
+
 
     public ArrayList<File> getSlideShowResources(String baseDir) {
         ArrayList<File> slideShow=new ArrayList<>();
@@ -32,6 +31,10 @@ public class IndexClass {
         return slideShow;
     }
 
+    public int getRow() {
+        return row;
+    }
+
     //trying to get current path
     public void getSlides(JspWriter jspWriter) {
         try {
@@ -39,6 +42,15 @@ public class IndexClass {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public ArrayList<String> getNavMenuHeads(){
+        ArrayList<String> arrayList=new ArrayList<>();
+        for (int i = 0; i <6 ; i++) {
+            arrayList.add("Page"+1);
+        }
+
+        return arrayList;
     }
 
     public String getWebsiteName() {
@@ -66,12 +78,12 @@ public class IndexClass {
         this.BASE_DIR=path;
     }
 
-    public ArrayList<String> getNavMenuHeads(){
+    public ArrayList<String> getRowContents(){
         ArrayList<String> arrayList=new ArrayList<>();
         for (int i = 0; i <6 ; i++) {
-            arrayList.add("Page"+1);
+            arrayList.add("row"+i);
         }
-
         return arrayList;
     }
+
 }
