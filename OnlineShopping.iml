@@ -20,5 +20,6 @@
     <orderEntry type="library" name="jquery.mobile-1.4.5" level="application" />
     <orderEntry type="library" name="jquery-1.11.3" level="application" />
     <orderEntry type="library" name="jquery" level="application" />
+    <orderEntry type="library" name="mysql:mysql-connector-java:6.0.6" level="project" />
   </component>
 </module>

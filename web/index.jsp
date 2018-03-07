@@ -17,7 +17,7 @@
         main.setBASE_DIR(baseDir);
         slideResources = main.getSlideShowResources(baseDir);
         navMenus = main.getNavMenuHeads();
-        rowContents=main.getRowContents();
+        rowContents = main.getRowContents();
     %>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
@@ -105,10 +105,9 @@
 
         <!--row contents-->
         <%for (String rowContent : rowContents) {%>
-            <div class="cardMain" id="<%=rowContent%>">
-            <h2><%=rowContent%>
-            </h2>
-            <div class="itemContainerHorizontal" id="MyDivName" onmouseover="pauseDiv()" onmouseleave="resumeDiv()">
+        <div class="cardMain" id="<%=rowContent%>">
+            <h2><%=rowContent%></h2>
+            <div class="itemContainerHorizontal" id="MyDivName" >
                 <%for (int j = 0; j < 10; j++) {%>
                 <a href="#">
                     <div class="itemCard" onclick="">
@@ -120,8 +119,8 @@
                     </div>
                 </a>
                 <%}%>
+                <script src="res/script/autoScrollDiv.js"></script>
             </div>
-            <script src="res/script/autoScrollDiv.js"></script>
             <ul class="pager">
                 <li><a href="#">Previous</a></li>
                 <li><a href="#">Next</a></li>

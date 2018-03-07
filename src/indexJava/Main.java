@@ -1,5 +1,6 @@
 package indexJava;
 
+import javax.annotation.Resource;
 import javax.servlet.jsp.JspWriter;
 import java.io.File;
 import java.io.IOException;
@@ -7,6 +8,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.Objects;
 
 public class Main {
@@ -14,7 +16,6 @@ public class Main {
     private String WEBSITE_NAME = "Online Shop";
     private String WEBSITE_DESCRIPTION="fast and safe shop with us, by FahamuTech";
     private String BASE_DIR;
-    private int row=5;
 
     public Main(){
 
@@ -31,9 +32,6 @@ public class Main {
         return slideShow;
     }
 
-    public int getRow() {
-        return row;
-    }
 
     //trying to get current path
     public void getSlides(JspWriter jspWriter) {
@@ -78,12 +76,13 @@ public class Main {
         this.BASE_DIR=path;
     }
 
-    public ArrayList<String> getRowContents(){
-        ArrayList<String> arrayList=new ArrayList<>();
-        for (int i = 0; i <6 ; i++) {
-            arrayList.add("row"+i);
-        }
-        return arrayList;
-    }
+//
+//    public ArrayList<ArrayList<HashMap<String,String>>> getRowContents(){
+//        ArrayList<ArrayList<HashMap<String,String>>> arrayList=new ArrayList<>();
+//        for (int i = 0; i <6 ; i++) {
+//            arrayList.add("row"+i);
+//        }
+//        return arrayList;
+//    }
 
 }
