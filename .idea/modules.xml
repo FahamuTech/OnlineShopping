@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/OnlineShopping.iml" filepath="$PROJECT_DIR$/OnlineShopping.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/onlineShopping.iml" filepath="$PROJECT_DIR$/.idea/modules/onlineShopping.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/onlineShopping_main.iml" filepath="$PROJECT_DIR$/.idea/modules/onlineShopping_main.iml" group="onlineShopping" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/onlineShopping_test.iml" filepath="$PROJECT_DIR$/.idea/modules/onlineShopping_test.iml" group="onlineShopping" />
     </modules>
   </component>
 </project>
