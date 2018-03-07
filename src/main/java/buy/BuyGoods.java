@@ -6,7 +6,7 @@ import java.io.IOException;
 
 public class BuyGoods {
 
-    public void getSomething(JspWriter jspWriter,String s){
+    public void getSomething(JspWriter jspWriter, String s){
         try {
             jspWriter.println(s);
         } catch (IOException e) {
