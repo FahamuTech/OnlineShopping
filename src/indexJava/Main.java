@@ -76,6 +76,14 @@ public class Main {
         this.BASE_DIR=path;
     }
 
+    public ArrayList<String> getRowContents() {
+        ArrayList<String> arrayList=new ArrayList<>();
+        for (int i = 0; i < 6; i++) {
+            arrayList.add("row"+i);
+        }
+        return arrayList;
+    }
+
 //
 //    public ArrayList<ArrayList<HashMap<String,String>>> getRowContents(){
 //        ArrayList<ArrayList<HashMap<String,String>>> arrayList=new ArrayList<>();

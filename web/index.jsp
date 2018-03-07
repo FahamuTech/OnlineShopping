@@ -67,7 +67,7 @@
             <li><a href="#">Page Self</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            <li><a href="#myModal"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
             <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
         </ul>
     </div>
@@ -108,6 +108,7 @@
         <div class="cardMain" id="<%=rowContent%>">
             <h2><%=rowContent%></h2>
             <div class="itemContainerHorizontal" id="MyDivName" >
+
                 <%for (int j = 0; j < 10; j++) {%>
                 <a href="#">
                     <div class="itemCard" onclick="">
@@ -119,7 +120,7 @@
                     </div>
                 </a>
                 <%}%>
-                <script src="res/script/autoScrollDiv.js"></script>
+
             </div>
             <ul class="pager">
                 <li><a href="#">Previous</a></li>
@@ -147,7 +148,7 @@
 
 </div>
 
-<div class="cardMain">
+<div class="footer">
     <h2>Footer</h2>
     <p>this is the footer</p>
 </div>
