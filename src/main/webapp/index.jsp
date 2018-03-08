@@ -149,7 +149,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <jsp:include page="deals.jsp"/>
 <jsp:include page="footerTop.jsp"/>
 <jsp:include page="share.jsp"/>
-<jsp:include page="footer.jsp"/>
+<%--<jsp:include page="footer.jsp"/>--%>
 <!-- cart-js -->
 <script src="res/script/minicart.js"></script>
 <script>
