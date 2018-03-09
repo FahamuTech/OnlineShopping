@@ -12,11 +12,12 @@ License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<jsp:useBean id="main" class="homepage.Main"/>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <title>Online Shopping</title>
+    <title><jsp:getProperty name="main" property="webSiteName"/></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="keywords" content="Smart Shop Management"/>
@@ -115,34 +116,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 </head>
 
 <body>
-<jsp:include page="banner.jsp"/>
-<jsp:include page="head.jsp"/>
-<jsp:include page="wellcome.jsp"/>
-<jsp:include page="deals.jsp"/>
-<jsp:include page="footerTop.jsp"/>
-<!-- cart-js -->
-<script src="res/script/minicart.js"></script>
-<script>
-    w3ls.render();
-
-    w3ls.cart.on('w3sb_checkout', function (evt) {
-        var items, len, i;
-
-        if (this.subtotal() > 0) {
-            items = this.items();
-
-            for (i = 0, len = items.length; i < len; i++) {
-                items[i].set('shipping', 0);
-                items[i].set('shipping2', 0);
-            }
-        }
-    });
-</script>
-<!-- //cart-js -->
-<!-- menu js aim -->
-<script src="res/script/jquery.menu-aim.js"></script>
-<script src="res/script/main.js"></script> <!-- Resource jQuery -->
-<!-- //menu js aim -->
+<jsp:include page="res/jsp/banner.jsp"/>
+<jsp:include page="res/jsp/head.jsp"/>
+<jsp:include page="res/jsp/featureProducts.jsp"/>
+<jsp:include page="res/jsp/dealsOfToday.jsp"/>
+<jsp:include page="res/jsp/footerTop.jsp"/>
+<jsp:include page="res/jsp/headScript.jsp"/>
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->

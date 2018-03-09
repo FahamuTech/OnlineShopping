@@ -6,7 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@page import="indexJava.Main" %>
+<%@page import="homepage.Main" %>
 <%@ page import="java.util.ArrayList" %>
 <%!Main main =new Main();%>
 <%!private ArrayList<String> bannerImages=main.getBannerImages();%>
@@ -59,7 +59,7 @@
             <span class="sr-only">Next</span>
         </a>
     </div>
-    <script src="res/script/custom.js"></script>
+    <script src="../../res/script/custom.js"></script>
 </div>
 <!-- //banner -->
 </body>

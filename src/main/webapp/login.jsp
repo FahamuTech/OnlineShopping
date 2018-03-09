@@ -6,11 +6,6 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <title>login</title>
-</head>
-<body>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -53,9 +48,9 @@
     </script>
     <!-- //js -->
     <!-- web-fonts -->
-    <link href='//fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
-    <link href='//fonts.googleapis.com/css?family=Lovers+Quarrel' rel='stylesheet' type='text/css'>
-    <link href='//fonts.googleapis.com/css?family=Offside' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lovers+Quarrel' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Offside' rel='stylesheet' type='text/css'>
     <!-- web-fonts -->
     <!-- start-smooth-scrolling -->
     <script type="text/javascript" src="res/script/move-top.js"></script>
@@ -88,7 +83,7 @@
 </head>
 <body>
 <!-- header -->
-<jsp:include page="head.jsp"/>
+<jsp:include page="res/jsp/head.jsp"/>
 <!-- //header -->
 <!-- login-page -->
 <div class="login-page">
@@ -123,11 +118,8 @@
 </div>
 <!-- //login-page -->
 <!-- footer-top -->
-<jsp:include page="footerTop.jsp"/>
+<jsp:include page="res/jsp/footerTop.jsp"/>
 <!-- //footer-top -->
-<!-- subscribe -->
-<jsp:include page="share.jsp"/>
-<!-- //subscribe -->
 <!-- cart-js -->
 <script src="res/script/minicart.js"></script>
 <script>
@@ -155,7 +147,5 @@
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="res/script/bootstrap.js"></script>
-</body>
-</html>
 </body>
 </html>

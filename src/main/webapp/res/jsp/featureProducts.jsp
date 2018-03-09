@@ -46,9 +46,9 @@
                             <div id="owl-demo" class="owl-carousel">
                                 <div class="item">
                                     <div class="glry-w3agile-grids agileits">
-                                        <a href="products.html"><img src="res/img/e1.png" alt="img"></a>
+                                        <a href="../../products.html"><img src="../../res/img/e1.png" alt="img"></a>
                                         <div class="view-caption agileits-w3layouts">
-                                            <h4><a href="products.html">Audio speaker</a></h4>
+                                            <h4><a href="../../products.html">Audio speaker</a></h4>
                                             <p>Lorem ipsum dolor sit amet consectetur</p>
                                             <h5>$100</h5>
                                             <form action="#" method="post">
@@ -67,9 +67,9 @@
                                 <div class="item">
                                     <div class="glry-w3agile-grids agileits">
                                         <div class="new-tag"><h6>Sale</h6></div>
-                                        <a href="products.html"><img src="res/img/e2.png" alt="img"></a>
+                                        <a href="../../products.html"><img src="../../res/img/e2.png" alt="img"></a>
                                         <div class="view-caption agileits-w3layouts">
-                                            <h4><a href="products.html">Refrigerator</a></h4>
+                                            <h4><a href="../../products.html">Refrigerator</a></h4>
                                             <p>Lorem ipsum dolor sit amet consectetur</p>
                                             <h5>$300</h5>
                                             <form action="#" method="post">
@@ -88,9 +88,9 @@
                                 <div class="item">
                                     <div class="glry-w3agile-grids agileits">
                                         <div class="new-tag"><h6>New</h6></div>
-                                        <a href="products.html"><img src="res/img/e3.png" alt="img"></a>
+                                        <a href="../../products.html"><img src="../../res/img/e3.png" alt="img"></a>
                                         <div class="view-caption agileits-w3layouts">
-                                            <h4><a href="products.html">Smart Phone</a></h4>
+                                            <h4><a href="../../products.html">Smart Phone</a></h4>
                                             <p>Lorem ipsum dolor sit amet consectetur</p>
                                             <h5>$70</h5>
                                             <form action="#" method="post">
@@ -108,9 +108,9 @@
                                 </div>
                                 <div class="item">
                                     <div class="glry-w3agile-grids agileits">
-                                        <a href="products.html"><img src="res/img/e4.png" alt="img"></a>
+                                        <a href="../../products.html"><img src="../../res/img/e4.png" alt="img"></a>
                                         <div class="view-caption agileits-w3layouts">
-                                            <h4><a href="products.html">Digital Camera</a></h4>
+                                            <h4><a href="../../products.html">Digital Camera</a></h4>
                                             <p>Lorem ipsum dolor sit amet consectetur</p>
                                             <h5>$80</h5>
                                             <form action="#" method="post">
@@ -128,9 +128,9 @@
                                 </div>
                                 <div class="item">
                                     <div class="glry-w3agile-grids agileits">
-                                        <a href="products.html"><img src="res/img/e1.png" alt="img"></a>
+                                        <a href="../../products.html"><img src="../../res/img/e1.png" alt="img"></a>
                                         <div class="view-caption agileits-w3layouts">
-                                            <h4><a href="products.html">Audio speaker</a></h4>
+                                            <h4><a href="../../products.html">Audio speaker</a></h4>
                                             <p>Lorem ipsum dolor sit amet consectetur</p>
                                             <h5>$100</h5>
                                             <form action="#" method="post">
@@ -149,9 +149,9 @@
                                 <div class="item">
                                     <div class="glry-w3agile-grids agileits">
                                         <div class="new-tag"><h6>Sale</h6></div>
-                                        <a href="products.html"><img src="res/img/e2.png" alt="img"></a>
+                                        <a href="../../products.html"><img src="../../res/img/e2.png" alt="img"></a>
                                         <div class="view-caption agileits-w3layouts">
-                                            <h4><a href="products.html">Refrigerator</a></h4>
+                                            <h4><a href="../../products.html">Refrigerator</a></h4>
                                             <p>Lorem ipsum dolor sit amet consectetur</p>
                                             <h5>$300</h5>
                                             <form action="#" method="post">
@@ -170,9 +170,9 @@
                                 <div class="item">
                                     <div class="glry-w3agile-grids agileits">
                                         <div class="new-tag"><h6>New</h6></div>
-                                        <a href="products.html"><img src="res/img/e3.png" alt="img"></a>
+                                        <a href="../../products.html"><img src="../../res/img/e3.png" alt="img"></a>
                                         <div class="view-caption agileits-w3layouts">
-                                            <h4><a href="products.html">Smart Phone</a></h4>
+                                            <h4><a href="../../products.html">Smart Phone</a></h4>
                                             <p>Lorem ipsum dolor sit amet consectetur</p>
                                             <h5>$70</h5>
                                             <form action="#" method="post">
@@ -190,9 +190,9 @@
                                 </div>
                                 <div class="item">
                                     <div class="glry-w3agile-grids agileits">
-                                        <a href="products.html"><img src="res/img/e4.png" alt="img"></a>
+                                        <a href="../../products.html"><img src="../../res/img/e4.png" alt="img"></a>
                                         <div class="view-caption agileits-w3layouts">
-                                            <h4><a href="products.html">Digital Camera</a></h4>
+                                            <h4><a href="../../products.html">Digital Camera</a></h4>
                                             <p>Lorem ipsum dolor sit amet consectetur</p>
                                             <h5>$80</h5>
                                             <form action="#" method="post">
@@ -231,9 +231,9 @@
                             <div id="owl-demo1" class="owl-carousel">
                                 <div class="item">
                                     <div class="glry-w3agile-grids agileits">
-                                        <a href="products1.html"><img src="res/img/f1.png" alt="img"></a>
+                                        <a href="../../products1.html"><img src="../../res/img/f1.png" alt="img"></a>
                                         <div class="view-caption agileits-w3layouts">
-                                            <h4><a href="products1.html">T Shirt</a></h4>
+                                            <h4><a href="../../products1.html">T Shirt</a></h4>
                                             <p>Lorem ipsum dolor sit amet consectetur</p>
                                             <h5>$10</h5>
                                             <form action="#" method="post">
@@ -252,9 +252,9 @@
                                 <div class="item">
                                     <div class="glry-w3agile-grids agileits">
                                         <div class="new-tag"><h6>20% <br> Off</h6></div>
-                                        <a href="products1.html"><img src="res/img/f2.png" alt="img"></a>
+                                        <a href="../../products1.html"><img src="../../res/img/f2.png" alt="img"></a>
                                         <div class="view-caption agileits-w3layouts">
-                                            <h4><a href="products1.html">Women Sandal</a></h4>
+                                            <h4><a href="../../products1.html">Women Sandal</a></h4>
                                             <p>Lorem ipsum dolor sit amet consectetur</p>
                                             <h5>$20</h5>
                                             <form action="#" method="post">
@@ -272,9 +272,9 @@
                                 </div>
                                 <div class="item">
                                     <div class="glry-w3agile-grids agileits">
-                                        <a href="products1.html"><img src="res/img/f3.png" alt="img"></a>
+                                        <a href="../../products1.html"><img src="../../res/img/f3.png" alt="img"></a>
                                         <div class="view-caption agileits-w3layouts">
-                                            <h4><a href="products1.html">Jewellery</a></h4>
+                                            <h4><a href="../../products1.html">Jewellery</a></h4>
                                             <p>Lorem ipsum dolor sit amet consectetur</p>
                                             <h5>$60</h5>
                                             <form action="#" method="post">
@@ -293,9 +293,9 @@
                                 <div class="item">
                                     <div class="glry-w3agile-grids agileits">
                                         <div class="new-tag"><h6>New</h6></div>
-                                        <a href="products1.html"><img src="res/img/f4.png" alt="img"></a>
+                                        <a href="../../products1.html"><img src="../../res/img/f4.png" alt="img"></a>
                                         <div class="view-caption agileits-w3layouts">
-                                            <h4><a href="products1.html">Party dress</a></h4>
+                                            <h4><a href="../../products1.html">Party dress</a></h4>
                                             <p>Lorem ipsum dolor sit amet consectetur</p>
                                             <h5>$15</h5>
                                             <form action="#" method="post">
@@ -313,9 +313,9 @@
                                 </div>
                                 <div class="item">
                                     <div class="glry-w3agile-grids agileits">
-                                        <a href="products1.html"><img src="res/img/f1.png" alt="img"></a>
+                                        <a href="../../products1.html"><img src="../../res/img/f1.png" alt="img"></a>
                                         <div class="view-caption agileits-w3layouts">
-                                            <h4><a href="products1.html">T Shirt</a></h4>
+                                            <h4><a href="../../products1.html">T Shirt</a></h4>
                                             <p>Lorem ipsum dolor sit amet consectetur</p>
                                             <h5>$10</h5>
                                             <form action="#" method="post">
@@ -334,9 +334,9 @@
                                 <div class="item">
                                     <div class="glry-w3agile-grids agileits">
                                         <div class="new-tag"><h6>20% <br> Off</h6></div>
-                                        <a href="products1.html"><img src="res/img/f2.png" alt="img"></a>
+                                        <a href="../../products1.html"><img src="../../res/img/f2.png" alt="img"></a>
                                         <div class="view-caption agileits-w3layouts">
-                                            <h4><a href="products1.html">Women Sandal</a></h4>
+                                            <h4><a href="../../products1.html">Women Sandal</a></h4>
                                             <p>Lorem ipsum dolor sit amet consectetur</p>
                                             <h5>$20</h5>
                                             <form action="#" method="post">
@@ -354,9 +354,9 @@
                                 </div>
                                 <div class="item">
                                     <div class="glry-w3agile-grids agileits">
-                                        <a href="products1.html"><img src="res/img/f3.png" alt="img"></a>
+                                        <a href="../../products1.html"><img src="../../res/img/f3.png" alt="img"></a>
                                         <div class="view-caption agileits-w3layouts">
-                                            <h4><a href="products1.html">Jewellery</a></h4>
+                                            <h4><a href="../../products1.html">Jewellery</a></h4>
                                             <p>Lorem ipsum dolor sit amet consectetur</p>
                                             <h5>$60</h5>
                                             <form action="#" method="post">
@@ -375,9 +375,9 @@
                                 <div class="item">
                                     <div class="glry-w3agile-grids agileits">
                                         <div class="new-tag"><h6>New</h6></div>
-                                        <a href="products1.html"><img src="res/img/f4.png" alt="img"></a>
+                                        <a href="../../products1.html"><img src="../../res/img/f4.png" alt="img"></a>
                                         <div class="view-caption agileits-w3layouts">
-                                            <h4><a href="products1.html">Party dress</a></h4>
+                                            <h4><a href="../../products1.html">Party dress</a></h4>
                                             <p>Lorem ipsum dolor sit amet consectetur</p>
                                             <h5>$15</h5>
                                             <form action="#" method="post">
@@ -417,9 +417,9 @@
                                 <div class="item">
                                     <div class="glry-w3agile-grids agileits">
                                         <div class="new-tag"><h6>New</h6></div>
-                                        <a href="products6.html"><img src="res/img/p1.png" alt="img"></a>
+                                        <a href="../../products6.html"><img src="../../res/img/p1.png" alt="img"></a>
                                         <div class="view-caption agileits-w3layouts">
-                                            <h4><a href="products6.html">Coffee Mug</a></h4>
+                                            <h4><a href="../../products6.html">Coffee Mug</a></h4>
                                             <p>Lorem ipsum dolor sit amet consectetur</p>
                                             <h5>$14</h5>
                                             <form action="#" method="post">
@@ -438,9 +438,9 @@
                                 <div class="item">
                                     <div class="glry-w3agile-grids agileits">
                                         <div class="new-tag"><h6>20% <br> Off</h6></div>
-                                        <a href="products6.html"><img src="res/img/p2.png" alt="img"></a>
+                                        <a href="../../products6.html"><img src="../../res/img/p2.png" alt="img"></a>
                                         <div class="view-caption agileits-w3layouts">
-                                            <h4><a href="products6.html">Teddy bear</a></h4>
+                                            <h4><a href="../../products6.html">Teddy bear</a></h4>
                                             <p>Lorem ipsum dolor sit amet consectetur</p>
                                             <h5>$20</h5>
                                             <form action="#" method="post">
@@ -459,9 +459,9 @@
                                 <div class="item">
                                     <div class="glry-w3agile-grids agileits">
                                         <div class="new-tag"><h6>Sale</h6></div>
-                                        <a href="products6.html"><img src="res/img/p3.png" alt="img"></a>
+                                        <a href="../../products6.html"><img src="../../res/img/p3.png" alt="img"></a>
                                         <div class="view-caption agileits-w3layouts">
-                                            <h4><a href="products6.html">Chocolates</a></h4>
+                                            <h4><a href="../../products6.html">Chocolates</a></h4>
                                             <p>Lorem ipsum dolor sit amet consectetur</p>
                                             <h5>$60</h5>
                                             <form action="#" method="post">
@@ -479,9 +479,9 @@
                                 </div>
                                 <div class="item">
                                     <div class="glry-w3agile-grids agileits">
-                                        <a href="products6.html"><img src="res/img/p4.png" alt="img"></a>
+                                        <a href="../../products6.html"><img src="../../res/img/p4.png" alt="img"></a>
                                         <div class="view-caption agileits-w3layouts">
-                                            <h4><a href="products6.html">Gift Card</a></h4>
+                                            <h4><a href="../../products6.html">Gift Card</a></h4>
                                             <p>Lorem ipsum dolor sit amet consectetur</p>
                                             <h5>$22</h5>
                                             <form action="#" method="post">
@@ -500,9 +500,9 @@
                                 <div class="item">
                                     <div class="glry-w3agile-grids agileits">
                                         <div class="new-tag"><h6>New</h6></div>
-                                        <a href="products6.html"><img src="res/img/p1.png" alt="img"></a>
+                                        <a href="../../products6.html"><img src="../../res/img/p1.png" alt="img"></a>
                                         <div class="view-caption agileits-w3layouts">
-                                            <h4><a href="products6.html">Coffee Mug</a></h4>
+                                            <h4><a href="../../products6.html">Coffee Mug</a></h4>
                                             <p>Lorem ipsum dolor sit amet consectetur</p>
                                             <h5>$14</h5>
                                             <form action="#" method="post">
@@ -521,9 +521,9 @@
                                 <div class="item">
                                     <div class="glry-w3agile-grids agileits">
                                         <div class="new-tag"><h6>20% <br> Off</h6></div>
-                                        <a href="products6.html"><img src="res/img/p2.png" alt="img"></a>
+                                        <a href="../../products6.html"><img src="../../res/img/p2.png" alt="img"></a>
                                         <div class="view-caption agileits-w3layouts">
-                                            <h4><a href="products6.html">Teddy bear</a></h4>
+                                            <h4><a href="../../products6.html">Teddy bear</a></h4>
                                             <p>Lorem ipsum dolor sit amet consectetur</p>
                                             <h5>$20</h5>
                                             <form action="#" method="post">
@@ -542,9 +542,9 @@
                                 <div class="item">
                                     <div class="glry-w3agile-grids agileits">
                                         <div class="new-tag"><h6>Sale</h6></div>
-                                        <a href="products6.html"><img src="res/img/p3.png" alt="img"></a>
+                                        <a href="../../products6.html"><img src="../../res/img/p3.png" alt="img"></a>
                                         <div class="view-caption agileits-w3layouts">
-                                            <h4><a href="products6.html">Chocolates</a></h4>
+                                            <h4><a href="../../products6.html">Chocolates</a></h4>
                                             <p>Lorem ipsum dolor sit amet consectetur</p>
                                             <h5>$60</h5>
                                             <form action="#" method="post">
@@ -562,9 +562,9 @@
                                 </div>
                                 <div class="item">
                                     <div class="glry-w3agile-grids agileits">
-                                        <a href="products6.html"><img src="res/img/p4.png" alt="img"></a>
+                                        <a href="../../products6.html"><img src="../../res/img/p4.png" alt="img"></a>
                                         <div class="view-caption agileits-w3layouts">
-                                            <h4><a href="products6.html">Gift Card</a></h4>
+                                            <h4><a href="../../products6.html">Gift Card</a></h4>
                                             <p>Lorem ipsum dolor sit amet consectetur</p>
                                             <h5>$22</h5>
                                             <form action="#" method="post">
@@ -604,9 +604,9 @@
                                 <div class="item">
                                     <div class="glry-w3agile-grids agileits">
                                         <div class="new-tag"><h6>Sale</h6></div>
-                                        <a href="products3.html"><img src="res/img/h1.png" alt="img"></a>
+                                        <a href="../../products3.html"><img src="../../res/img/h1.png" alt="img"></a>
                                         <div class="view-caption agileits-w3layouts">
-                                            <h4><a href="products3.html">Wall Clock</a></h4>
+                                            <h4><a href="../../products3.html">Wall Clock</a></h4>
                                             <p>Lorem ipsum dolor sit amet consectetur</p>
                                             <h5>$80</h5>
                                             <form action="#" method="post">
@@ -625,9 +625,9 @@
                                 <div class="item">
                                     <div class="glry-w3agile-grids agileits">
                                         <div class="new-tag"><h6>10%<br>Off</h6></div>
-                                        <a href="products3.html"><img src="res/img/h2.png" alt="img"></a>
+                                        <a href="../../products3.html"><img src="../../res/img/h2.png" alt="img"></a>
                                         <div class="view-caption agileits-w3layouts">
-                                            <h4><a href="products3.html">Plants & Vases</a></h4>
+                                            <h4><a href="../../products3.html">Plants & Vases</a></h4>
                                             <p>Lorem ipsum dolor sit amet consectetur</p>
                                             <h5>$40</h5>
                                             <form action="#" method="post">
@@ -645,9 +645,9 @@
                                 </div>
                                 <div class="item">
                                     <div class="glry-w3agile-grids agileits">
-                                        <a href="products3.html"><img src="res/img/h3.png" alt="img"></a>
+                                        <a href="../../products3.html"><img src="../../res/img/h3.png" alt="img"></a>
                                         <div class="view-caption agileits-w3layouts">
-                                            <h4><a href="products3.html">Queen Size Bed</a></h4>
+                                            <h4><a href="../../products3.html">Queen Size Bed</a></h4>
                                             <p>Lorem ipsum dolor sit amet consectetur</p>
                                             <h5>$250</h5>
                                             <form action="#" method="post">
@@ -665,9 +665,9 @@
                                 </div>
                                 <div class="item">
                                     <div class="glry-w3agile-grids agileits">
-                                        <a href="products3.html"><img src="res/img/h4.png" alt="img"></a>
+                                        <a href="../../products3.html"><img src="../../res/img/h4.png" alt="img"></a>
                                         <div class="view-caption agileits-w3layouts">
-                                            <h4><a href="products3.html">flower pot</a></h4>
+                                            <h4><a href="../../products3.html">flower pot</a></h4>
                                             <p>Lorem ipsum dolor sit amet consectetur</p>
                                             <h5>$30</h5>
                                             <form action="#" method="post">
@@ -686,9 +686,9 @@
                                 <div class="item">
                                     <div class="glry-w3agile-grids agileits">
                                         <div class="new-tag"><h6>Sale</h6></div>
-                                        <a href="products3.html"><img src="res/img/h1.png" alt="img"></a>
+                                        <a href="../../products3.html"><img src="../../res/img/h1.png" alt="img"></a>
                                         <div class="view-caption agileits-w3layouts">
-                                            <h4><a href="products3.html">Wall Clock</a></h4>
+                                            <h4><a href="../../products3.html">Wall Clock</a></h4>
                                             <p>Lorem ipsum dolor sit amet consectetur</p>
                                             <h5>$80</h5>
                                             <form action="#" method="post">
@@ -707,9 +707,9 @@
                                 <div class="item">
                                     <div class="glry-w3agile-grids agileits">
                                         <div class="new-tag"><h6>10%<br>Off</h6></div>
-                                        <a href="products3.html"><img src="res/img/h2.png" alt="img"></a>
+                                        <a href="../../products3.html"><img src="../../res/img/h2.png" alt="img"></a>
                                         <div class="view-caption agileits-w3layouts">
-                                            <h4><a href="products3.html">Plants & Vases</a></h4>
+                                            <h4><a href="../../products3.html">Plants & Vases</a></h4>
                                             <p>Lorem ipsum dolor sit amet consectetur</p>
                                             <h5>$40</h5>
                                             <form action="#" method="post">
@@ -727,9 +727,9 @@
                                 </div>
                                 <div class="item">
                                     <div class="glry-w3agile-grids agileits">
-                                        <a href="products3.html"><img src="res/img/h3.png" alt="img"></a>
+                                        <a href="../../products3.html"><img src="../../res/img/h3.png" alt="img"></a>
                                         <div class="view-caption agileits-w3layouts">
-                                            <h4><a href="products3.html">Queen Size Bed</a></h4>
+                                            <h4><a href="../../products3.html">Queen Size Bed</a></h4>
                                             <p>Lorem ipsum dolor sit amet consectetur</p>
                                             <h5>$250</h5>
                                             <form action="#" method="post">
@@ -747,9 +747,9 @@
                                 </div>
                                 <div class="item">
                                     <div class="glry-w3agile-grids agileits">
-                                        <a href="products3.html"><img src="res/img/h4.png" alt="img"></a>
+                                        <a href="../../products3.html"><img src="../../res/img/h4.png" alt="img"></a>
                                         <div class="view-caption agileits-w3layouts">
-                                            <h4><a href="products3.html">flower pot</a></h4>
+                                            <h4><a href="../../products3.html">flower pot</a></h4>
                                             <p>Lorem ipsum dolor sit amet consectetur</p>
                                             <h5>$30</h5>
                                             <form action="#" method="post">
@@ -788,9 +788,9 @@
                                 <div class="item">
                                     <div class="glry-w3agile-grids agileits">
                                         <div class="new-tag"><h6>New</h6></div>
-                                        <a href="products4.html"><img src="res/img/s1.png" alt="img"></a>
+                                        <a href="../../products4.html"><img src="../../res/img/s1.png" alt="img"></a>
                                         <div class="view-caption agileits-w3layouts">
-                                            <h4><a href="products4.html">Roller Skates</a></h4>
+                                            <h4><a href="../../products4.html">Roller Skates</a></h4>
                                             <p>Lorem ipsum dolor sit amet consectetur</p>
                                             <h5>$180</h5>
                                             <form action="#" method="post">
@@ -808,9 +808,9 @@
                                 </div>
                                 <div class="item">
                                     <div class="glry-w3agile-grids agileits">
-                                        <a href="products4.html"><img src="res/img/s2.png" alt="img"></a>
+                                        <a href="../../products4.html"><img src="../../res/img/s2.png" alt="img"></a>
                                         <div class="view-caption agileits-w3layouts">
-                                            <h4><a href="products4.html">Football</a></h4>
+                                            <h4><a href="../../products4.html">Football</a></h4>
                                             <p>Lorem ipsum dolor sit amet consectetur</p>
                                             <h5>$70</h5>
                                             <form action="#" method="post">
@@ -829,9 +829,9 @@
                                 <div class="item">
                                     <div class="glry-w3agile-grids agileits">
                                         <div class="new-tag"><h6>20% <br>Off</h6></div>
-                                        <a href="products4.html"><img src="res/img/s3.png" alt="img"></a>
+                                        <a href="../../products4.html"><img src="../../res/img/s3.png" alt="img"></a>
                                         <div class="view-caption agileits-w3layouts">
-                                            <h4><a href="products4.html">Nylon Shuttle</a></h4>
+                                            <h4><a href="../../products4.html">Nylon Shuttle</a></h4>
                                             <p>Lorem ipsum dolor sit amet consectetur</p>
                                             <h5>$56</h5>
                                             <form action="#" method="post">
@@ -849,9 +849,9 @@
                                 </div>
                                 <div class="item">
                                     <div class="glry-w3agile-grids agileits">
-                                        <a href="products4.html"><img src="res/img/s4.png" alt="img"></a>
+                                        <a href="../../products4.html"><img src="../../res/img/s4.png" alt="img"></a>
                                         <div class="view-caption agileits-w3layouts">
-                                            <h4><a href="products4.html">Cricket Kit</a></h4>
+                                            <h4><a href="../../products4.html">Cricket Kit</a></h4>
                                             <p>Lorem ipsum dolor sit amet consectetur</p>
                                             <h5>$80</h5>
                                             <form action="#" method="post">
@@ -870,9 +870,9 @@
                                 <div class="item">
                                     <div class="glry-w3agile-grids agileits">
                                         <div class="new-tag"><h6>New</h6></div>
-                                        <a href="products4.html"><img src="res/img/s1.png" alt="img"></a>
+                                        <a href="../../products4.html"><img src="../../res/img/s1.png" alt="img"></a>
                                         <div class="view-caption agileits-w3layouts">
-                                            <h4><a href="products4.html">Roller Skates</a></h4>
+                                            <h4><a href="../../products4.html">Roller Skates</a></h4>
                                             <p>Lorem ipsum dolor sit amet consectetur</p>
                                             <h5>$180</h5>
                                             <form action="#" method="post">
@@ -890,9 +890,9 @@
                                 </div>
                                 <div class="item">
                                     <div class="glry-w3agile-grids agileits">
-                                        <a href="products4.html"><img src="res/img/s2.png" alt="img"></a>
+                                        <a href="../../products4.html"><img src="../../res/img/s2.png" alt="img"></a>
                                         <div class="view-caption agileits-w3layouts">
-                                            <h4><a href="products4.html">Football</a></h4>
+                                            <h4><a href="../../products4.html">Football</a></h4>
                                             <p>Lorem ipsum dolor sit amet consectetur</p>
                                             <h5>$70</h5>
                                             <form action="#" method="post">
@@ -911,9 +911,9 @@
                                 <div class="item">
                                     <div class="glry-w3agile-grids agileits">
                                         <div class="new-tag"><h6>20% <br>Off</h6></div>
-                                        <a href="products4.html"><img src="res/img/s3.png" alt="img"></a>
+                                        <a href="../../products4.html"><img src="../../res/img/s3.png" alt="img"></a>
                                         <div class="view-caption agileits-w3layouts">
-                                            <h4><a href="products4.html">Nylon Shuttle</a></h4>
+                                            <h4><a href="../../products4.html">Nylon Shuttle</a></h4>
                                             <p>Lorem ipsum dolor sit amet consectetur</p>
                                             <h5>$56</h5>
                                             <form action="#" method="post">
@@ -931,9 +931,9 @@
                                 </div>
                                 <div class="item">
                                     <div class="glry-w3agile-grids agileits">
-                                        <a href="products4.html"><img src="res/img/s4.png" alt="img"></a>
+                                        <a href="../../products4.html"><img src="../../res/img/s4.png" alt="img"></a>
                                         <div class="view-caption agileits-w3layouts">
-                                            <h4><a href="products4.html">Cricket Kit</a></h4>
+                                            <h4><a href="../../products4.html">Cricket Kit</a></h4>
                                             <p>Lorem ipsum dolor sit amet consectetur</p>
                                             <h5>$80</h5>
                                             <form action="#" method="post">

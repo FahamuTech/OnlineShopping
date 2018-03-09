@@ -20,9 +20,9 @@
     </div>
 </div>
 <!-- countdown.js -->
-<script src="res/script/jquery.knob.js"></script>
-<script src="res/script/jquery.throttle.js"></script>
-<script src="res/script/jquery.classycountdown.js"></script>
+<script src="../script/jquery.knob.js"></script>
+<script src="../script/jquery.throttle.js"></script>
+<script src="../script/jquery.classycountdown.js"></script>
 <script>
     $(document).ready(function () {
         $('#countdown1').ClassyCountdown({

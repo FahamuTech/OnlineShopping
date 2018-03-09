@@ -12,7 +12,7 @@
 </head>
 <body>
 <!-- footer-top -->
-<div class="w3agile-ftr-top">
+<div class="w3agile-ftr-top ">
     <div class="container">
         <div class="ftr-toprow">
             <div class="col-md-4 ftr-top-grids">
@@ -46,10 +46,16 @@
                 <div class="clearfix"></div>
             </div>
             <div class="clearfix"></div>
-            <jsp:include page="share.jsp"/>
+            <jsp:include page="subscribe.jsp"/>
         </div>
     </div>
 </div>
 <!-- //footer-top -->
+<div class="copy-right">
+    <div class="container">
+        <p>© 2018 Online Shopping . All rights reserved | Design by <a href="http://w3layouts.com"> W3layouts.</a>|Implemented
+            by FahamuTech</p>
+    </div>
+</div>
 </body>
 </html>
