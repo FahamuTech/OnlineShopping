@@ -12,10 +12,10 @@
 </head>
 <body>
 <!-- subscribe -->
-<div class="subscribe">
+<div class="subscribe" >
     <div class="container">
         <div class="col-md-6 social-icons w3-agile-icons">
-            <h4>Keep in touch</h4>
+            <h4 style="color: white">Keep in touch</h4>
             <ul>
                 <li><a href="#" class="fa fa-facebook icon facebook"> </a></li>
                 <li><a href="#" class="fa fa-twitter icon twitter"> </a></li>
@@ -24,14 +24,14 @@
                 <li><a href="#" class="fa fa-rss icon rss"> </a></li>
             </ul>
             <ul class="apps">
-                <li><h4>Download Our app : </h4></li>
-                <li><a href="#" class="fa fa-apple"></a></li>
-                <li><a href="#" class="fa fa-windows"></a></li>
+                <li><h4 style="color: white">Download Our app : </h4></li>
+                <%--<li><a href="#" class="fa fa-apple"></a></li>--%>
+                <%--<li><a href="#" class="fa fa-windows"></a></li>--%>
                 <li><a href="#" class="fa fa-android"></a></li>
             </ul>
         </div>
         <div class="col-md-6 subscribe-right">
-            <h4>Sign up for email and get 25%off!</h4>
+            <h4 style="color: white;">Sign up for email and get 15%off!</h4>
             <form action="#" method="post">
                 <input type="text" name="email" placeholder="Enter your Email..." required="">
                 <input type="submit" value="Subscribe">

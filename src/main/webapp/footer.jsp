@@ -41,10 +41,10 @@
                     <h3>Services</h3>
                     <ul>
                         <li><a href="contact.html">Contact Us</a></li>
-                        <li><a href="login.html">Returns</a></li>
+                        <li><a href="login.jsp">Returns</a></li>
                         <li><a href="faq.html">FAQ</a></li>
                         <li><a href="sitemap.html">Site Map</a></li>
-                        <li><a href="login.html">Order Status</a></li>
+                        <li><a href="login.jsp">Order Status</a></li>
                     </ul>
                 </div>
                 <div class="col-md-4 footer-grids">

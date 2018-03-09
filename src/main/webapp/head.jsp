@@ -32,26 +32,26 @@
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li class="dropdown head-dpdn">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-percent"
-                                                                                  aria-hidden="true"></i> Today's
-                        Deals<span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="offers.html">Cash Back Offers</a></li>
-                        <li><a href="offers.html">Product Discounts</a></li>
-                        <li><a href="offers.html">Special Offers</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown head-dpdn">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-gift"
-                                                                                  aria-hidden="true"></i> Gift
-                        Cards<span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="offers.html">Product Gift card</a></li>
-                        <li><a href="offers.html">Occasions Register</a></li>
-                        <li><a href="offers.html">View Balance</a></li>
-                    </ul>
-                </li>
+                <%--<li class="dropdown head-dpdn">--%>
+                    <%--<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-percent"--%>
+                                                                                  <%--aria-hidden="true"></i> Today's--%>
+                        <%--Deals<span class="caret"></span></a>--%>
+                    <%--<ul class="dropdown-menu">--%>
+                        <%--<li><a href="offers.html">Cash Back Offers</a></li>--%>
+                        <%--<li><a href="offers.html">Product Discounts</a></li>--%>
+                        <%--<li><a href="offers.html">Special Offers</a></li>--%>
+                    <%--</ul>--%>
+                <%--</li>--%>
+                <%--<li class="dropdown head-dpdn">--%>
+                    <%--<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-gift"--%>
+                                                                                  <%--aria-hidden="true"></i> Gift--%>
+                        <%--Cards<span class="caret"></span></a>--%>
+                    <%--<ul class="dropdown-menu">--%>
+                        <%--<li><a href="offers.html">Product Gift card</a></li>--%>
+                        <%--<li><a href="offers.html">Occasions Register</a></li>--%>
+                        <%--<li><a href="offers.html">View Balance</a></li>--%>
+                    <%--</ul>--%>
+                <%--</li>--%>
                 <li class="dropdown head-dpdn">
                     <a href="contact.html" class="dropdown-toggle"><i class="fa fa-map-marker" aria-hidden="true"></i>
                         Store Finder</a>

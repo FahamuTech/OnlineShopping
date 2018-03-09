@@ -118,38 +118,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <jsp:include page="banner.jsp"/>
 <jsp:include page="head.jsp"/>
 <jsp:include page="wellcome.jsp"/>
-<!-- add-products -->
-<div class="add-products">
-    <div class="container">
-        <div class="add-products-row">
-            <div class="w3ls-add-grids">
-                <a href="products1.html">
-                    <h4>TOP 10 TRENDS FOR YOU FLAT <span>20%</span> OFF</h4>
-                    <h6>Shop now <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></h6>
-                </a>
-            </div>
-            <div class="w3ls-add-grids w3ls-add-grids-mdl">
-                <a href="products1.html">
-                    <h4>SUNDAY SPECIAL DISCOUNT FLAT <span>40%</span> OFF</h4>
-                    <h6>Shop now <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></h6>
-                </a>
-            </div>
-            <div class="w3ls-add-grids w3ls-add-grids-mdl1">
-                <a href="products.html">
-                    <h4>LATEST DESIGNS FOR YOU <span> Hurry !</span></h4>
-                    <h6>Shop now <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></h6>
-                </a>
-            </div>
-            <div class="clerfix"></div>
-        </div>
-    </div>
-</div>
-<!-- //add-products -->
-<jsp:include page="commingSoon.jsp"/>
 <jsp:include page="deals.jsp"/>
 <jsp:include page="footerTop.jsp"/>
-<jsp:include page="share.jsp"/>
-<%--<jsp:include page="footer.jsp"/>--%>
 <!-- cart-js -->
 <script src="res/script/minicart.js"></script>
 <script>
@@ -169,64 +139,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     });
 </script>
 <!-- //cart-js -->
-<!-- countdown.js -->
-<script src="res/script/jquery.knob.js"></script>
-<script src="res/script/jquery.throttle.js"></script>
-<script src="res/script/jquery.classycountdown.js"></script>
-<script>
-    $(document).ready(function () {
-        $('#countdown1').ClassyCountdown({
-            end: '1388268325',
-            now: '1387999995',
-            labels: true,
-            style: {
-                element: "",
-                textResponsive: .5,
-                days: {
-                    gauge: {
-                        thickness: .10,
-                        bgColor: "rgba(0,0,0,0)",
-                        fgColor: "#1abc9c",
-                        lineCap: 'round'
-                    },
-                    textCSS: 'font-weight:300; color:#fff;'
-                },
-                hours: {
-                    gauge: {
-                        thickness: .10,
-                        bgColor: "rgba(0,0,0,0)",
-                        fgColor: "#05BEF6",
-                        lineCap: 'round'
-                    },
-                    textCSS: ' font-weight:300; color:#fff;'
-                },
-                minutes: {
-                    gauge: {
-                        thickness: .10,
-                        bgColor: "rgba(0,0,0,0)",
-                        fgColor: "#8e44ad",
-                        lineCap: 'round'
-                    },
-                    textCSS: ' font-weight:300; color:#fff;'
-                },
-                seconds: {
-                    gauge: {
-                        thickness: .10,
-                        bgColor: "rgba(0,0,0,0)",
-                        fgColor: "#f39c12",
-                        lineCap: 'round'
-                    },
-                    textCSS: ' font-weight:300; color:#fff;'
-                }
-
-            },
-            onEndCallback: function () {
-                console.log("Time out!");
-            }
-        });
-    });
-</script>
-<!-- //countdown.js -->
 <!-- menu js aim -->
 <script src="res/script/jquery.menu-aim.js"></script>
 <script src="res/script/main.js"></script> <!-- Resource jQuery -->

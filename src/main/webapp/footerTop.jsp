@@ -21,7 +21,7 @@
                 </div>
                 <div class="ftr-top-right">
                     <h4>FREE DELIVERY</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tempus justo ac </p>
+                    <p>Wherever you are we will reach you </p>
                 </div>
                 <div class="clearfix"></div>
             </div>
@@ -31,7 +31,7 @@
                 </div>
                 <div class="ftr-top-right">
                     <h4>CUSTOMER CARE</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tempus justo ac </p>
+                    <p>Our customers our Kings. We listen call anytime </p>
                 </div>
                 <div class="clearfix"></div>
             </div>
@@ -41,11 +41,12 @@
                 </div>
                 <div class="ftr-top-right">
                     <h4>GOOD QUALITY</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tempus justo ac </p>
+                    <p>All new and furbrished one year warrant </p>
                 </div>
                 <div class="clearfix"></div>
             </div>
             <div class="clearfix"></div>
+            <jsp:include page="share.jsp"/>
         </div>
     </div>
 </div>
