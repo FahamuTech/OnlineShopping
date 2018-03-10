@@ -242,9 +242,9 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
                 </div>
                 <div class="item">
                     <div class="glry-w3agile-grids agileits">
-                        <a href="products.html"><img src="res/img/e4.png" alt="img"></a>
+                        <a href="products.jsp"><img src="res/img/e4.png" alt="img"></a>
                         <div class="view-caption agileits-w3layouts">
-                            <h4><a href="products.html">Digital Camera</a></h4>
+                            <h4><a href="products.jsp">Digital Camera</a></h4>
                             <p>Lorem ipsum dolor sit amet consectetur</p>
                             <h5>$80</h5>
                             <form action="#" method="post">

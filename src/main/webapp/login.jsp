@@ -103,7 +103,7 @@
                 </div>
             </form>
         </div>
-        <h6> Not a Member? <a href="signup.html">Sign Up Now »</a> </h6>
+        <h6> Not a Member? <a href="signup.jsp">Sign Up Now »</a> </h6>
         <div class="login-page-bottom social-icons">
             <h5>Recover your social account</h5>
             <ul>

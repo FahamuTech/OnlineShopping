@@ -12,7 +12,7 @@
 </head>
 <body>
 <!-- cart-js -->
-<script src="../script/minicart.js"></script>
+<script src="../../res/script/minicart.js"></script>
 <script>
     w3ls.render();
 
@@ -31,8 +31,8 @@
 </script>
 <!-- //cart-js -->
 <!-- menu js aim -->
-<script src="../script/jquery.menu-aim.js"></script>
-<script src="../script/main.js"></script> <!-- Resource jQuery -->
+<script src="../../res/script/jquery.menu-aim.js"></script>
+<script src="../../res/script/main.js"></script> <!-- Resource jQuery -->
 <!-- //menu js aim -->
 </body>
 </html>

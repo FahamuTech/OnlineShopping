@@ -27,7 +27,7 @@
                 </a>
             </div>
             <div class="w3ls-add-grids w3ls-add-grids-mdl1">
-                <a href="../../products.html">
+                <a href="../../products.jsp">
                     <h4>LATEST DESIGNS FOR YOU <span> Hurry !</span></h4>
                     <h6>Shop now <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></h6>
                 </a>

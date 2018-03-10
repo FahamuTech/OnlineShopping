@@ -1,28 +1,20 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: olive
-  Date: 3/7/18
-  Time: 10:42 PM
-  To change this template use File | Settings | File Templates.
---%>
 <!--
 Author: W3layouts
 Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Un ported
+License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
+Implemented bu FahamuTech
 -->
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html; charset=UTF-8" language="java" %>
 <jsp:useBean id="main" class="homepage.Main"/>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <title>
         <jsp:getProperty name="main" property="webSiteName"/>
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta name="keywords" content="Smart Shop Management"/>
     <script type="application/x-javascript"> addEventListener("load", function () {
         setTimeout(hideURLbar, 0);
     }, false);
@@ -31,41 +23,17 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         window.scrollTo(0, 1);
     } </script>
     <!-- Custom Theme files -->
-
     <link href="res/style/bootstrap.css" rel="stylesheet" type="text/css" media="all"/>
     <link href="res/style/style.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="res/style/animate.min.css" rel="stylesheet" type="text/css" media="all"/><!-- animation -->
     <link href="res/style/menu.css" rel="stylesheet" type="text/css" media="all"/> <!-- menu style -->
-    <link href="res/style/ken-burns.css" rel="stylesheet" type="text/css" media="all"/> <!-- banner slider -->
-    <link href="res/style/animate.min.css" rel="stylesheet" type="text/css" media="all"/>
-    <link href="res/style/owl.carousel.css" rel="stylesheet" type="text/css" media="all"> <!-- carousel slider -->
     <!-- //Custom Theme files -->
     <!-- font-awesome icons -->
     <link href="res/style/font-awesome.css" rel="stylesheet">
     <!-- //font-awesome icons -->
     <!-- js -->
     <script src="res/script/jquery-2.2.3.min.js"></script>
-    <!-- //js -->
-    <!-- web-fonts -->
-    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic'
-          rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Lovers+Quarrel' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Offside' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Tangerine:400,700' rel='stylesheet' type='text/css'>
-    <!-- web-fonts -->
-    <script src="res/script/owl.carousel.js"></script>
-    <script>
-        $(document).ready(function () {
-            $("#owl-demo").owlCarousel({
-                autoPlay: 3000, //Set AutoPlay to 3 seconds
-                items: 4,
-                itemsDesktop: [640, 5],
-                itemsDesktopSmall: [480, 2],
-                navigation: true
-
-            });
-        });
-    </script>
-    <script src="res/script/jquery-scrolltofixed-min.js" type="text/javascript"></script>
+    <script src="res/script/jquery-scrolltofixed-min.js" type="text/javascript"></script><!-- fixed nav js -->
     <script>
         $(document).ready(function () {
 
@@ -86,6 +54,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             });
         });
     </script>
+    <!-- //js -->
+    <!-- web-fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic'
+          rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lovers+Quarrel' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Offside' rel='stylesheet' type='text/css'>
+    <!-- web-fonts -->
     <!-- start-smooth-scrolling -->
     <script type="text/javascript" src="res/script/move-top.js"></script>
     <script type="text/javascript" src="res/script/easing.js"></script>
@@ -114,18 +89,41 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         });
     </script>
     <!-- //smooth-scrolling-of-move-up -->
-    <script src="res/script/bootstrap.js"></script>
 </head>
-
 <body>
-<jsp:include page="res/jsp/banner.jsp"/>
+<!-- header -->
 <jsp:include page="res/jsp/head.jsp"/>
-<jsp:include page="res/jsp/featureProducts.jsp"/>
-<jsp:include page="res/jsp/dealsOfToday.jsp"/>
+<!-- //header -->
+<!-- sign up-page -->
+<div class="login-page">
+    <div class="container">
+        <h3 class="w3ls-title w3ls-title1">Create your account</h3>
+        <div class="login-body">
+            <form action="#" method="post">
+                <input type="text" class="user" name="name" placeholder="Enter your Name" required="">
+                <input type="text" class="user" name="email" placeholder="Enter your email" required="">
+                <input type="password" name="password" class="lock" placeholder="Password" required="">
+                <input type="submit" value="Sign Up ">
+                <div class="forgot-grid">
+                    <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Remember me</label>
+                    <div class="forgot">
+                        <a href="#">Forgot Password?</a>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </form>
+        </div>
+        <h6>Already have an account? <a href="login.jsp">Login Now »</a></h6>
+    </div>
+</div>
+<!-- //sign up-page -->
+<!-- footer-top -->
 <jsp:include page="res/jsp/footerTop.jsp"/>
 <jsp:include page="res/jsp/headScript.jsp"/>
+<!-- //menu js aim -->
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
+<script src="res/script/bootstrap.js"></script>
 </body>
 </html>

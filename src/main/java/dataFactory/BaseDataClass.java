@@ -16,6 +16,7 @@ public abstract class BaseDataClass {
         dataSource.setServerName("127.0.0.1");
         dataSource.setDatabaseName("OnlineShopping");
     }
+
     public abstract void encryptData(HashMap<String,Object> values);
     public abstract void decryptData(HashMap<String,Object> values);
     public abstract void insertData(HashMap<String,Object> values);
