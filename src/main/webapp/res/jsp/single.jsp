@@ -24,22 +24,22 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
         window.scrollTo(0, 1);
     } </script>
     <!-- Custom Theme files -->
-    <link href="res/style/bootstrap.css" rel="stylesheet" type="text/css" media="all"/>
-    <link href="res/style/style.css" rel="stylesheet" type="text/css" media="all"/>
-    <link href="res/style/animate.min.css" rel="stylesheet" type="text/css" media="all"/><!-- animation -->
-    <link href="res/style/menu.css" rel="stylesheet" type="text/css" media="all"/> <!-- menu style -->
-    <link href="res/style/owl.carousel.css" rel="stylesheet" type="text/css" media="all"> <!-- carousel slider -->
+    <link href="../style/bootstrap.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="../style/style.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="../style/animate.min.css" rel="stylesheet" type="text/css" media="all"/><!-- animation -->
+    <link href="../style/menu.css" rel="stylesheet" type="text/css" media="all"/> <!-- menu style -->
+    <link href="../style/owl.carousel.css" rel="stylesheet" type="text/css" media="all"> <!-- carousel slider -->
     <!-- //Custom Theme files -->
     <!-- font-awesome icons -->
-    <link href="res/style/font-awesome.css" rel="stylesheet">
+    <link href="../style/font-awesome.css" rel="stylesheet">
     <!-- //font-awesome icons -->
     <!-- js -->
-    <script src="res/script/jquery-2.2.3.min.js"></script>
-    <script src="res/script/owl.carousel.js"></script>
-    <script src="res/script/bootstrap.js"></script>
+    <script src="../script/jquery-2.2.3.min.js"></script>
+    <script src="../script/owl.carousel.js"></script>
+    <script src="../script/bootstrap.js"></script>
     <!--flex slider-->
-    <script defer src="res/script/jquery.flexslider.js"></script>
-    <link rel="stylesheet" href="res/style/flexslider.css" type="text/css" media="screen"/>
+    <script defer src="../script/jquery.flexslider.js"></script>
+    <link rel="stylesheet" href="../style/flexslider.css" type="text/css" media="screen"/>
     <script>
         // Can also be used with $(document).ready()
         $(window).load(function () {
@@ -50,7 +50,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
         });
     </script>
     <!--flex slider-->
-    <script src="res/script/imagezoom.js"></script>
+    <script src="../script/imagezoom.js"></script>
     <!-- //js -->
     <!-- web-fonts -->
     <link href='//fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic'
@@ -60,7 +60,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
     <link href='//fonts.googleapis.com/css?family=Tangerine:400,700' rel='stylesheet' type='text/css'>
     <!-- web-fonts -->
     <!-- scroll to fixed-->
-    <script src="res/script/jquery-scrolltofixed-min.js" type="text/javascript"></script>
+    <script src="../script/jquery-scrolltofixed-min.js" type="text/javascript"></script>
     <script>
         $(document).ready(function () {
 
@@ -83,8 +83,8 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
     </script>
     <!-- //scroll to fixed-->
     <!-- start-smooth-scrolling -->
-    <script type="text/javascript" src="res/script/move-top.js"></script>
-    <script type="text/javascript" src="res/script/easing.js"></script>
+    <script type="text/javascript" src="../script/move-top.js"></script>
+    <script type="text/javascript" src="../script/easing.js"></script>
     <script type="text/javascript">
         jQuery(document).ready(function ($) {
             $(".scroll").click(function (event) {
@@ -113,12 +113,12 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 </head>
 <body>
 <!-- header -->
-<jsp:include page="res/jsp/head.jsp"/>
+<jsp:include page="head.jsp"/>
 <!-- //header -->
 <!-- breadcrumbs -->
 <div class="container">
     <ol class="breadcrumb breadcrumb1">
-        <li><a href="main.jsp">Home</a></li>
+        <li><a href="../../main.jsp">Home</a></li>
         <li class="active">Single Page</li>
     </ol>
     <div class="clearfix"></div>
@@ -137,11 +137,11 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
                                                                             class="img-responsive" alt=""></div>
                             </li>
                             <li data-thumb="images/s2.jpg">
-                                <div class="thumb-image"><img src="res/img/s2.jpg" data-imagezoom="true"
+                                <div class="thumb-image"><img src="../img/s2.jpg" data-imagezoom="true"
                                                               class="img-responsive" alt=""></div>
                             </li>
                             <li data-thumb="res/img/s3.jpg">
-                                <div class="thumb-image"><img src="res/img/s3.jpg" data-imagezoom="true"
+                                <div class="thumb-image"><img src="../img/s3.jpg" data-imagezoom="true"
                                                               class="img-responsive" alt=""></div>
                             </li>
                         </ul>
@@ -223,9 +223,9 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
                 <div class="item">
                     <div class="glry-w3agile-grids agileits">
                         <div class="new-tag"><h6>20% <br> Off</h6></div>
-                        <a href="products1.html"><img src="res/img/f2.png" alt="img"></a>
+                        <a href="../../products1.html"><img src="../img/f2.png" alt="img"></a>
                         <div class="view-caption agileits-w3layouts">
-                            <h4><a href="products1.html">Women Sandal</a></h4>
+                            <h4><a href="../../products1.html">Women Sandal</a></h4>
                             <p>Lorem ipsum dolor sit amet consectetur</p>
                             <h5>$20</h5>
                             <form action="#" method="post">
@@ -242,7 +242,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
                 </div>
                 <div class="item">
                     <div class="glry-w3agile-grids agileits">
-                        <a href="products.jsp"><img src="res/img/e4.png" alt="img"></a>
+                        <a href="products.jsp"><img src="../img/e4.png" alt="img"></a>
                         <div class="view-caption agileits-w3layouts">
                             <h4><a href="products.jsp">Digital Camera</a></h4>
                             <p>Lorem ipsum dolor sit amet consectetur</p>
@@ -262,9 +262,9 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
                 <div class="item">
                     <div class="glry-w3agile-grids agileits">
                         <div class="new-tag"><h6>New</h6></div>
-                        <a href="products4.html"><img src="res/img/s1.png" alt="img"></a>
+                        <a href="../../products4.html"><img src="../img/s1.png" alt="img"></a>
                         <div class="view-caption agileits-w3layouts">
-                            <h4><a href="products4.html">Roller Skates</a></h4>
+                            <h4><a href="../../products4.html">Roller Skates</a></h4>
                             <p>Lorem ipsum dolor sit amet consectetur</p>
                             <h5>$180</h5>
                             <form action="#" method="post">
@@ -281,9 +281,9 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
                 </div>
                 <div class="item">
                     <div class="glry-w3agile-grids agileits">
-                        <a href="products1.html"><img src="res/img/f1.png" alt="img"></a>
+                        <a href="../../products1.html"><img src="../img/f1.png" alt="img"></a>
                         <div class="view-caption agileits-w3layouts">
-                            <h4><a href="products1.html">T Shirt</a></h4>
+                            <h4><a href="../../products1.html">T Shirt</a></h4>
                             <p>Lorem ipsum dolor sit amet consectetur</p>
                             <h5>$10</h5>
                             <form action="#" method="post">
@@ -301,9 +301,9 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
                 <div class="item">
                     <div class="glry-w3agile-grids agileits">
                         <div class="new-tag"><h6>New</h6></div>
-                        <a href="products6.html"><img src="res/img/p1.png" alt="img"></a>
+                        <a href="../../products6.html"><img src="../img/p1.png" alt="img"></a>
                         <div class="view-caption agileits-w3layouts">
-                            <h4><a href="products6.html">Coffee Mug</a></h4>
+                            <h4><a href="../../products6.html">Coffee Mug</a></h4>
                             <p>Lorem ipsum dolor sit amet consectetur</p>
                             <h5>$14</h5>
                             <form action="#" method="post">
@@ -321,9 +321,9 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
                 <div class="item">
                     <div class="glry-w3agile-grids agileits">
                         <div class="new-tag"><h6>20% <br> Off</h6></div>
-                        <a href="products6.html"><img src="res/img/p2.png" alt="img"></a>
+                        <a href="../../products6.html"><img src="../img/p2.png" alt="img"></a>
                         <div class="view-caption agileits-w3layouts">
-                            <h4><a href="products6.html">Teddy bear</a></h4>
+                            <h4><a href="../../products6.html">Teddy bear</a></h4>
                             <p>Lorem ipsum dolor sit amet consectetur</p>
                             <h5>$20</h5>
                             <form action="#" method="post">
@@ -340,9 +340,9 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
                 </div>
                 <div class="item">
                     <div class="glry-w3agile-grids agileits">
-                        <a href="products4.html"><img src="res/img/s2.png" alt="img"></a>
+                        <a href="../../products4.html"><img src="../img/s2.png" alt="img"></a>
                         <div class="view-caption agileits-w3layouts">
-                            <h4><a href="products4.html">Football</a></h4>
+                            <h4><a href="../../products4.html">Football</a></h4>
                             <p>Lorem ipsum dolor sit amet consectetur</p>
                             <h5>$70</h5>
                             <form action="#" method="post">
@@ -360,9 +360,9 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
                 <div class="item">
                     <div class="glry-w3agile-grids agileits">
                         <div class="new-tag"><h6>Sale</h6></div>
-                        <a href="products3.html"><img src="res/img/h1.png" alt="img"></a>
+                        <a href="../../products3.html"><img src="../img/h1.png" alt="img"></a>
                         <div class="view-caption agileits-w3layouts">
-                            <h4><a href="products3.html">Wall Clock</a></h4>
+                            <h4><a href="../../products3.html">Wall Clock</a></h4>
                             <p>Lorem ipsum dolor sit amet consectetur</p>
                             <h5>$80</h5>
                             <form action="#" method="post">
@@ -503,9 +503,9 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 </div>
 <!--//products-->
 <!-- footer-top -->
-<jsp:include page="res/jsp/footerTop.jsp"/>
+<jsp:include page="footerTop.jsp"/>
 <!-- cart-js -->
-<jsp:include page="res/jsp/headScript.jsp"/><!-- //menu js aim -->
+<jsp:include page="headScript.jsp"/><!-- //menu js aim -->
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->

@@ -1,5 +1,7 @@
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"  %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <jsp:useBean id="constant" class="utils.Constants"/>
 <!DOCTYPE html>
 <html lang="en">
@@ -19,24 +21,22 @@
         window.scrollTo(0, 1);
     } </script>
     <!-- Custom Theme files -->
-
-    <%--<link href="${pageContext.request.contextPath}/res/style/bootstrap.css" rel="stylesheet" type="text/css" media="all"/>--%>
-    <link href="res/style/bootstrap.css" rel="Stylesheet" type="text/css" media="all"/>
-    <link href="res/style/style.css" rel="stylesheet" type="text/css" media="all"/>
-    <link href="res/style/menu.css" rel="stylesheet" type="text/css" media="all"/> <!-- menu style -->
-    <link href="res/style/ken-burns.css" rel="stylesheet" type="text/css" media="all"/> <!-- banner slider -->
-    <link href="res/style/animate.min.css" rel="stylesheet" type="text/css" media="all"/>
-    <link href="res/style/owl.carousel.css" rel="stylesheet" type="text/css" media="all"> <!-- carousel slider -->
+    <link href="<c:url value="/res/style/bootstrap.css"/>" rel="Stylesheet" type="text/css" media="all"/>
+    <link href="<c:url value="res/style/style.css"/>" rel="stylesheet" type="text/css" media="all"/>
+    <link href="<c:url value="res/style/menu.css"/>" rel="stylesheet" type="text/css" media="all"/> <!-- menu style -->
+    <link href="<c:url value="res/style/ken-burns.css"/>" rel="stylesheet" type="text/css" media="all"/> <!-- banner slider -->
+    <link href="<c:url value="res/style/animate.min.css"/>" rel="stylesheet" type="text/css" media="all"/>
+    <link href="<c:url value="res/style/owl.carousel.css"/>" rel="stylesheet" type="text/css" media="all"> <!-- carousel slider -->
     <!-- //Custom Theme files -->
     <!-- font-awesome icons -->
-    <link href="res/style/font-awesome.css" rel="stylesheet">
+    <link href="<c:url value="res/style/font-awesome.css"/>" rel="stylesheet">
     <!-- //font-awesome icons -->
     <!-- js -->
-    <script src="res/script/jquery-2.2.3.min.js"></script>
+    <script src="<c:url value="res/script/jquery-2.2.3.min.js"/>"></script>
     <!-- //js -->
     <!-- web-fonts -->
     <%--<link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic'--%>
-          <%--rel='stylesheet' type='text/css'>--%>
+    <%--rel='stylesheet' type='text/css'>--%>
     <link href='https://fonts.googleapis.com/css?family=Lovers+Quarrel' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Offside' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Tangerine:400,700' rel='stylesheet' type='text/css'>
@@ -50,7 +50,7 @@
     </script>
     <!-- web-fonts -->
 
-    <script src="res/script/owl.carousel.js"></script>
+    <script src="<c:url value="res/script/owl.carousel.js"/>"></script>
     <script>
         $(document).ready(function () {
             $("#owl-demo").owlCarousel({
@@ -63,7 +63,7 @@
             });
         });
     </script>
-    <script src="res/script/jquery-scrolltofixed-min.js" type="text/javascript"></script>
+    <script src="<c:url value="res/script/jquery-scrolltofixed-min.js"/>" type="text/javascript"></script>
     <script>
         $(document).ready(function () {
 
@@ -85,8 +85,8 @@
         });
     </script>
     <!-- start-smooth-scrolling -->
-    <script type="text/javascript" src="res/script/move-top.js"></script>
-    <script type="text/javascript" src="res/script/easing.js"></script>
+    <script type="text/javascript" src="<c:url value="res/script/move-top.js"/>"></script>
+    <script type="text/javascript" src="<c:url value="res/script/easing.js"/>"></script>
     <script type="text/javascript">
         jQuery(document).ready(function ($) {
             $(".scroll").click(function (event) {
@@ -112,7 +112,7 @@
         });
     </script>
     <!-- //smooth-scrolling-of-move-up -->
-    <script src="res/script/bootstrap.js"></script>
+    <script src="<c:url value="res/script/bootstrap.js"/>"></script>
 </head>
 
 <body>

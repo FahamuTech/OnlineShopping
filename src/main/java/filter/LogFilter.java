@@ -5,8 +5,8 @@ import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 import java.util.Date;
-//
-//@WebFilter(urlPatterns = {"/*"})
+
+@WebFilter(urlPatterns = {"/*"})
 public class LogFilter implements Filter {
 
     @Override

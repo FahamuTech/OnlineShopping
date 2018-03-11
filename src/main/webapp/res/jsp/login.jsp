@@ -15,17 +15,17 @@
     <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
     function hideURLbar(){ window.scrollTo(0,1); } </script>
     <!-- Custom Theme files -->
-    <link href="res/style/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-    <link href="res/style/style.css" rel="stylesheet" type="text/css" media="all" />
-    <link href="res/style/animate.min.css" rel="stylesheet" type="text/css" media="all" /><!-- animation -->
-    <link href="res/style/menu.css" rel="stylesheet" type="text/css" media="all" /> <!-- menu style -->
+    <link href="../style/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="../style/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="../style/animate.min.css" rel="stylesheet" type="text/css" media="all" /><!-- animation -->
+    <link href="../style/menu.css" rel="stylesheet" type="text/css" media="all" /> <!-- menu style -->
     <!-- //Custom Theme files -->
     <!-- font-awesome icons -->
-    <link href="res/style/font-awesome.css" rel="stylesheet">
+    <link href="../style/font-awesome.css" rel="stylesheet">
     <!-- //font-awesome icons -->
     <!-- js -->
-    <script src="res/script/jquery-2.2.3.min.js"></script>
-    <script src="res/script/jquery-scrolltofixed-min.js" type="text/javascript"></script><!-- fixed nav js -->
+    <script src="../script/jquery-2.2.3.min.js"></script>
+    <script src="../script/jquery-scrolltofixed-min.js" type="text/javascript"></script><!-- fixed nav js -->
     <script>
         $(document).ready(function() {
 
@@ -53,8 +53,8 @@
     <link href='https://fonts.googleapis.com/css?family=Offside' rel='stylesheet' type='text/css'>
     <!-- web-fonts -->
     <!-- start-smooth-scrolling -->
-    <script type="text/javascript" src="res/script/move-top.js"></script>
-    <script type="text/javascript" src="res/script/easing.js"></script>
+    <script type="text/javascript" src="../script/move-top.js"></script>
+    <script type="text/javascript" src="../script/easing.js"></script>
     <script type="text/javascript">
         jQuery(document).ready(function($) {
             $(".scroll").click(function(event){
@@ -83,7 +83,7 @@
 </head>
 <body>
 <!-- header -->
-<jsp:include page="res/jsp/head.jsp"/>
+<jsp:include page="head.jsp"/>
 <!-- //header -->
 <!-- login-page -->
 <div class="login-page">
@@ -118,10 +118,10 @@
 </div>
 <!-- //login-page -->
 <!-- footer-top -->
-<jsp:include page="res/jsp/footerTop.jsp"/>
+<jsp:include page="footerTop.jsp"/>
 <!-- //footer-top -->
 <!-- cart-js -->
-<script src="res/script/minicart.js"></script>
+<script src="../script/minicart.js"></script>
 <script>
     w3ls.render();
 
@@ -140,12 +140,12 @@
 </script>
 <!-- //cart-js -->
 <!-- menu js aim -->
-<script src="res/script/jquery.menu-aim.js"> </script>
-<script src="res/script/main.js"></script> <!-- Resource jQuery -->
+<script src="../script/jquery.menu-aim.js"> </script>
+<script src="../script/main.js"></script> <!-- Resource jQuery -->
 <!-- //menu js aim -->
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="res/script/bootstrap.js"></script>
+<script src="../script/bootstrap.js"></script>
 </body>
 </html>

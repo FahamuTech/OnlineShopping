@@ -31,20 +31,20 @@
                 <div class="col-md-4 footer-grids">
                     <h3>Company</h3>
                     <ul>
-                        <li><a href="../../about.jsp">About Us</a></li>
-                        <li><a href="../../marketplace.jsp">Marketplace</a></li>
-                        <li><a href="../../values.jsp">Core Values</a></li>
-                        <li><a href="../../privacy.jsp">Privacy Policy</a></li>
+                        <li><a href="about.jsp">About Us</a></li>
+                        <li><a href="marketplace.jsp">Marketplace</a></li>
+                        <li><a href="values.jsp">Core Values</a></li>
+                        <li><a href="privacy.jsp">Privacy Policy</a></li>
                     </ul>
                 </div>
                 <div class="col-md-4 footer-grids">
                     <h3>Services</h3>
                     <ul>
-                        <li><a href="../../contact.jsp">Contact Us</a></li>
-                        <li><a href="../../login.jsp">Returns</a></li>
-                        <li><a href="../../faq.jsp">FAQ</a></li>
-                        <li><a href="../../sitemap.jsp">Site Map</a></li>
-                        <li><a href="../../login.jsp">Order Status</a></li>
+                        <li><a href="contact.jsp">Contact Us</a></li>
+                        <li><a href="login.jsp">Returns</a></li>
+                        <li><a href="faq.jsp">FAQ</a></li>
+                        <li><a href="sitemap.jsp">Site Map</a></li>
+                        <li><a href="login.jsp">Order Status</a></li>
                     </ul>
                 </div>
                 <div class="col-md-4 footer-grids">

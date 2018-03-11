@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: olive
@@ -13,21 +14,21 @@
         <!-- Wrapper-for-Slides -->
         <div class="carousel-inner" role="listbox">
             <div class="item active"><!-- First-Slide -->
-                <img src="../../res/img/head/3.jpg" alt="" class="img-responsive"/>
+                <img src="<c:url value="/res/img/head/3.jpg"/>" alt="" class="img-responsive"/>
                 <div class="carousel-caption kb_caption kb_caption_right">
                     <h3 data-animation="animated flipInX">Flat <span>50%</span> Discount</h3>
                     <h4 data-animation="animated flipInX">Hot Offer Today Only</h4>
                 </div>
             </div>
             <div class="item"> <!-- Second-Slide -->
-                <img src="../../res/img/head/5.jpg" alt="" class="img-responsive"/>
+                <img src="<c:url value="/res/img/head/5.jpg"/>" alt="" class="img-responsive"/>
                 <div class="carousel-caption kb_caption kb_caption_right">
                     <h3 data-animation="animated fadeInDown">Our Latest Fashion Editorials</h3>
                     <h4 data-animation="animated fadeInUp">cupidatat non proident</h4>
                 </div>
             </div>
             <div class="item"><!-- Third-Slide -->
-                <img src="../../res/img/head/8.jpg" alt="" class="img-responsive"/>
+                <img src="<c:url value="/res/img/head/8.jpg"/>" alt="" class="img-responsive"/>
                 <div class="carousel-caption kb_caption kb_caption_center">
                     <h3 data-animation="animated fadeInLeft">End Of Season Sale</h3>
                     <h4 data-animation="animated flipInX">cupidatat non proident</h4>
@@ -45,5 +46,5 @@
             <span class="sr-only">Next</span>
         </a>
     </div>
-    <script src="../../res/script/custom.js"></script>
+    <script src="<c:url value="/res/script/custom.js"/>"></script>
 </div>

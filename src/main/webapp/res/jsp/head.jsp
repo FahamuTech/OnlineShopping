@@ -22,10 +22,10 @@
                                                                                    aria-hidden="true"></i> My
                         Account<span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="../../login.jsp">Login </a></li>
-                        <li><a href="../../signup.jsp">Sign Up</a></li>
-                        <li><a href="../../login.jsp">My Orders</a></li>
-                        <li><a href="../../login.jsp">Wallet</a></li>
+                        <li><a href="login.jsp">Login </a></li>
+                        <li><a href="signup.jsp">Sign Up</a></li>
+                        <li><a href="login.jsp">My Orders</a></li>
+                        <li><a href="login.jsp">Wallet</a></li>
                     </ul>
                 </li>
             </ul>
@@ -51,8 +51,8 @@
                 <%--</ul>--%>
                 <%--</li>--%>
                 <li class="dropdown head-dpdn">
-                    <a href="../../contact.jsp" class="dropdown-toggle"><i class="fa fa-map-marker"
-                                                                           aria-hidden="true"></i>
+                    <a href="contact.jsp" class="dropdown-toggle"><i class="fa fa-map-marker"
+                                                                     aria-hidden="true"></i>
                         Store Finder</a>
                 </li>
                 <%--<li class="dropdown head-dpdn">--%>
@@ -61,8 +61,8 @@
                         <%--Credit Card</a>--%>
                 <%--</li>--%>
                 <li class="dropdown head-dpdn">
-                    <a href="../../help.jsp" class="dropdown-toggle"><i class="fa fa-question-circle"
-                                                                        aria-hidden="true"></i>
+                    <a href="help.jsp" class="dropdown-toggle"><i class="fa fa-question-circle"
+                                                                  aria-hidden="true"></i>
                         Help</a>
                 </li>
             </ul>
@@ -97,7 +97,7 @@
             </div>
             <div class="header-cart">
                 <div class="my-account">
-                    <a href="../../contact.jsp"><i class="fa fa-map-marker" aria-hidden="true"></i> CONTACT US</a>
+                    <a href="contact.jsp"><i class="fa fa-map-marker" aria-hidden="true"></i> CONTACT US</a>
                 </div>
                 <div class="cart">
                     <form action="#" method="post" class="last">
@@ -120,12 +120,12 @@
                     <nav class="cd-dropdown">
                         <a href="#0" class="cd-close">Close</a>
                         <ul class="cd-dropdown-content">
-                            <li><a href="../../offers.jsp">Today's Offers</a></li>
+                            <li><a href="offers.jsp">Today's Offers</a></li>
                             <li class="has-children">
                                 <a href="#">Electronics</a>
                                 <ul class="cd-secondary-dropdown is-hidden">
                                     <li class="go-back"><a href="#">Menu</a></li>
-                                    <li class="see-all"><a href="../../products.jsp">All Electronics</a></li>
+                                    <li class="see-all"><a href="products.jsp">All Electronics</a></li>
                                     <li class="has-children">
                                         <a href="#">MOBILE PHONES</a>
                                         <ul class="is-hidden">
@@ -134,46 +134,46 @@
                                                 <a href="#0">SmartPhones</a>
                                                 <ul class="is-hidden">
                                                     <li class="go-back"><a href="#"> </a></li>
-                                                    <li><a href="../../products.jsp">Android</a></li>
-                                                    <li><a href="../../products.jsp">Windows</a></li>
-                                                    <li><a href="../../products.jsp">Black berry</a></li>
+                                                    <li><a href="products.jsp">Android</a></li>
+                                                    <li><a href="products.jsp">Windows</a></li>
+                                                    <li><a href="products.jsp">Black berry</a></li>
                                                 </ul>
                                             </li>
-                                            <li><a href="../../products.jsp">IPhones</a></li>
-                                            <li><a href="../../products.jsp">Tablets</a></li>
-                                            <li><a href="../../products.jsp">IPad</a></li>
-                                            <li><a href="../../products.jsp">Feature Phones</a></li>
+                                            <li><a href="products.jsp">IPhones</a></li>
+                                            <li><a href="products.jsp">Tablets</a></li>
+                                            <li><a href="products.jsp">IPad</a></li>
+                                            <li><a href="products.jsp">Feature Phones</a></li>
                                         </ul>
                                     </li>
                                     <li class="has-children">
                                         <a href="#">LARGE APPLIANCES</a>
                                         <ul class="is-hidden">
                                             <li class="go-back"><a href="#">All Electronics </a></li>
-                                            <li><a href="../../products.jsp">Refrigerators</a></li>
-                                            <li><a href="../../products.jsp">Washing Machine</a></li>
-                                            <li><a href="../../products.jsp">Office Technology</a></li>
-                                            <li><a href="../../products.jsp">Air conditioner</a></li>
-                                            <li><a href="../../products.jsp">Home Automation</a></li>
+                                            <li><a href="products.jsp">Refrigerators</a></li>
+                                            <li><a href="products.jsp">Washing Machine</a></li>
+                                            <li><a href="products.jsp">Office Technology</a></li>
+                                            <li><a href="products.jsp">Air conditioner</a></li>
+                                            <li><a href="products.jsp">Home Automation</a></li>
                                         </ul>
                                     </li>
                                     <li class="has-children">
                                         <a href="#">ENTERTAINMENT</a>
                                         <ul class="is-hidden">
                                             <li class="go-back"><a href="#">All Electronics</a></li>
-                                            <li><a href="../../products.jsp">Tv & Accessories</a></li>
-                                            <li><a href="../../products.jsp">Digital Camera</a></li>
-                                            <li><a href="../../products.jsp">Gaming</a></li>
-                                            <li><a href="../../products.jsp">Home Audio & Theater</a></li>
+                                            <li><a href="products.jsp">Tv & Accessories</a></li>
+                                            <li><a href="products.jsp">Digital Camera</a></li>
+                                            <li><a href="products.jsp">Gaming</a></li>
+                                            <li><a href="products.jsp">Home Audio & Theater</a></li>
                                             <li class="has-children">
                                                 <a href="#">Computer</a>
                                                 <ul class="is-hidden">
                                                     <li class="go-back"><a href="#"> </a></li>
-                                                    <li><a href="../../products.jsp">Laptop </a></li>
-                                                    <li><a href="../../products.jsp">Gaming PC</a></li>
-                                                    <li><a href="../../products.jsp">Monitors</a></li>
-                                                    <li><a href="../../products.jsp">Networking</a></li>
-                                                    <li><a href="../../products.jsp">Printers & Supplies</a></li>
-                                                    <li><a href="../../products.jsp">Accessories</a></li>
+                                                    <li><a href="products.jsp">Laptop </a></li>
+                                                    <li><a href="products.jsp">Gaming PC</a></li>
+                                                    <li><a href="products.jsp">Monitors</a></li>
+                                                    <li><a href="products.jsp">Networking</a></li>
+                                                    <li><a href="products.jsp">Printers & Supplies</a></li>
+                                                    <li><a href="products.jsp">Accessories</a></li>
                                                 </ul>
                                             </li>
                                         </ul>
@@ -185,53 +185,53 @@
                                             <li class="has-children"><a href="#">Kitchen appliances</a>
                                                 <ul class="is-hidden">
                                                     <li class="go-back"><a href="#0"> </a></li>
-                                                    <li><a href="../../products.jsp">Rice Cookers</a></li>
-                                                    <li><a href="../../products.jsp">Mixer Juicer</a></li>
-                                                    <li><a href="../../products.jsp">Grinder</a></li>
-                                                    <li><a href="../../products.jsp">Blenders & Choppers</a></li>
-                                                    <li><a href="../../products.jsp">Microwave Oven</a></li>
-                                                    <li><a href="../../products.jsp">Food Processors</a></li>
+                                                    <li><a href="products.jsp">Rice Cookers</a></li>
+                                                    <li><a href="products.jsp">Mixer Juicer</a></li>
+                                                    <li><a href="products.jsp">Grinder</a></li>
+                                                    <li><a href="products.jsp">Blenders & Choppers</a></li>
+                                                    <li><a href="products.jsp">Microwave Oven</a></li>
+                                                    <li><a href="products.jsp">Food Processors</a></li>
                                                 </ul>
                                             </li>
-                                            <li><a href="../../products.jsp">Purifiers</a></li>
-                                            <li><a href="../../products.jsp">Geysers</a></li>
-                                            <li><a href="../../products.jsp">Gas Stove</a></li>
-                                            <li><a href="../../products.jsp">Vacuum Cleaner</a></li>
-                                            <li><a href="../../products.jsp">Sewing Machine</a></li>
-                                            <li><a href="../../products.jsp">Heaters & Fans</a></li>
+                                            <li><a href="products.jsp">Purifiers</a></li>
+                                            <li><a href="products.jsp">Geysers</a></li>
+                                            <li><a href="products.jsp">Gas Stove</a></li>
+                                            <li><a href="products.jsp">Vacuum Cleaner</a></li>
+                                            <li><a href="products.jsp">Sewing Machine</a></li>
+                                            <li><a href="products.jsp">Heaters & Fans</a></li>
                                         </ul>
                                     </li>
                                     <li class="has-children">
                                         <a href="#">SMALL DEVICES</a>
                                         <ul class="is-hidden">
                                             <li class="go-back"><a href="#0">All Electronics </a></li>
-                                            <li><a href="../../products.jsp">Wifi Dongle</a></li>
-                                            <li><a href="../../products.jsp">Router & Modem</a></li>
+                                            <li><a href="products.jsp">Wifi Dongle</a></li>
+                                            <li><a href="products.jsp">Router & Modem</a></li>
                                             <li class="has-children"><a href="#">Storage Devices</a>
                                                 <ul class="is-hidden">
                                                     <li class="go-back"><a href="#0"> </a></li>
-                                                    <li><a href="../../products.jsp">Cloud Storage</a></li>
-                                                    <li><a href="../../products.jsp">Hard Disk</a></li>
-                                                    <li><a href="../../products.jsp">SSD</a></li>
-                                                    <li><a href="../../products.jsp">Pen Drive</a></li>
-                                                    <li><a href="../../products.jsp">Memory card</a></li>
-                                                    <li><a href="../../products.jsp">Security Devices</a></li>
+                                                    <li><a href="products.jsp">Cloud Storage</a></li>
+                                                    <li><a href="products.jsp">Hard Disk</a></li>
+                                                    <li><a href="products.jsp">SSD</a></li>
+                                                    <li><a href="products.jsp">Pen Drive</a></li>
+                                                    <li><a href="products.jsp">Memory card</a></li>
+                                                    <li><a href="products.jsp">Security Devices</a></li>
                                                 </ul>
                                             </li>
-                                            <li><a href="../../products.jsp">Office Supplies</a></li>
-                                            <li><a href="../../products.jsp">Cut the Cable</a></li>
-                                            <li><a href="../../products.jsp">Auto Electronics</a></li>
+                                            <li><a href="products.jsp">Office Supplies</a></li>
+                                            <li><a href="products.jsp">Cut the Cable</a></li>
+                                            <li><a href="products.jsp">Auto Electronics</a></li>
                                         </ul>
                                     </li>
                                     <li class="has-children">
                                         <a href="#">PERSONAL CARE</a>
                                         <ul class="is-hidden">
                                             <li class="go-back"><a href="#0">All Electronics </a></li>
-                                            <li><a href="../../products.jsp">Epilator</a></li>
-                                            <li><a href="../../products.jsp">Hair Styler</a></li>
-                                            <li><a href="../../products.jsp">Trimmer & Shaver</a></li>
-                                            <li><a href="../../products.jsp">Health Care</a></li>
-                                            <li><a href="../../products.jsp">cables</a></li>
+                                            <li><a href="products.jsp">Epilator</a></li>
+                                            <li><a href="products.jsp">Hair Styler</a></li>
+                                            <li><a href="products.jsp">Trimmer & Shaver</a></li>
+                                            <li><a href="products.jsp">Health Care</a></li>
+                                            <li><a href="products.jsp">cables</a></li>
                                         </ul>
                                     </li>
                                 </ul> <!-- .cd-secondary-dropdown -->
@@ -885,13 +885,13 @@
                                     </li>
                                 </ul><!-- .cd-secondary-dropdown -->
                             </li>
-                            <li><a href="../../sitemap.jsp">Full Site Directory </a></li>
+                            <li><a href="sitemap.jsp">Full Site Directory </a></li>
                         </ul> <!-- .cd-dropdown-content -->
                     </nav> <!-- .cd-dropdown -->
                 </div> <!-- .cd-dropdown-wrapper -->
             </div>
             <div class="move-text">
-                <div class="marquee"><a href="../../offers.jsp"> New collections are available here......
+                <div class="marquee"><a href="offers.jsp"> New collections are available here......
                     <span>Get extra 10% off on everything | no extra taxes </span>
                     <span> Try shipping pass free for 15 days with unlimited</span></a></div>
                 <script type="text/javascript" src="../../res/script/jquery.marquee.min.js"></script>

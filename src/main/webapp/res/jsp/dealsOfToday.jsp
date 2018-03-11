@@ -17,13 +17,13 @@
         <h3 class="w3ls-title">DEALS OF THE DAY </h3>
         <div class="deals-row">
             <div class="col-md-3 focus-grid">
-                <a href="../../products.jsp" class="wthree-btn">
+                <a href="products.jsp" class="wthree-btn">
                     <div class="focus-image"><i class="fa fa-mobile"></i></div>
                     <h4 class="clrchg">Mobiles</h4>
                 </a>
             </div>
             <div class="col-md-3 focus-grid">
-                <a href="../../products.jsp" class="wthree-btn wthree1">
+                <a href="products.jsp" class="wthree-btn wthree1">
                     <div class="focus-image"><i class="fa fa-laptop"></i></div>
                     <h4 class="clrchg"> Electronics & Appliances</h4>
                 </a>

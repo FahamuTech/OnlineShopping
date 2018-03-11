@@ -24,18 +24,18 @@ Implemented by FahamuTech
         window.scrollTo(0, 1);
     } </script>
     <!-- Custom Theme files -->
-    <link href="res/style/bootstrap.css" rel="stylesheet" type="text/css" media="all"/>
-    <link href="res/style/style.css" rel="stylesheet" type="text/css" media="all"/>
-    <link href="res/style/menu.css" rel="stylesheet" type="text/css" media="all"/> <!-- menu style -->
-    <link href="res/style/animate.min.css" rel="stylesheet" type="text/css" media="all"/>
-    <link href="res/style/owl.carousel.css" rel="stylesheet" type="text/css" media="all"> <!-- carousel slider -->
+    <link href="../style/bootstrap.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="../style/style.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="../style/menu.css" rel="stylesheet" type="text/css" media="all"/> <!-- menu style -->
+    <link href="../style/animate.min.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="../style/owl.carousel.css" rel="stylesheet" type="text/css" media="all"> <!-- carousel slider -->
     <!-- //Custom Theme files -->
     <!-- font-awesome icons -->
-    <link href="res/style/font-awesome.css" rel="stylesheet">
+    <link href="../style/font-awesome.css" rel="stylesheet">
     <!-- //font-awesome icons -->
     <!-- js -->
-    <script src="res/script/jquery-2.2.3.min.js"></script>
-    <script src="res/script/owl.carousel.js"></script>
+    <script src="../script/jquery-2.2.3.min.js"></script>
+    <script src="../script/owl.carousel.js"></script>
     <!-- //js -->
     <!-- web-fonts -->
     <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic'
@@ -45,7 +45,7 @@ Implemented by FahamuTech
     <link href='https://fonts.googleapis.com/css?family=Tangerine:400,700' rel='stylesheet' type='text/css'>
     <!-- web-fonts -->
     <!-- scroll to fixed-->
-    <script src="res/script/jquery-scrolltofixed-min.js" type="text/javascript"></script>
+    <script src="../script/jquery-scrolltofixed-min.js" type="text/javascript"></script>
     <script>
         $(document).ready(function () {
 
@@ -68,8 +68,8 @@ Implemented by FahamuTech
     </script>
     <!-- //scroll to fixed-->
     <!-- start-smooth-scrolling -->
-    <script type="text/javascript" src="res/script/move-top.js"></script>
-    <script type="text/javascript" src="res/script/easing.js"></script>
+    <script type="text/javascript" src="../script/move-top.js"></script>
+    <script type="text/javascript" src="../script/easing.js"></script>
     <script type="text/javascript">
         jQuery(document).ready(function ($) {
             $(".scroll").click(function (event) {
@@ -96,19 +96,19 @@ Implemented by FahamuTech
     </script>
     <!-- //smooth-scrolling-of-move-up -->
     <!-- the jScrollPane script -->
-    <script type="text/javascript" src="res/script/jquery.jscrollpane.min.js"></script>
+    <script type="text/javascript" src="../script/jquery.jscrollpane.min.js"></script>
     <script type="text/javascript" id="sourcecode">
         $(function () {
             $('.scroll-pane').jScrollPane();
         });
     </script>
     <!-- //the jScrollPane script -->
-    <script type="text/javascript" src="res/script/jquery.mousewheel.js"></script>
+    <script type="text/javascript" src="../script/jquery.mousewheel.js"></script>
     <!-- the mousewheel plugin -->
 </head>
 <body>
 <!-- header -->
-<jsp:include page="res/jsp/head.jsp"/>
+<jsp:include page="head.jsp"/>
 <!-- //header -->
 <!-- products -->
 <div class="products">
@@ -665,9 +665,9 @@ Implemented by FahamuTech
                 <div class="item">
                     <div class="glry-w3agile-grids agileits">
                         <div class="new-tag"><h6>20% <br> Off</h6></div>
-                        <a href="products1.html"><img src="images/f2.png" alt="img"></a>
+                        <a href="../../products1.html"><img src="images/f2.png" alt="img"></a>
                         <div class="view-caption agileits-w3layouts">
-                            <h4><a href="products1.html">Women Sandal</a></h4>
+                            <h4><a href="../../products1.html">Women Sandal</a></h4>
                             <p>Lorem ipsum dolor sit amet consectetur</p>
                             <h5>$20</h5>
                             <form action="#" method="post">
@@ -704,9 +704,9 @@ Implemented by FahamuTech
                 <div class="item">
                     <div class="glry-w3agile-grids agileits">
                         <div class="new-tag"><h6>New</h6></div>
-                        <a href="products4.html"><img src="images/s1.png" alt="img"></a>
+                        <a href="../../products4.html"><img src="images/s1.png" alt="img"></a>
                         <div class="view-caption agileits-w3layouts">
-                            <h4><a href="products4.html">Roller Skates</a></h4>
+                            <h4><a href="../../products4.html">Roller Skates</a></h4>
                             <p>Lorem ipsum dolor sit amet consectetur</p>
                             <h5>$180</h5>
                             <form action="#" method="post">
@@ -723,9 +723,9 @@ Implemented by FahamuTech
                 </div>
                 <div class="item">
                     <div class="glry-w3agile-grids agileits">
-                        <a href="products1.html"><img src="images/f1.png" alt="img"></a>
+                        <a href="../../products1.html"><img src="images/f1.png" alt="img"></a>
                         <div class="view-caption agileits-w3layouts">
-                            <h4><a href="products1.html">T Shirt</a></h4>
+                            <h4><a href="../../products1.html">T Shirt</a></h4>
                             <p>Lorem ipsum dolor sit amet consectetur</p>
                             <h5>$10</h5>
                             <form action="#" method="post">
@@ -743,9 +743,9 @@ Implemented by FahamuTech
                 <div class="item">
                     <div class="glry-w3agile-grids agileits">
                         <div class="new-tag"><h6>New</h6></div>
-                        <a href="products6.html"><img src="images/p1.png" alt="img"></a>
+                        <a href="../../products6.html"><img src="images/p1.png" alt="img"></a>
                         <div class="view-caption agileits-w3layouts">
-                            <h4><a href="products6.html">Coffee Mug</a></h4>
+                            <h4><a href="../../products6.html">Coffee Mug</a></h4>
                             <p>Lorem ipsum dolor sit amet consectetur</p>
                             <h5>$14</h5>
                             <form action="#" method="post">
@@ -763,9 +763,9 @@ Implemented by FahamuTech
                 <div class="item">
                     <div class="glry-w3agile-grids agileits">
                         <div class="new-tag"><h6>20% <br> Off</h6></div>
-                        <a href="products6.html"><img src="images/p2.png" alt="img"></a>
+                        <a href="../../products6.html"><img src="images/p2.png" alt="img"></a>
                         <div class="view-caption agileits-w3layouts">
-                            <h4><a href="products6.html">Teddy bear</a></h4>
+                            <h4><a href="../../products6.html">Teddy bear</a></h4>
                             <p>Lorem ipsum dolor sit amet consectetur</p>
                             <h5>$20</h5>
                             <form action="#" method="post">
@@ -782,9 +782,9 @@ Implemented by FahamuTech
                 </div>
                 <div class="item">
                     <div class="glry-w3agile-grids agileits">
-                        <a href="products4.html"><img src="images/s2.png" alt="img"></a>
+                        <a href="../../products4.html"><img src="images/s2.png" alt="img"></a>
                         <div class="view-caption agileits-w3layouts">
-                            <h4><a href="products4.html">Football</a></h4>
+                            <h4><a href="../../products4.html">Football</a></h4>
                             <p>Lorem ipsum dolor sit amet consectetur</p>
                             <h5>$70</h5>
                             <form action="#" method="post">
@@ -802,9 +802,9 @@ Implemented by FahamuTech
                 <div class="item">
                     <div class="glry-w3agile-grids agileits">
                         <div class="new-tag"><h6>Sale</h6></div>
-                        <a href="products3.html"><img src="images/h1.png" alt="img"></a>
+                        <a href="../../products3.html"><img src="images/h1.png" alt="img"></a>
                         <div class="view-caption agileits-w3layouts">
-                            <h4><a href="products3.html">Wall Clock</a></h4>
+                            <h4><a href="../../products3.html">Wall Clock</a></h4>
                             <p>Lorem ipsum dolor sit amet consectetur</p>
                             <h5>$80</h5>
                             <form action="#" method="post">
@@ -826,13 +826,13 @@ Implemented by FahamuTech
 </div>
 <!--//products-->
 <!-- footer-top -->
-<jsp:include page="res/jsp/footerTop.jsp"/>
+<jsp:include page="footerTop.jsp"/>
 <!-- cart-js -->
-<jsp:include page="res/jsp/headScript.jsp"/>
+<jsp:include page="headScript.jsp"/>
 <!-- //menu js aim -->
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="res/script/bootstrap.js"></script>
+<script src="../script/bootstrap.js"></script>
 </body>
 </html>
