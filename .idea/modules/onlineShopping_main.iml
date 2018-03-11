@@ -19,14 +19,22 @@
     <orderEntry type="jdk" jdkName="1.8" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Gradle: mysql:mysql-connector-java:5.1.6" level="project" />
+    <orderEntry type="library" name="Gradle: javax.servlet.jsp:javax.servlet.jsp-api:2.3.1" level="project" />
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="file://$MODULE_DIR$/../../lib" />
+          <root url="jar://$MODULE_DIR$/../../lib/javax.ejb.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../lib/javax.jms.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../lib/javax.servlet.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../lib/javax.resource.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../lib/javax.annotation.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../lib/javax.persistence.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../lib/javax.servlet.jsp.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../lib/javax.transaction.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../lib/javax.servlet.jsp.jstl.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
-        <jarDirectory url="file://$MODULE_DIR$/../../lib" recursive="false" />
       </library>
     </orderEntry>
   </component>

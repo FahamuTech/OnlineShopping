@@ -12,13 +12,12 @@ License: Creative Commons Attribution 3.0 Un ported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<jsp:useBean id="main" class="homepage.Main"/>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <title>
-        <jsp:getProperty name="main" property="webSiteName"/>
+        <%--<jsp:getProperty name="main" property="webSiteName"/>--%>
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>

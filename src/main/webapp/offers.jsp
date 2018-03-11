@@ -5,7 +5,7 @@ License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 <%@ page contentType="text/html; charset=UTF-8"%>
-<jsp:useBean id="main" class="homepage.Main"/>
+<jsp:useBean id="main" class="homeServlet.Main"/>
 <!DOCTYPE html>
 <html lang="en">
 <head>

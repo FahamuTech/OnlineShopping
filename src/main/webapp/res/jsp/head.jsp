@@ -6,7 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<jsp:useBean id="main" class="homepage.Main"/>
+<%--<jsp:useBean id="main" class="homeServlet.Main"/>--%>
 
 <body>
 <!-- header -->
@@ -85,7 +85,7 @@
         <div class="container">
             <div class="header-logo">
                 <h1><a href="../../index.jsp"><span>O</span>nline <i>Shopping</i></a></h1>
-                <h5><jsp:getProperty name="main" property="webSiteDescription"/></h5>
+                <%--<h5><jsp:getProperty name="main" property="webSiteDescription"/></h5>--%>
             </div>
             <div class="header-search">
                 <form action="#" method="post">
