@@ -1,11 +1,4 @@
-/*
-	JavaScript For Responsive Bootstrap Carousel
 
-    Author: Razboynik
-    Author URI: http://filwebs.ru
-    Description: Bootstrap Carousel Effect Ken Burns
-
-*/
 
 $(function ($) {
 

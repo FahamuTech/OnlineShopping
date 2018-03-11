@@ -19,5 +19,6 @@
         <jarDirectory url="file://$MODULE_DIR$/../../lib" recursive="false" />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="webfont" level="application" />
   </component>
 </module>

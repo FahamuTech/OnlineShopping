@@ -256,7 +256,7 @@ ul.cd-dropdown-content li {
 /*-- header-three --*/ 
 .header-three {
     border-bottom: 1px solid #eaeaea; 
-    background: url(../../res/img/bg.png)#08bce4 no-repeat;
+    background: url(../img/bg.png)#08bce4 no-repeat;
     background-size: cover;  
 }
 /*-- //header-three --*/
@@ -725,7 +725,7 @@ p {
 }
 .w3agile-ftr-top {
     padding: 4em 0;
-    background: url(../../res/img/bg1.jpg)no-repeat center 0px;
+    background: url(../img/footer/bg1.jpg)no-repeat center 0px;
 	background-size: cover; 
 }
 .ftr-top-left {
@@ -774,7 +774,7 @@ p {
 .soon{
     margin-top: 5em;
 	padding:5em 0;
-    background: url(../../res/img/bg2.jpg)no-repeat center 0px;
+    background: url(../img/footer/bg2.jpg)no-repeat center 0px;
 	text-align: center;
 	background-size: cover;
 }
@@ -953,7 +953,7 @@ p {
 /*-- footer --*/
 .footer {
     padding-top: 5em;
-    background: url(../../res/img/bg.png)#42d406 no-repeat;
+    background: url(../img/bg.png)#42d406 no-repeat;
     background-size: cover;
 }
 .footer-logo.header-logo {
@@ -1613,7 +1613,7 @@ h3.w3ls-title.w3ls-title1 {
     text-align: right; 
 }
 .offer-bottom-grids-info2{
-    background: url(../../res/img/bg2.jpg)no-repeat center 0px;
+    background: url(../img/footer/bg2.jpg)no-repeat center 0px;
     background-size: cover; 
 }
 .offer-bottom-grids h4 {
@@ -1726,7 +1726,7 @@ h3.w3ls-title.w3ls-title1 {
 /*-- card-page --*/
 .agile-card-top {
     padding: 4em  5em;
-    background: url(../../res/img/bg.png)#4dff03 no-repeat;
+    background: url(../img/bg.png)#4dff03 no-repeat;
     background-size: cover;
 }
 .card-top-grids {

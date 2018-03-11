@@ -12,12 +12,13 @@ License: Creative Commons Attribution 3.0 Un ported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<jsp:useBean id="constant" class="utils.Constants"/>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <title>
-        <%--<jsp:getProperty name="main" property="webSiteName"/>--%>
+        <jsp:getProperty name="constant" property="webSiteName"/>
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -31,7 +32,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     } </script>
     <!-- Custom Theme files -->
 
-    <link href="res/style/bootstrap.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="<%=request.getContextPath()%>/res/style/bootstrap.css" rel="Stylesheet" type="text/css" media="all"/>
     <link href="res/style/style.css" rel="stylesheet" type="text/css" media="all"/>
     <link href="res/style/menu.css" rel="stylesheet" type="text/css" media="all"/> <!-- menu style -->
     <link href="res/style/ken-burns.css" rel="stylesheet" type="text/css" media="all"/> <!-- banner slider -->
@@ -45,12 +46,21 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <script src="res/script/jquery-2.2.3.min.js"></script>
     <!-- //js -->
     <!-- web-fonts -->
-    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic'
-          rel='stylesheet' type='text/css'>
+    <%--<link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic'--%>
+          <%--rel='stylesheet' type='text/css'>--%>
     <link href='https://fonts.googleapis.com/css?family=Lovers+Quarrel' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Offside' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Tangerine:400,700' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script>
+        WebFont.load({
+            google: {
+                families: ['Droid Sans', 'Droid Serif']
+            }
+        });
+    </script>
     <!-- web-fonts -->
+
     <script src="res/script/owl.carousel.js"></script>
     <script>
         $(document).ready(function () {

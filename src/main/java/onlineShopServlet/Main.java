@@ -1,5 +1,6 @@
-package homeServlet;
+package onlineShopServlet;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.ServletOutputStream;
 import javax.servlet.annotation.WebServlet;
@@ -8,28 +9,30 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-
-@WebServlet(urlPatterns = {"/*"})
+@WebServlet(urlPatterns = {"/"})
 public class Main extends HttpServlet {
 
       private static final long serialVersionUID = 1L;
 
-
     @Override
     protected void doGet(HttpServletRequest request,
-                         HttpServletResponse response) throws ServletException, IOException {
+                         HttpServletResponse response) throws IOException {
 
-
-
-        response.sendRedirect("/about");
+        //RequestDispatcher requestDispatcher=getServletContext().getRequestDispatcher("/main.jsp");
+        response.sendRedirect("/main.jsp");
+//        try {
+//            requestDispatcher.forward(request,response);
+//        } catch (ServletException e) {
+//            e.printStackTrace();
+//        }
 //        ServletOutputStream out = response.getOutputStream();
 //
 //        out.println("<html>");
-//        out.println("<head><title>Hello Servlet</title></head>");
+//        out.println("<head><title>Online Shopping</title></head>");
 //
 //        out.println("<body>");
 //        out.println("<h3>Hello World</h3>");
-//        out.println("any url");
+//        out.println("This is Home Page");
 //        out.println("</body>");
 //        out.println("<html>");
     }

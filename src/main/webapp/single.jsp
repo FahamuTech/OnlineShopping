@@ -6,7 +6,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 Implemented by Fahamutech
 -->
 <%@ page contentType="text/html; charset=UTF-8" language="java" %>
-<jsp:useBean id="main" class="homeServlet.Main"/>
+<jsp:useBean id="main" class="onlineShopServlet.Main"/>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -118,7 +118,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 <!-- breadcrumbs -->
 <div class="container">
     <ol class="breadcrumb breadcrumb1">
-        <li><a href="index.jsp">Home</a></li>
+        <li><a href="main.jsp">Home</a></li>
         <li class="active">Single Page</li>
     </ol>
     <div class="clearfix"></div>
