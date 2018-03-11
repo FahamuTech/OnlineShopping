@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(urlPatterns = {"/error"})
+//@WebServlet(urlPatterns = {"/error"})
 public class PageNotFound extends HttpServlet {
 
     @Override

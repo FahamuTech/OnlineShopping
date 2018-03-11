@@ -1,13 +1,15 @@
 package onlineShopServlet;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.ServletOutputStream;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.File;
 import java.io.IOException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 @WebServlet(urlPatterns = {"/"})
 public class Main extends HttpServlet {
@@ -18,23 +20,26 @@ public class Main extends HttpServlet {
     protected void doGet(HttpServletRequest request,
                          HttpServletResponse response) throws IOException {
 
-        //RequestDispatcher requestDispatcher=getServletContext().getRequestDispatcher("/main.jsp");
-        response.sendRedirect("/main.jsp");
+        String main=getServletContext().getRealPath("");
+        Path paths=Paths.get(main,"main.jsp");
+        File file=new File(paths.toString());
+//        RequestDispatcher requestDispatcher=getServletContext().getRequestDispatcher("/main.jsp");
+//            response.sendRedirect("/main.jsp");
 //        try {
 //            requestDispatcher.forward(request,response);
 //        } catch (ServletException e) {
 //            e.printStackTrace();
 //        }
-//        ServletOutputStream out = response.getOutputStream();
-//
-//        out.println("<html>");
-//        out.println("<head><title>Online Shopping</title></head>");
-//
-//        out.println("<body>");
-//        out.println("<h3>Hello World</h3>");
-//        out.println("This is Home Page");
-//        out.println("</body>");
-//        out.println("<html>");
+        ServletOutputStream out = response.getOutputStream();
+
+        out.println("<html>");
+        out.println("<head><title>Online Shopping</title></head>");
+
+        out.println("<body>");
+        out.println("<h3>Hello World</h3>");
+        out.println("This is Home Page");
+        out.println("</body>");
+        out.println("<html>");
     }
 
     @Override

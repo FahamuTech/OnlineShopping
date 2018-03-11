@@ -1,16 +1,4 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: olive
-  Date: 3/7/18
-  Time: 10:42 PM
-  To change this template use File | Settings | File Templates.
---%>
-<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Un ported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <jsp:useBean id="constant" class="utils.Constants"/>
 <!DOCTYPE html>
@@ -32,7 +20,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     } </script>
     <!-- Custom Theme files -->
 
-    <link href="<%=request.getContextPath()%>/res/style/bootstrap.css" rel="Stylesheet" type="text/css" media="all"/>
+    <%--<link href="${pageContext.request.contextPath}/res/style/bootstrap.css" rel="stylesheet" type="text/css" media="all"/>--%>
+    <link href="res/style/bootstrap.css" rel="Stylesheet" type="text/css" media="all"/>
     <link href="res/style/style.css" rel="stylesheet" type="text/css" media="all"/>
     <link href="res/style/menu.css" rel="stylesheet" type="text/css" media="all"/> <!-- menu style -->
     <link href="res/style/ken-burns.css" rel="stylesheet" type="text/css" media="all"/> <!-- banner slider -->

@@ -14,8 +14,8 @@ import javax.servlet.annotation.WebInitParam;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebFilter(urlPatterns = {"*.png", "*.jpg", "*.gif"}, initParams = {
-        @WebInitParam(name = "notFoundImage", value = "/res/img/3.jpg")})
+//@WebFilter(urlPatterns = {"*.png", "*.jpg", "*.gif"}, initParams = {
+//        @WebInitParam(name = "notFoundImage", value = "/res/img/3.jpg")})
 public class ImageFilter implements Filter {
 
     private String notFoundImage;
