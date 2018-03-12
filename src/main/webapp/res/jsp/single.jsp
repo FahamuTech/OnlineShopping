@@ -118,7 +118,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 <!-- breadcrumbs -->
 <div class="container">
     <ol class="breadcrumb breadcrumb1">
-        <li><a href="../../main.jsp">Home</a></li>
+        <li><a href="../../index.jsp">Home</a></li>
         <li class="active">Single Page</li>
     </ol>
     <div class="clearfix"></div>

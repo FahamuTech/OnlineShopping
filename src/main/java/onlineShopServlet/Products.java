@@ -1,29 +1,18 @@
 package onlineShopServlet;
 
 import javax.servlet.ServletException;
-import javax.servlet.ServletOutputStream;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-//@WebServlet(urlPatterns = {"/"})
-public class PageNotFound extends HttpServlet {
+@WebServlet(urlPatterns = {"/products"})
+public class Products extends HttpServlet{
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-//        ServletOutputStream out = resp.getOutputStream();
-//
-//        out.println("<html>");
-//        out.println("<head><title>Hello Servlet</title></head>");
-//
-//        out.println("<body>");
-//        out.println("<h3>Page Note Found</h3>");
-//        out.println("go back to<a href=\"/home\">Home</a>");
-//        out.println("</body>");
-//        out.println("<html>");
-        //resp.sendRedirect("/index.jsp");
+        req.getRequestDispatcher("/res/jsp/products.jsp").forward(req,resp);
     }
 
     @Override

@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: olive
@@ -6,13 +7,8 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <title>head script</title>
-</head>
-<body>
 <!-- cart-js -->
-<script src="../../res/script/minicart.js"></script>
+<script src="<c:url value="/res/script/minicart.js"/>"></script>
 <script>
     w3ls.render();
 
@@ -31,8 +27,6 @@
 </script>
 <!-- //cart-js -->
 <!-- menu js aim -->
-<script src="../../res/script/jquery.menu-aim.js"></script>
-<script src="../../res/script/main.js"></script> <!-- Resource jQuery -->
+<script src="<c:url value="/res/script/jquery.menu-aim.js"/>"></script>
+<script src="<c:url value="/res/script/main.js"/>"></script> <!-- Resource jQuery -->
 <!-- //menu js aim -->
-</body>
-</html>

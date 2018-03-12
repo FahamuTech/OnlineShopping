@@ -20,7 +20,7 @@ public class About extends HttpServlet {
 
         out.println("<body>");
         out.println("<h3>Hello World</h3>");
-        out.println("Redirected ");
+        out.println("Redirected home <a href=\"home\">Home</a>");
         out.println("</body>");
         out.println("<html>");
 

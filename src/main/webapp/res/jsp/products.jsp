@@ -6,13 +6,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 Implemented by FahamuTech
 -->
 <%@ page contentType="text/html; charset=UTF-8"  language="java" %>
-<jsp:useBean id="main" class="onlineShopServlet.Main"/>
+<jsp:useBean id="constant" class="utils.Constants"/>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <title>
-        <jsp:getProperty name="main" property="webSiteName"/>
+        <jsp:getProperty name="constant" property="webSiteName"/>
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>

@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: olive
@@ -7,8 +8,6 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%--<jsp:useBean id="main" class="onlineShopServlet.Main"/>--%>
-
-<body>
 <!-- header -->
 <div class="header ">
     <nav class="navbar navbar-inverse" style="border-radius: 0">
@@ -84,7 +83,7 @@
     <div class="header-two"><!-- header-two -->
         <div class="container">
             <div class="header-logo">
-                <h1><a href="../../main.jsp"><span>O</span>nline <i>Shopping</i></a></h1>
+                <h1><a href="<c:url value="/home"/>"><span>O</span>nline <i>Shopping</i></a></h1>
                 <%--<h5><jsp:getProperty name="main" property="webSiteDescription"/></h5>--%>
             </div>
             <div class="header-search">
@@ -904,5 +903,5 @@
     </div>
 </div>
 <!-- //header -->
-</body>
+
 

@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!--
 Author: W3layouts
 Author URL: http://w3layouts.com
@@ -6,12 +7,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 Implemented by FahamuTech
 -->
 <%@ page contentType="text/html; charset=UTF-8" language="java" %>
-<jsp:useBean id="main" class="onlineShopServlet.Main"/>
+<jsp:useBean id="constants" class="utils.Constants"/>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <title>
-        <jsp:getProperty name="main" property="webSiteName"/>
+        <jsp:getProperty name="constants" property="webSiteName"/>
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -23,16 +24,16 @@ Implemented by FahamuTech
         window.scrollTo(0, 1);
     } </script>
     <!-- Custom Theme files -->
-    <link href="../style/bootstrap.css" rel="stylesheet" type="text/css" media="all"/>
-    <link href="../style/style.css" rel="stylesheet" type="text/css" media="all"/>
-    <link href="../style/animate.min.css" rel="stylesheet" type="text/css" media="all"/><!-- animation -->
-    <link href="../style/menu.css" rel="stylesheet" type="text/css" media="all"/> <!-- menu style -->
+    <link href="<c:url value="/res/style/bootstrap.css"/>" rel="stylesheet" type="text/css" media="all"/>
+    <link href="<c:url value="/res/style/style.css"/>" rel="stylesheet" type="text/css" media="all"/>
+    <link href="<c:url value="/res/style/animate.min.css"/>" rel="stylesheet" type="text/css" media="all"/><!-- animation -->
+    <link href="<c:url value="/res/style/menu.css"/>" rel="stylesheet" type="text/css" media="all"/> <!-- menu style -->
     <!-- //Custom Theme files -->
     <!-- font-awesome icons -->
-    <link href="../style/font-awesome.css" rel="stylesheet">
+    <link href="<c:url value="/res/style/font-awesome.css"/>" rel="stylesheet">
     <!-- //font-awesome icons -->
     <!-- js -->
-    <script src="../script/jquery-2.2.3.min.js"></script>
+    <script src="<c:url value="/res/script/jquery-2.2.3.min.js"/>"></script>
     <!-- //js -->
     <!-- web-fonts -->
     <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic'
@@ -41,8 +42,8 @@ Implemented by FahamuTech
     <link href='https://fonts.googleapis.com/css?family=Offside' rel='stylesheet' type='text/css'>
     <!-- web-fonts -->
     <!-- start-smooth-scrolling -->
-    <script type="text/javascript" src="../script/move-top.js"></script>
-    <script type="text/javascript" src="../script/easing.js"></script>
+    <script type="text/javascript" src="<c:url value="/res/script/move-top.js"/>"></script>
+    <script type="text/javascript" src="<c:url value="/res/script/easing.js"/>"></script>
     <script type="text/javascript">
         jQuery(document).ready(function ($) {
             $(".scroll").click(function (event) {

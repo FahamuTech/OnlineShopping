@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: olive
@@ -6,30 +7,25 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <title>deals</title>
-</head>
-<body>
 <!-- deals -->
 <div class="deals">
     <div class="container">
         <h3 class="w3ls-title">DEALS OF THE DAY </h3>
         <div class="deals-row">
             <div class="col-md-3 focus-grid">
-                <a href="products.jsp" class="wthree-btn">
+                <a href="<c:url var="/products"/>" class="wthree-btn">
                     <div class="focus-image"><i class="fa fa-mobile"></i></div>
                     <h4 class="clrchg">Mobiles</h4>
                 </a>
             </div>
             <div class="col-md-3 focus-grid">
-                <a href="products.jsp" class="wthree-btn wthree1">
+                <a href="<c:url var="/products"/>" class="wthree-btn wthree1">
                     <div class="focus-image"><i class="fa fa-laptop"></i></div>
                     <h4 class="clrchg"> Electronics & Appliances</h4>
                 </a>
             </div>
             <div class="col-md-3 focus-grid">
-                <a href="../../products4.html" class="wthree-btn wthree2">
+                <a href="<c:url var="/products"/>" class="wthree-btn wthree2">
                     <div class="focus-image"><i class="fa fa-wheelchair"></i></div>
                     <h4 class="clrchg">Furnitures</h4>
                 </a>
@@ -105,5 +101,4 @@
     </div>
 </div>
 <!-- //deals -->
-</body>
-</html>
+

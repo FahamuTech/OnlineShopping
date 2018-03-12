@@ -6,11 +6,6 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <title>footerTop</title>
-</head>
-<body>
 <!-- footer-top -->
 <div class="w3agile-ftr-top ">
     <div class="container">
@@ -57,5 +52,4 @@
             by FahamuTech</p>
     </div>
 </div>
-</body>
-</html>
+
