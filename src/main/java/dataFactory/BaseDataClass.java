@@ -3,11 +3,11 @@ package dataFactory;
 import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
 
 import java.sql.Connection;
-import java.util.HashMap;
+import java.sql.SQLException;
 
-public abstract class BaseDataClass {
+public class BaseDataClass {
 
-    MysqlDataSource dataSource;
+    private MysqlDataSource dataSource;
 
     BaseDataClass(){
         dataSource=new MysqlDataSource();
@@ -17,9 +17,7 @@ public abstract class BaseDataClass {
         dataSource.setDatabaseName("OnlineShopping");
     }
 
-    public abstract void encryptData(HashMap<String,Object> values);
-    public abstract void decryptData(HashMap<String,Object> values);
-    public abstract void insertData(HashMap<String,Object> values);
-    public abstract boolean logIn(String email,String password, Connection connection);
-
+    public Connection getConnection() throws SQLException {
+        return dataSource.getConnection();
+    }
 }
