@@ -4,7 +4,6 @@ import dataFactory.HomePageData;
 import utils.Constants;
 
 import javax.servlet.*;
-import javax.servlet.annotation.WebServlet;
 import java.io.IOException;
 //
 //@WebServlet( urlPatterns = {"/home"})
@@ -19,7 +18,7 @@ public class HomePageFilter implements Filter {
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
             throws IOException, ServletException {
-        request.setAttribute(Constants.DB_CONN,homePageData.getCategories() );
+        request.setAttribute(Constants.DB_CATEGORIES,homePageData.getCategories() );
         chain.doFilter(request,response);
     }
 

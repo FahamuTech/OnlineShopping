@@ -12,6 +12,7 @@ public class Products extends HttpServlet{
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        System.out.println(req.getQueryString());
         req.getRequestDispatcher("/res/jsp/products.jsp").forward(req,resp);
     }
 

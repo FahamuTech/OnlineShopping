@@ -6,7 +6,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 Implemented by FahamuTech
 -->
 <%@ page contentType="text/html; charset=UTF-8"  language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <jsp:useBean id="constant" class="utils.Constants"/>
+
 
 <!DOCTYPE html>
 <html lang="en">

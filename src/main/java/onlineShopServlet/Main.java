@@ -3,8 +3,6 @@ package onlineShopServlet;
 import dataFactory.HomePageData;
 import utils.Constants;
 
-import javax.annotation.Resource;
-import javax.annotation.Resources;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -21,7 +19,7 @@ public class Main extends HttpServlet {
     protected void doGet(HttpServletRequest request,
                          HttpServletResponse response) throws IOException, ServletException {
             //response.sendRedirect("/index.jsp");
-        request.setAttribute(Constants.DB_CONN,homePageData.getCategories());
+        request.setAttribute(Constants.DB_CATEGORIES,homePageData.getCategories());
            request.getRequestDispatcher("/index.jsp").forward(request,response);
     }
 
