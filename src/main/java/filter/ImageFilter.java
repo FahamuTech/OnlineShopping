@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @WebFilter(urlPatterns = {"*.png", "*.jpg", "*.gif"}, initParams = {
-        @WebInitParam(name = "notFoundImage", value = "/res/img/3.jpg")})
+        @WebInitParam(name = "notFoundImage", value = "/res/img/not-found.png")})
 public class ImageFilter implements Filter {
 
     private String notFoundImage;
@@ -25,13 +25,13 @@ public class ImageFilter implements Filter {
 
     @Override
     public void init(FilterConfig fConfig) throws ServletException {
-
         // ==> /images/image-not-found.png
         notFoundImage = fConfig.getInitParameter("notFoundImage");
     }
 
     @Override
     public void destroy() {
+
     }
 
     @Override
@@ -49,13 +49,14 @@ public class ImageFilter implements Filter {
 
         // The absolute path of Image.
         String imageRealPath = realRootPath + servletPath;
+        if (imageRealPath.contains("//"))imageRealPath=imageRealPath.replace("//","/");
 
         System.out.println("imageRealPath = " + imageRealPath);
 
         File file = new File(imageRealPath);
 
         // Check image exists.
-        if (file.exists()) {
+        if (file.exists()&&file.isFile()) {
 
             System.out.println("File: File exist;   -->"+file.getAbsolutePath());
             // Go to the next element (filter or servlet) in chain

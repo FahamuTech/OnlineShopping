@@ -1,6 +1,7 @@
 package onlineShopServlet;
 
 import dataFactory.HomePageData;
+import dataFactory.ProductsData;
 import utils.Constants;
 
 import javax.servlet.ServletException;
@@ -13,12 +14,14 @@ import java.io.IOException;
 @WebServlet(urlPatterns = {"/home"})
 public class Main extends HttpServlet {
     private static final long serialVersionUID = 1L;
-
+    private ProductsData productsData=new ProductsData();
     @Override
     protected void doGet(HttpServletRequest request,
                          HttpServletResponse response) throws IOException, ServletException {
-            //response.sendRedirect("/index.jsp");
+
+           request.setAttribute(Constants.FEATURES_PRODUCT,productsData.getProductsByCategory(1));
            request.getRequestDispatcher("/index.jsp").forward(request,response);
+
     }
 
     @Override

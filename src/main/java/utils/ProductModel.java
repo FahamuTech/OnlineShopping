@@ -12,13 +12,19 @@ public class  ProductModel {
         public SimpleStringProperty model;
         public SimpleStringProperty image;
         public SimpleFloatProperty sell;
+        public SimpleStringProperty category;
 
-        public ProductByCategory(int id,String product,String model, String image, float sell){
+        public ProductByCategory(int id,String product,String model, String image,String category, float sell){
             this.id=new SimpleIntegerProperty(id);
             this.product=new SimpleStringProperty(product);
             this.model=new SimpleStringProperty(model);
             this.image=new SimpleStringProperty(image);
             this.sell=new SimpleFloatProperty(sell);
+            this.category=new SimpleStringProperty(category);
+        }
+
+        public void setCategory(String category) {
+            this.category.set(category);
         }
 
         public void setId(int id) {
@@ -61,6 +67,9 @@ public class  ProductModel {
             return product.get();
         }
 
+        public String getCategory() {
+            return category.get();
+        }
     }
 
 }

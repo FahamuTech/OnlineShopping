@@ -122,7 +122,10 @@ Implemented by FahamuTech
 <%
     ArrayList<ProductModel.ProductByCategory> products =
             (ArrayList<ProductModel.ProductByCategory>) request.getAttribute(Constants.PRODUCTS_BY_CATEGORY);
-    String query=request.getQueryString().replace("%20"," ");
+    String query=request.getQueryString();
+    if (query!=null){
+        query=query.replace("%20"," ");
+    }
 %>
 <!-- header -->
 <jsp:include page="head.jsp"/>
@@ -135,8 +138,10 @@ Implemented by FahamuTech
             <!-- breadcrumbs -->
             <ol class="breadcrumb breadcrumb1">
                 <li><a href="<c:url value="/home"/>">Home</a></li>
-                <li>Products</li>
-                <li class="active"><%=query%></li>
+                <%if(query==null){%>
+                    <li >Products</li>
+                     <li class="active"><%=query%></li>
+                <%}%>
             </ol>
             <div class="clearfix"></div>
             <!-- //breadcrumbs -->
@@ -452,7 +457,7 @@ Implemented by FahamuTech
 <%--<div class="col-md-3 product-grids">--%>
 <%--<div class="agile-products">--%>
 <%--<div class="new-tag"><h6>New</h6></div>--%>
-<%--<a href="single.jsp"><img src="images/e2.png" class="img-responsive" alt="img"></a>--%>
+<%--<a href="single.jsp"><img src="images/fridge.png" class="img-responsive" alt="img"></a>--%>
 <%--<div class="agile-product-text">--%>
 <%--<h5><a href="single.jsp">Refrigerator</a></h5>--%>
 <%--<h6>--%>
@@ -475,7 +480,7 @@ Implemented by FahamuTech
 <%--<div class="col-md-3 product-grids">--%>
 <%--<div class="agile-products">--%>
 <%--<div class="new-tag"><h6>5% <br> Off</h6></div>--%>
-<%--<a href="single.jsp"><img src="images/e3.png" class="img-responsive" alt="img"></a>--%>
+<%--<a href="single.jsp"><img src="images/smart.png" class="img-responsive" alt="img"></a>--%>
 <%--<div class="agile-product-text">--%>
 <%--<h5><a href="single.jsp">Smart Phone</a></h5>--%>
 <%--<h6>--%>
@@ -498,7 +503,7 @@ Implemented by FahamuTech
 <%--<div class="col-md-3 product-grids">--%>
 <%--<div class="agile-products">--%>
 <%--<div class="new-tag"><h6>New</h6></div>--%>
-<%--<a href="single.jsp"><img src="images/e4.png" class="img-responsive" alt="img"></a>--%>
+<%--<a href="single.jsp"><img src="images/camera.png" class="img-responsive" alt="img"></a>--%>
 <%--<div class="agile-product-text">--%>
 <%--<h5><a href="single.jsp">Digital Camera</a></h5>--%>
 <%--<h6>--%>
@@ -521,7 +526,7 @@ Implemented by FahamuTech
 <%--<div class="col-md-3 product-grids">--%>
 <%--<div class="agile-products">--%>
 <%--<div class="new-tag"><h6>New</h6></div>--%>
-<%--<a href="single.jsp"><img src="images/e4.png" class="img-responsive" alt="img"></a>--%>
+<%--<a href="single.jsp"><img src="images/camera.png" class="img-responsive" alt="img"></a>--%>
 <%--<div class="agile-product-text">--%>
 <%--<h5><a href="single.jsp">Digital Camera</a></h5>--%>
 <%--<h6>--%>
@@ -544,7 +549,7 @@ Implemented by FahamuTech
 <%--<div class="col-md-3 product-grids">--%>
 <%--<div class="agile-products">--%>
 <%--<div class="new-tag"><h6>5% <br> Off</h6></div>--%>
-<%--<a href="single.jsp"><img src="images/e3.png" class="img-responsive" alt="img"></a>--%>
+<%--<a href="single.jsp"><img src="images/smart.png" class="img-responsive" alt="img"></a>--%>
 <%--<div class="agile-product-text">--%>
 <%--<h5><a href="single.jsp">Smart Phone</a></h5>--%>
 <%--<h6>--%>
@@ -567,7 +572,7 @@ Implemented by FahamuTech
 <%--<div class="col-md-3 product-grids">--%>
 <%--<div class="agile-products">--%>
 <%--<div class="new-tag"><h6>20%<br>Off</h6></div>--%>
-<%--<a href="single.jsp"><img src="images/e1.png" class="img-responsive" alt="img"></a>--%>
+<%--<a href="single.jsp"><img src="images/subwoffer.png" class="img-responsive" alt="img"></a>--%>
 <%--<div class="agile-product-text">--%>
 <%--<h5><a href="single.jsp">Audio speaker</a></h5>--%>
 <%--<h6>--%>
@@ -590,7 +595,7 @@ Implemented by FahamuTech
 <%--<div class="col-md-3 product-grids">--%>
 <%--<div class="agile-products">--%>
 <%--<div class="new-tag"><h6>New</h6></div>--%>
-<%--<a href="single.jsp"><img src="images/e2.png" class="img-responsive" alt="img"></a>--%>
+<%--<a href="single.jsp"><img src="images/fridge.png" class="img-responsive" alt="img"></a>--%>
 <%--<div class="agile-product-text">--%>
 <%--<h5><a href="single.jsp">Refrigerator</a></h5>--%>
 <%--<h6>--%>
@@ -613,7 +618,7 @@ Implemented by FahamuTech
 <%--<div class="col-md-3 product-grids">--%>
 <%--<div class="agile-products">--%>
 <%--<div class="new-tag"><h6>20%<br>Off</h6></div>--%>
-<%--<a href="single.jsp"><img src="images/e1.png" class="img-responsive" alt="img"></a>--%>
+<%--<a href="single.jsp"><img src="images/subwoffer.png" class="img-responsive" alt="img"></a>--%>
 <%--<div class="agile-product-text">--%>
 <%--<h5><a href="single.jsp">Audio speaker</a></h5>--%>
 <%--<h6>--%>
@@ -636,7 +641,7 @@ Implemented by FahamuTech
 <%--<div class="col-md-3 product-grids">--%>
 <%--<div class="agile-products">--%>
 <%--<div class="new-tag"><h6>New</h6></div>--%>
-<%--<a href="single.jsp"><img src="images/e2.png" class="img-responsive" alt="img"></a>--%>
+<%--<a href="single.jsp"><img src="images/fridge.png" class="img-responsive" alt="img"></a>--%>
 <%--<div class="agile-product-text">--%>
 <%--<h5><a href="single.jsp">Refrigerator</a></h5>--%>
 <%--<h6>--%>
@@ -659,7 +664,7 @@ Implemented by FahamuTech
 <%--<div class="col-md-3 product-grids">--%>
 <%--<div class="agile-products">--%>
 <%--<div class="new-tag"><h6>5% <br> Off</h6></div>--%>
-<%--<a href="single.jsp"><img src="images/e3.png" class="img-responsive" alt="img"></a>--%>
+<%--<a href="single.jsp"><img src="images/smart.png" class="img-responsive" alt="img"></a>--%>
 <%--<div class="agile-product-text">--%>
 <%--<h5><a href="single.jsp">Smart Phone</a></h5>--%>
 <%--<h6>--%>
@@ -682,7 +687,7 @@ Implemented by FahamuTech
 <%--<div class="col-md-3 product-grids">--%>
 <%--<div class="agile-products">--%>
 <%--<div class="new-tag"><h6>New</h6></div>--%>
-<%--<a href="single.jsp"><img src="images/e4.png" class="img-responsive" alt="img"></a>--%>
+<%--<a href="single.jsp"><img src="images/camera.png" class="img-responsive" alt="img"></a>--%>
 <%--<div class="agile-product-text">--%>
 <%--<h5><a href="single.jsp">Digital Camera</a></h5>--%>
 <%--<h6>--%>
@@ -705,7 +710,7 @@ Implemented by FahamuTech
 <%--<div class="col-md-3 product-grids">--%>
 <%--<div class="agile-products">--%>
 <%--<div class="new-tag"><h6>New</h6></div>--%>
-<%--<a href="single.jsp"><img src="images/e4.png" class="img-responsive" alt="img"></a>--%>
+<%--<a href="single.jsp"><img src="images/camera.png" class="img-responsive" alt="img"></a>--%>
 <%--<div class="agile-product-text">--%>
 <%--<h5><a href="single.jsp">Digital Camera</a></h5>--%>
 <%--<h6>--%>
@@ -728,7 +733,7 @@ Implemented by FahamuTech
 <%--<div class="col-md-3 product-grids">--%>
 <%--<div class="agile-products">--%>
 <%--<div class="new-tag"><h6>5% <br> Off</h6></div>--%>
-<%--<a href="single.jsp"><img src="images/e3.png" class="img-responsive" alt="img"></a>--%>
+<%--<a href="single.jsp"><img src="images/smart.png" class="img-responsive" alt="img"></a>--%>
 <%--<div class="agile-product-text">--%>
 <%--<h5><a href="single.jsp">Smart Phone</a></h5>--%>
 <%--<h6>--%>
@@ -751,7 +756,7 @@ Implemented by FahamuTech
 <%--<div class="col-md-3 product-grids">--%>
 <%--<div class="agile-products">--%>
 <%--<div class="new-tag"><h6>20%<br>Off</h6></div>--%>
-<%--<a href="single.jsp"><img src="images/e1.png" class="img-responsive" alt="img"></a>--%>
+<%--<a href="single.jsp"><img src="images/subwoffer.png" class="img-responsive" alt="img"></a>--%>
 <%--<div class="agile-product-text">--%>
 <%--<h5><a href="single.jsp">Audio speaker</a></h5>--%>
 <%--<h6>--%>
@@ -774,7 +779,7 @@ Implemented by FahamuTech
 <%--<div class="col-md-3 product-grids">--%>
 <%--<div class="agile-products">--%>
 <%--<div class="new-tag"><h6>New</h6></div>--%>
-<%--<a href="single.jsp"><img src="images/e2.png" class="img-responsive" alt="img"></a>--%>
+<%--<a href="single.jsp"><img src="images/fridge.png" class="img-responsive" alt="img"></a>--%>
 <%--<div class="agile-product-text">--%>
 <%--<h5><a href="single.jsp">Refrigerator</a></h5>--%>
 <%--<h6>--%>

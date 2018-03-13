@@ -137,11 +137,11 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
                                                                             class="img-responsive" alt=""></div>
                             </li>
                             <li data-thumb="images/s2.jpg">
-                                <div class="thumb-image"><img src="../img/s2.jpg" data-imagezoom="true"
+                                <div class="thumb-image"><img src="../img/categories/sports/s2.jpg" data-imagezoom="true"
                                                               class="img-responsive" alt=""></div>
                             </li>
                             <li data-thumb="res/img/s3.jpg">
-                                <div class="thumb-image"><img src="../img/s3.jpg" data-imagezoom="true"
+                                <div class="thumb-image"><img src="../img/categories/sports/s3.jpg" data-imagezoom="true"
                                                               class="img-responsive" alt=""></div>
                             </li>
                         </ul>
@@ -223,7 +223,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
                 <div class="item">
                     <div class="glry-w3agile-grids agileits">
                         <div class="new-tag"><h6>20% <br> Off</h6></div>
-                        <a href="../../products1.html"><img src="../img/f2.png" alt="img"></a>
+                        <a href="../../products1.html"><img src="../img/categories/fashion/sandal.png" alt="img"></a>
                         <div class="view-caption agileits-w3layouts">
                             <h4><a href="../../products1.html">Women Sandal</a></h4>
                             <p>Lorem ipsum dolor sit amet consectetur</p>
@@ -242,7 +242,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
                 </div>
                 <div class="item">
                     <div class="glry-w3agile-grids agileits">
-                        <a href="products.jsp"><img src="../img/e4.png" alt="img"></a>
+                        <a href="products.jsp"><img src="../img/categories/electronic/camera.png" alt="img"></a>
                         <div class="view-caption agileits-w3layouts">
                             <h4><a href="products.jsp">Digital Camera</a></h4>
                             <p>Lorem ipsum dolor sit amet consectetur</p>
@@ -262,7 +262,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
                 <div class="item">
                     <div class="glry-w3agile-grids agileits">
                         <div class="new-tag"><h6>New</h6></div>
-                        <a href="../../products4.html"><img src="../img/s1.png" alt="img"></a>
+                        <a href="../../products4.html"><img src="../img/categories/sports/s1.png" alt="img"></a>
                         <div class="view-caption agileits-w3layouts">
                             <h4><a href="../../products4.html">Roller Skates</a></h4>
                             <p>Lorem ipsum dolor sit amet consectetur</p>
@@ -281,7 +281,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
                 </div>
                 <div class="item">
                     <div class="glry-w3agile-grids agileits">
-                        <a href="../../products1.html"><img src="../img/f1.png" alt="img"></a>
+                        <a href="../../products1.html"><img src="../img/categories/fashion/tshirt.png" alt="img"></a>
                         <div class="view-caption agileits-w3layouts">
                             <h4><a href="../../products1.html">T Shirt</a></h4>
                             <p>Lorem ipsum dolor sit amet consectetur</p>
@@ -301,7 +301,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
                 <div class="item">
                     <div class="glry-w3agile-grids agileits">
                         <div class="new-tag"><h6>New</h6></div>
-                        <a href="../../products6.html"><img src="../img/p1.png" alt="img"></a>
+                        <a href="../../products6.html"><img src="../img/categories/photo/p1.png" alt="img"></a>
                         <div class="view-caption agileits-w3layouts">
                             <h4><a href="../../products6.html">Coffee Mug</a></h4>
                             <p>Lorem ipsum dolor sit amet consectetur</p>
@@ -321,7 +321,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
                 <div class="item">
                     <div class="glry-w3agile-grids agileits">
                         <div class="new-tag"><h6>20% <br> Off</h6></div>
-                        <a href="../../products6.html"><img src="../img/p2.png" alt="img"></a>
+                        <a href="../../products6.html"><img src="../img/categories/photo/p2.png" alt="img"></a>
                         <div class="view-caption agileits-w3layouts">
                             <h4><a href="../../products6.html">Teddy bear</a></h4>
                             <p>Lorem ipsum dolor sit amet consectetur</p>
@@ -340,7 +340,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
                 </div>
                 <div class="item">
                     <div class="glry-w3agile-grids agileits">
-                        <a href="../../products4.html"><img src="../img/s2.png" alt="img"></a>
+                        <a href="../../products4.html"><img src="../img/categories/sports/s2.png" alt="img"></a>
                         <div class="view-caption agileits-w3layouts">
                             <h4><a href="../../products4.html">Football</a></h4>
                             <p>Lorem ipsum dolor sit amet consectetur</p>
@@ -360,7 +360,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
                 <div class="item">
                     <div class="glry-w3agile-grids agileits">
                         <div class="new-tag"><h6>Sale</h6></div>
-                        <a href="../../products3.html"><img src="../img/h1.png" alt="img"></a>
+                        <a href="../../products3.html"><img src="../img/categories/fashion/h1.png" alt="img"></a>
                         <div class="view-caption agileits-w3layouts">
                             <h4><a href="../../products3.html">Wall Clock</a></h4>
                             <p>Lorem ipsum dolor sit amet consectetur</p>

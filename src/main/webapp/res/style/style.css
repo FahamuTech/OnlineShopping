@@ -521,11 +521,11 @@ h3.w3ls-title {
 	float:left;
 }
 .w3ls-add-grids.w3ls-add-grids-mdl{
-    background: url(../../res/img/img2.jpg)no-repeat 0px 0px;
+    background: url(../img/categories/others/img2.jpg)no-repeat 0px 0px;
 	background-size: cover;
 }
 .w3ls-add-grids.w3ls-add-grids-mdl1{
-    background: url(../../res/img/img3.jpg)no-repeat 0px 0px;
+    background: url(../img/categories/others/img3.jpg)no-repeat 0px 0px;
 	background-size: cover;
 }
 .w3ls-add-grids.w3ls-add-grids-mdl {
@@ -970,7 +970,7 @@ p {
 }
 .address-right:before {
     content: '';
-    background: url(../../res/img/a1.png)no-repeat 0px 0px;
+    background: url(../img/categories/health/diet.png)no-repeat 0px 0px;
     background-size: 100%;
     display: block;
     position: absolute;
@@ -1608,7 +1608,7 @@ h3.w3ls-title.w3ls-title1 {
 	padding: 3em;
 }
 .offer-bottom-grids-info {
-    background: url(../../res/img/img2.jpg)no-repeat center 0px;
+    background: url(../img/categories/others/img2.jpg)no-repeat center 0px;
     background-size: cover; 
     text-align: right; 
 }
