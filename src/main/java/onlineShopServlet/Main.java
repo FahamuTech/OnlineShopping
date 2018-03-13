@@ -13,13 +13,11 @@ import java.io.IOException;
 @WebServlet(urlPatterns = {"/home"})
 public class Main extends HttpServlet {
     private static final long serialVersionUID = 1L;
-    private HomePageData homePageData=new HomePageData();
 
     @Override
     protected void doGet(HttpServletRequest request,
                          HttpServletResponse response) throws IOException, ServletException {
             //response.sendRedirect("/index.jsp");
-        request.setAttribute(Constants.DB_CATEGORIES,homePageData.getCategories());
            request.getRequestDispatcher("/index.jsp").forward(request,response);
     }
 

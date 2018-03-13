@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 public class HomePageData extends BaseDataClass{
 
-    public ArrayList<String> getCategories(){
+    public  ArrayList<String> getCategories(){
         Connection connection=null;
         String query="SELECT * FROM categories";
         ArrayList<String> categories=null;
