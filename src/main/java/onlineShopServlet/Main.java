@@ -1,6 +1,5 @@
 package onlineShopServlet;
 
-import dataFactory.HomePageData;
 import dataFactory.ProductsData;
 import utils.Constants;
 
@@ -19,7 +18,7 @@ public class Main extends HttpServlet {
     protected void doGet(HttpServletRequest request,
                          HttpServletResponse response) throws IOException, ServletException {
 
-           request.setAttribute(Constants.FEATURES_PRODUCT,productsData.getProductsByCategory(1));
+           request.setAttribute(Constants.FEATURES_PRODUCT,productsData.getFeatureProducts(1));
            request.getRequestDispatcher("/index.jsp").forward(request,response);
 
     }

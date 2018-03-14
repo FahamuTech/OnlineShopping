@@ -72,4 +72,72 @@ public class  ProductModel {
         }
     }
 
+    public static class AllProducts{
+
+        public SimpleIntegerProperty id;
+        public SimpleStringProperty product;
+        public SimpleStringProperty model;
+        public SimpleStringProperty image;
+        public SimpleStringProperty category;
+        public SimpleFloatProperty sell;
+
+        public AllProducts(int id,String product,String model,String image,String category,float sell){
+            this.id=new SimpleIntegerProperty(id);
+            this.product=new SimpleStringProperty(product);
+            this.model=new SimpleStringProperty(model);
+            this.image=new SimpleStringProperty(image);
+            this.category=new SimpleStringProperty(category);
+            this.sell=new SimpleFloatProperty(sell);
+        }
+
+        public String getProduct() {
+            return product.get();
+        }
+
+        public String getModel() {
+            return model.get();
+        }
+
+        public int getId() {
+            return id.get();
+        }
+
+        public String getCategory() {
+            return category.get();
+        }
+
+        public String getImage() {
+            return image.get();
+        }
+
+        public float getSell() {
+            return sell.get();
+        }
+
+        public void setModel(String model) {
+            this.model.set(model);
+        }
+
+        public void setProduct(String product) {
+            this.product.set(product);
+        }
+
+        public void setId(int id) {
+            this.id.set(id);
+        }
+
+        public void setCategory(String category) {
+            this.category.set(category);
+        }
+
+        public void setSell(float sell) {
+            this.sell.set(sell);
+        }
+
+        public void setImage(String image) {
+            this.image.set(image);
+        }
+
+    }
+
 }

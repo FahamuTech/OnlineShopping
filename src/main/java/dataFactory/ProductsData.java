@@ -16,11 +16,11 @@ public class ProductsData extends BaseDataClass {
         ArrayList<ProductModel.ProductByCategory> products=null;
         if (category!=null) {
             try {
+                products = new ArrayList<>();
                 String query = "SELECT id,product,model,image,sell FROM stock WHERE category=\'" + category + "\' AND quantity>0";
                 connection = getConnection();
                 Statement statement = connection.createStatement();
                 ResultSet resultSet = statement.executeQuery(query);
-                products = new ArrayList<>();
                 while (resultSet.next()) {
                     products.add(new ProductModel.ProductByCategory(
                             resultSet.getInt("id"),
@@ -32,14 +32,14 @@ public class ProductsData extends BaseDataClass {
                     ));
                 }
             } catch (SQLException e) {
-                e.printStackTrace();
+                record(e);
                 return null;
             } finally {
                 if (connection != null) {
                     try {
                         connection.close();
                     } catch (SQLException e) {
-                        e.printStackTrace();
+                        record(e);
                     }
                 }
             }
@@ -48,15 +48,15 @@ public class ProductsData extends BaseDataClass {
         return products;
     }
 
-    public ArrayList<ProductModel.ProductByCategory> getProductsByCategory(int feature){
+    public ArrayList<ProductModel.ProductByCategory> getFeatureProducts(int feature){
         Connection connection=null;
         ArrayList<ProductModel.ProductByCategory> products=null;
         try {
+            products=new ArrayList<>();
             String query="SELECT id,product,model,image,sell,category FROM stock WHERE feature="+feature+" AND quantity>0";
             connection=getConnection();
             Statement statement=connection.createStatement();
             ResultSet resultSet=statement.executeQuery(query);
-            products=new ArrayList<>();
             while (resultSet.next()){
                 products.add(new ProductModel.ProductByCategory(
                         resultSet.getInt("id"),
@@ -68,19 +68,52 @@ public class ProductsData extends BaseDataClass {
                 ));
             }
         }catch (SQLException e){
-            e.printStackTrace();
-            return null;
+            record(e);
         }finally {
             if (connection!=null) {
                 try {
                     connection.close();
                 } catch (SQLException e) {
-                    e.printStackTrace();
+                    record(e);
                 }
             }
         }
 
         return products;
+    }
+
+    public ArrayList<ProductModel.AllProducts> getAllProducts(){
+        Connection connection=null;
+        ArrayList<ProductModel.AllProducts> allProducts=null;
+        try {
+            allProducts=new ArrayList<>();
+            String query="SELECT * FROM stock WHERE ";
+            connection=getConnection();
+            Statement statement=connection.createStatement();
+            ResultSet resultSet=statement.executeQuery(query);
+            while (resultSet.next()){
+                allProducts.add(new ProductModel.AllProducts(
+                        resultSet.getInt("id"),
+                        resultSet.getString("product"),
+                        resultSet.getString("model"),
+                        resultSet.getString("image"),
+                        resultSet.getString("category"),
+                        resultSet.getFloat("sell")
+                ));
+            }
+        }catch (SQLException e){
+            record(e);
+        }finally {
+            if (connection!=null) {
+                try {
+                    connection.close();
+                } catch (SQLException e) {
+                    record(e);
+                }
+            }
+        }
+
+        return allProducts;
     }
 
 }

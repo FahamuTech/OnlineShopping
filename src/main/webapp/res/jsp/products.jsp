@@ -120,11 +120,19 @@ Implemented by FahamuTech
 <body>
 <!--get attribute-->
 <%
-    ArrayList<ProductModel.ProductByCategory> products =
-            (ArrayList<ProductModel.ProductByCategory>) request.getAttribute(Constants.PRODUCTS_BY_CATEGORY);
-    String query=request.getQueryString();
-    if (query!=null){
-        query=query.replace("%20"," ");
+    ArrayList<ProductModel.ProductByCategory> productsByCategory = null;
+    ArrayList<ProductModel.AllProducts> allProducts = null;
+    try {
+        productsByCategory = (ArrayList<ProductModel.ProductByCategory>) request.getAttribute(Constants.PRODUCTS_BY_CATEGORY);
+    } catch (Throwable ignore) {
+    }
+    try {
+        allProducts = (ArrayList<ProductModel.AllProducts>) request.getAttribute(Constants.ALL_PRODUCT);
+    } catch (Throwable ignore) {
+    }
+    String query = request.getQueryString();
+    if (query != null) {
+        if (query.contains("%20")) query = query.replace("%20", " ");
     }
 %>
 <!-- header -->
@@ -138,50 +146,81 @@ Implemented by FahamuTech
             <!-- breadcrumbs -->
             <ol class="breadcrumb breadcrumb1">
                 <li><a href="<c:url value="/home"/>">Home</a></li>
-                <%if(query==null){%>
-                    <li >Products</li>
-                     <li class="active"><%=query%></li>
+                <%if (query != null) {%>
+                <li>Products</li>
+                <li class="active"><%=query%>
+                </li>
+                <%} else {%>
+                <li class="active">Products</li>
                 <%}%>
             </ol>
             <div class="clearfix"></div>
             <!-- //breadcrumbs -->
 
             <div class="product-top">
+                <%if (query != null) {%>
                 <h4><%=query%>
                 </h4>
+                <%} else {%>
+                <h4>All Products</h4>
+                <%}%>
                 <div class="clearfix"></div>
             </div>
 
             <div class="products-row">
                 <div class="col-md-3 product-grids">
                     <div class="agile-products">
-                        <%if (products != null) {%>
-                            <%for (ProductModel.ProductByCategory product : products) {%>
-                                <div class="new-tag"><h6>50%<br>Off</h6></div>
-                                <a href="<c:url value="/single?<%=product.getId()%>"/>"><img
-                                        src="<c:url value="<%=product.getImage()%>"/>"
-                                        class="img-responsive" alt="img"></a>
-                                <div class="agile-product-text">
-                                    <h5><a href="<c:url value="/single?<%=product.getId()%>"/>"><%=product.getProduct()%>
-                                    </a></h5>
-                                    <h6>
-                                        <del><%=product.getSell() * 2%>TZS</del>
-                                        <%=product.getSell()%>TZS
-                                    </h6>
-                                    <form action="#" method="post">
-                                        <input type="hidden" name="cmd" value="_cart"/>
-                                        <input type="hidden" name="add" value="1"/>
-                                        <input type="hidden" name="w3ls_item" value="<%=product.getProduct()%>"/>
-                                        <input type="hidden" name="amount" value="<%=product.getSell()%>"/>
-                                        <button type="submit" class="w3ls-cart pw3ls-cart"><i class="fa fa-cart-plus"
-                                                                                              aria-hidden="true"></i> Add to
-                                            cart
-                                        </button>
-                                    </form>
-                                </div>
-                            <%}%>
+                        <%if (productsByCategory != null) {%>
+                        <%for (ProductModel.ProductByCategory product : productsByCategory) {%>
+                        <div class="new-tag"><h6>50%<br>Off</h6></div>
+                        <a href="<c:url value="/single?<%=product.getId()%>"/>"><img
+                                src="<c:url value="<%=product.getImage()%>"/>"
+                                class="img-responsive" alt="img"></a>
+                        <div class="agile-product-text">
+                            <h5><a href="<c:url value="/single?<%=product.getId()%>"/>"><%=product.getProduct()%>
+                            </a></h5>
+                            <h6>
+                                <del><%=product.getSell() * 2%>TZS</del>
+                                <%=product.getSell()%>TZS
+                            </h6>
+                            <form action="#" method="post">
+                                <input type="hidden" name="cmd" value="_cart"/>
+                                <input type="hidden" name="add" value="1"/>
+                                <input type="hidden" name="w3ls_item" value="<%=product.getProduct()%>"/>
+                                <input type="hidden" name="amount" value="<%=product.getSell()%>"/>
+                                <button type="submit" class="w3ls-cart pw3ls-cart"><i class="fa fa-cart-plus"
+                                                                                      aria-hidden="true"></i> Add to
+                                    cart
+                                </button>
+                            </form>
+                        </div>
                         <%}%>
-
+                        <%}else {%>
+                        <%for (ProductModel.AllProducts product : allProducts) {%>
+                        <div class="new-tag"><h6>50%<br>Off</h6></div>
+                        <a href="<c:url value="/single?<%=product.getId()%>"/>"><img
+                                src="<c:url value="<%=product.getImage()%>"/>"
+                                class="img-responsive" alt="img"></a>
+                        <div class="agile-product-text">
+                            <h5><a href="<c:url value="/single?<%=product.getId()%>"/>"><%=product.getProduct()%>
+                            </a></h5>
+                            <h6>
+                                <del><%=product.getSell() * 2%>TZS</del>
+                                <%=product.getSell()%>TZS
+                            </h6>
+                            <form action="#" method="post">
+                                <input type="hidden" name="cmd" value="_cart"/>
+                                <input type="hidden" name="add" value="1"/>
+                                <input type="hidden" name="w3ls_item" value="<%=product.getProduct()%>"/>
+                                <input type="hidden" name="amount" value="<%=product.getSell()%>"/>
+                                <button type="submit" class="w3ls-cart pw3ls-cart"><i class="fa fa-cart-plus"
+                                                                                      aria-hidden="true"></i> Add to
+                                    cart
+                                </button>
+                            </form>
+                        </div>
+                        <%}%>
+                        <%}%>
                     </div>
                 </div>
 
