@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: olive
@@ -7,6 +8,13 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!-- footer-top -->
+
+
+<%--&lt;%&ndash;<link href="<c:url value="/res/style/bootstrap.css"/>" rel="Stylesheet" type="text/css" media="all"/>&ndash;%&gt;--%>
+<%--<link href="<c:url value="/res/style/style.css"/>" rel="stylesheet" type="text/css" media="all"/>--%>
+<%--&lt;%&ndash;<link href="<c:url value="/res/style/menu.css"/>" rel="stylesheet" type="text/css" media="all"/> <!-- menu style -->&ndash;%&gt;--%>
+<%--&lt;%&ndash;<link href="<c:url value="/res/style/ken-burns.css"/>" rel="stylesheet" type="text/css" media="all"/>&ndash;%&gt;--%>
+
 <div class="w3agile-ftr-top ">
     <div class="container">
         <div class="ftr-toprow">
@@ -52,4 +60,6 @@
             by FahamuTech</p>
     </div>
 </div>
+
+
 
