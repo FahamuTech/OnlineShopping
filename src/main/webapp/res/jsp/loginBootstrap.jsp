@@ -21,10 +21,10 @@
     <title>
         Login
     </title>
-    <!-- Extra details for Live View on GitHub Pages -->
+    <!-- Extra details for Live View on GitHub Pages
     <%--<!-- Canonical SEO -->--%>
     <%--<link rel="canonical" href="../../../../www.creative-tim.com/product/material-kit-pro.html"/>--%>
-    <!--  Social tags      -->
+    <!--  Social tags
     <%--<meta name="keywords"--%>
     <%--content="creative tim, html kit, html css template, web template, bootstrap, css3 template, frontend, responsive bootstrap template, bootstrap 4 ui kit, premium bootstrap kit, responsive ui kit">--%>
     <%--<meta name="description"--%>
@@ -61,12 +61,14 @@
     <!--     Fonts and icons     -->
     <%--<link rel="stylesheet" type="text/css"--%>
 
+
     <%--href="<c:url value="/res/fonts/googleFont.css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons"/>"/>--%>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
           rel="stylesheet">
     <link rel="stylesheet" href="<c:url value="/res/style/font-awesome.css"/>"/>
     <link rel="stylesheet" href="<c:url value="/res/style/material-kit.min40a0.css?v=2.0.2"/>"/>
-    <!-- Documentation extras -->
+    <!--
+    <Documentation extras
     <%--<!-- CSS Just for demo purpose, don't include it in your project -->--%>
     <%--<link href="<c:url value="/res/assets/assets-for-demo/demo.css"/>" rel="stylesheet"/>--%>
     <%--<link href="<c:url value="/res/assets/assets-for-demo/vertical-nav.css"/>" rel="stylesheet"/>--%>
@@ -81,6 +83,88 @@
     <%--}--%>
     <%--;--%>
     <%--</script>--%>
+    -->
+    <script>
+        function validateForm() {
+            var name = document.forms["myForm"]["text"].value;
+            var email = document.forms["myForm"]["email"].value;
+            var passw = document.forms["myForm"]["password"].value;
+            if (name === "") {
+                alert("Name must be filled out");
+                return false;
+            } else if (email === "") {
+                alert("Email must be filled");
+                return false;
+            } else if (passw === "") {
+                alert("Password Required");
+                return false;
+            }
+        }
+    </script>
+
+    <script type="text/javascript">
+        function id(id) {
+            return document.getElementById(id);
+        }
+
+        function setCookie(c_name, value, expiredays) {
+            var exdate = new Date();
+            exdate.setDate(exdate.getDate() + expiredays);
+            document.cookie = c_name + "=" + escape(value) +
+                ((expiredays == null) ? "" : ";expires=" + exdate.toUTCString());
+        }
+
+        function login(form) {
+            if (form.username.value == "") {
+                id("usernameError")//.textContent = "please enter the username";
+                form.username.focus();
+                alert("Please enter username")
+                return;
+            }
+            else
+                id("usernameError").textContent = "";
+            if (form.email.value == "") {
+                id("emailError")//.textContent = "please enter the email";
+                form.email.focus();
+                alert("Please enter the email");
+                return;
+            }
+            else
+                id("emailError").textContent = "";
+            if (form.password.value == "") {
+                id("passwordError")//.textContent = "Please enter the password";
+                form.password.focus();
+                alert("Please enter the password");
+                return;
+            } else
+                id("passwordError").textContent = "";
+
+            var ajax = new XMLHttpRequest();
+            ajax.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    var check = this.responseText;
+                    alert(check);
+                    if (check == "true") {
+                        setCookie('username', form.username.value, 10);
+                        location.replace("/home");
+                    }
+                    else if (check == "false") {
+                        id("response").textContent = "wrong username or password";
+                        return;
+                    }
+                    else {
+                        id("response").textContent = "...error";
+                        return;
+                    }
+                }
+            }
+
+            ajax.open("POST", "<c:url value="/login"/>");
+            ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            ajax.send("username=" + form.username.value + "&email=" + form.email.value + "&password=" + form.password.value);
+        }
+
+    </script>
 </head>
 
 <body class="login-page ">
@@ -89,8 +173,9 @@
      id="sectionsNav">
     <div class="container">
         <div class="navbar-translate">
-            <a class="navbar-brand" href="<c:url value="/home"/>">
-                <jsp:getProperty name="constants" property="webSiteName"/><i class="material-icons">home</i></a>
+            <a class="navbar-brand" href="<c:url value="/home"/>"><i class="material-icons">home</i>
+                <jsp:getProperty name="constants" property="webSiteName"/>
+            </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false"
                     aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -106,7 +191,7 @@
                     </a>
                     <div class="dropdown-menu dropdown-with-icons">
                         <a href="#" class="dropdown-item">
-                            <i class="material-icons">account_balance</i> Reset Password
+                            <i class="material-icons">settings</i> Reset Password
                         </a>
                     </div>
                 </li>
@@ -122,18 +207,20 @@
         <div class="row">
             <div class="col-md-4 col-sm-6 ml-auto mr-auto">
                 <div class="card card-signup">
-                    <form class="form" method="" action="#">
+
+                    <form class="form needs-validation" name="myForm" method="post"
+                          id="#logInForm">
                         <div class="card-header card-header-primary text-center">
                             <h4 class="card-title">Log in</h4>
                             <div class="social-line">
-                                <a href="#pablo" class="btn btn-just-icon btn-link">
+                                <a href="#" class="btn btn-just-icon btn-link">
                                     <i class="fa fa-facebook-square"></i>
                                 </a>
-                                <a href="#pablo" class="btn btn-just-icon btn-link">
+                                <a href="#" class="btn btn-just-icon btn-link">
                                     <i class="fa fa-twitter"></i>
                                 </a>
-                                <a href="#pablo" class="btn btn-just-icon btn-link">
-                                    <i class="fa fa-google-plus"></i>
+                                <a href="#" class="btn btn-just-icon btn-link">
+                                    <i class="fa fa-google"></i>
                                 </a>
                             </div>
                         </div>
@@ -145,7 +232,8 @@
                                             <i class="material-icons">face</i>
                                         </span>
                                 </div>
-                                <input type="text" class="form-control" placeholder="First Name...">
+                                <input type="text" name="username" class="form-control" placeholder="Full Name..."
+                                ><span id="usernameError" style="display:  none;"></span><br/>
                             </div>
                             <div class="input-group">
                                 <div class="input-group-prepend">
@@ -153,7 +241,8 @@
                                             <i class="material-icons">mail</i>
                                         </span>
                                 </div>
-                                <input type="email" class="form-control" placeholder="Email...">
+                                <input type="email" name="email" class="form-control" placeholder="Email...">
+                                <span id="emailError" style="display: none;"></span><br/>
                             </div>
                             <div class="input-group">
                                 <div class="input-group-prepend">
@@ -161,8 +250,10 @@
                                             <i class="material-icons">lock_outline</i>
                                         </span>
                                 </div>
-                                <input type="password" class="form-control" placeholder="Password...">
+                                <input type="password" name="password" class="form-control" placeholder="Password..."
+                                ><span id="passwordError" style="display: none;"></span><br/>
                             </div>
+                            <!--
                             <!-- If you want to add a checkbox to this form, uncomment this code
 
                             <div class="checkbox">
@@ -171,11 +262,37 @@
                                     Subscribe to newsletter
                                 </label>
                             </div> -->
+
                         </div>
                         <div class="footer text-center">
-                            <a href="#pablo" class="btn btn-primary btn-link btn-wd btn-lg">Get Started</a>
+                            <input onclick="login(this.form)" class="btn btn-primary btn-round" type="button"
+                                   value="Get Started">
+                            </input>
                         </div>
                     </form>
+                    <!--
+                    <%--<script>--%>
+                        <%--// Example starter JavaScript for disabling form submissions if there are invalid fields--%>
+                        <%--(function() {--%>
+                            <%--'use strict';--%>
+                            <%--window.addEventListener('load', function() {--%>
+                                <%--// Fetch all the forms we want to apply custom Bootstrap validation styles to--%>
+                                <%--var forms = document.getElementsByClassName('needs-validation');--%>
+                                <%--// Loop over them and prevent submission--%>
+                                <%--var validation = Array.prototype.filter.call(forms, function(form) {--%>
+                                    <%--form.addEventListener('submit', function(event) {--%>
+                                        <%--if (form.checkValidity() === false) {--%>
+                                            <%--event.preventDefault();--%>
+                                            <%--event.stopPropagation();--%>
+                                        <%--}--%>
+                                        <%--form.classList.add('was-validated');--%>
+                                    <%--}, false);--%>
+                                <%--});--%>
+                            <%--}, false);--%>
+                        <%--})();--%>
+                    <%--</script>--%>
+                    -->
+
                 </div>
             </div>
         </div>
@@ -202,7 +319,7 @@
 <script src="<c:url value="/res/script/plugins/jasny-bootstrap.min.js"/>"></script>
 <!--	Plugin for Small Gallery in Product Page -->
 <script src="<c:url value="/res/script/plugins/jquery.flexisel.js"/>"></script>
-
+<!--
 <%--<!-- Plugins for presentation and navigation  -->--%>
 <%--<script src="../assets/assets-for-demo/js/modernizr.js"></script>--%>
 <%--<script src="../assets/assets-for-demo/js/vertical-nav.js"></script>--%>
@@ -258,6 +375,8 @@
 <%--<img height="1" width="1" style="display:none"--%>
 <%--src="../../../../www.facebook.com/tr5c3c.gif?id=111649226022273&amp;ev=PageView&amp;noscript=1"/>--%>
 <%--</noscript>--%>
+-->
+
 </body>
 
 </html>

@@ -25,10 +25,10 @@
                                                                                    aria-hidden="true"></i> My
                         Account<span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="<c:url value="/login"/>">Login </a></li>
-                        <li><a href="signup.jsp">Sign Up</a></li>
-                        <li><a href="<c:url value="/login?MyOrders"/>">My Orders</a></li>
-                        <li><a href="<c:url value="/login?Wallet"/>">Wallet</a></li>
+                        <li><a href="<c:url value="/login"/>">Login</a></li>
+                        <li><a href="<c:url value="/signup"/>">Sign Up</a></li>
+                        <li><a href="<c:url value="/login?q=MyOrders"/>">My Orders</a></li>
+                        <li><a href="<c:url value="/login?q=Wallet"/>">Wallet</a></li>
                     </ul>
                 </li>
             </ul>
