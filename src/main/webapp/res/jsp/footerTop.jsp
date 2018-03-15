@@ -10,11 +10,13 @@
 <!-- footer-top -->
 
 
-<%--&lt;%&ndash;<link href="<c:url value="/res/style/bootstrap.css"/>" rel="Stylesheet" type="text/css" media="all"/>&ndash;%&gt;--%>
+<%--<link href="<c:url value="/res/style/bootstrap.css"/>" rel="Stylesheet" type="text/css" media="all"/>--%>
 <%--<link href="<c:url value="/res/style/style.css"/>" rel="stylesheet" type="text/css" media="all"/>--%>
 <%--&lt;%&ndash;<link href="<c:url value="/res/style/menu.css"/>" rel="stylesheet" type="text/css" media="all"/> <!-- menu style -->&ndash;%&gt;--%>
 <%--&lt;%&ndash;<link href="<c:url value="/res/style/ken-burns.css"/>" rel="stylesheet" type="text/css" media="all"/>&ndash;%&gt;--%>
-
+<head>
+    <link rel="stylesheet" href="<c:url value="/res/style/footerStyle.css"/> "/>
+</head>
 <div class="w3agile-ftr-top ">
     <div class="container">
         <div class="ftr-toprow">

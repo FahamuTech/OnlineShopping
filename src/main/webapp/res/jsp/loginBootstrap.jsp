@@ -7,10 +7,10 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<jsp:useBean id="constants" class="utils.Constants"/>
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from demos.creative-tim.com/marketplace/material-kit-pro/examples/login-page.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Mar 2018 20:11:57 GMT -->
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"/>
@@ -25,25 +25,25 @@
     <%--<!-- Canonical SEO -->--%>
     <%--<link rel="canonical" href="../../../../www.creative-tim.com/product/material-kit-pro.html"/>--%>
     <!--  Social tags      -->
-    <meta name="keywords"
-          content="creative tim, html kit, html css template, web template, bootstrap, css3 template, frontend, responsive bootstrap template, bootstrap 4 ui kit, premium bootstrap kit, responsive ui kit">
-    <meta name="description"
-          content="Start Your Development With A Badass Bootstrap 4 UI Kit inspired by Material Design.">
-    <!-- Schema.org markup for Google+ -->
-    <meta itemprop="name" content="Material Kit PRO by Creative Tim">
-    <meta itemprop="description"
-          content="Start Your Development With A Badass Bootstrap 4 UI Kit inspired by Material Design.">
-    <meta itemprop="image"
-          content="../../../../s3.amazonaws.com/creativetim_bucket/products/46/original/opt_mkp_thumbnail.jpg">
-    <%--<!-- Twitter Card data -->--%>
+    <%--<meta name="keywords"--%>
+    <%--content="creative tim, html kit, html css template, web template, bootstrap, css3 template, frontend, responsive bootstrap template, bootstrap 4 ui kit, premium bootstrap kit, responsive ui kit">--%>
+    <%--<meta name="description"--%>
+    <%--content="Start Your Development With A Badass Bootstrap 4 UI Kit inspired by Material Design.">--%>
+    <%--<!-- Schema.org markup for Google+ -->--%>
+    <%--<meta itemprop="name" content="Material Kit PRO by Creative Tim">--%>
+    <%--<meta itemprop="description"--%>
+    <%--content="Start Your Development With A Badass Bootstrap 4 UI Kit inspired by Material Design.">--%>
+    <%--<meta itemprop="image"--%>
+    <%--content="../../../../s3.amazonaws.com/creativetim_bucket/products/46/original/opt_mkp_thumbnail.jpg">--%>
+    <%--&lt;%&ndash;<!-- Twitter Card data -->&ndash;%&gt;--%>
     <%--<meta name="twitter:card" content="product">--%>
     <%--<meta name="twitter:site" content="@creativetim">--%>
     <%--<meta name="twitter:title" content="Material Kit PRO by Creative Tim">--%>
     <%--<meta name="twitter:description"--%>
-          <%--content="Start Your Development With A Badass Bootstrap 4 UI Kit inspired by Material Design.">--%>
+    <%--content="Start Your Development With A Badass Bootstrap 4 UI Kit inspired by Material Design.">--%>
     <%--<meta name="twitter:creator" content="@creativetim">--%>
     <%--<meta name="twitter:image"--%>
-          <%--content="../../../../s3.amazonaws.com/creativetim_bucket/products/46/original/opt_mkp_thumbnail.jpg">--%>
+    <%--content="../../../../s3.amazonaws.com/creativetim_bucket/products/46/original/opt_mkp_thumbnail.jpg">--%>
     <%--<meta name="twitter:data1" content="Material Kit PRO by Creative Tim">--%>
     <%--<meta name="twitter:label1" content="Product Type">--%>
     <%--<meta name="twitter:data2" content="$79">--%>
@@ -54,9 +54,9 @@
     <%--<meta property="og:type" content="article"/>--%>
     <%--<meta property="og:url" content="../../../material-kit-pro/presentation.html"/>--%>
     <%--<meta property="og:image"--%>
-          <%--content="../../../../s3.amazonaws.com/creativetim_bucket/products/46/original/opt_mkp_thumbnail.jpg"/>--%>
+    <%--content="../../../../s3.amazonaws.com/creativetim_bucket/products/46/original/opt_mkp_thumbnail.jpg"/>--%>
     <%--<meta property="og:description"--%>
-          <%--content="Start Your Development With A Badass Bootstrap 4 UI Kit inspired by Material Design."/>--%>
+    <%--content="Start Your Development With A Badass Bootstrap 4 UI Kit inspired by Material Design."/>--%>
     <%--<meta property="og:site_name" content="Creative Tim"/>--%>
     <!--     Fonts and icons     -->
     <%--<link rel="stylesheet" type="text/css"--%>
@@ -64,22 +64,22 @@
     <%--href="<c:url value="/res/fonts/googleFont.css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons"/>"/>--%>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
           rel="stylesheet">
-    <link rel="stylesheet" href="<c:url value="/res/style/font-awesome.min.css"/>"/>
+    <link rel="stylesheet" href="<c:url value="/res/style/font-awesome.css"/>"/>
     <link rel="stylesheet" href="<c:url value="/res/style/material-kit.min40a0.css?v=2.0.2"/>"/>
     <!-- Documentation extras -->
-    <!-- CSS Just for demo purpose, don't include it in your project -->
-    <link href="<c:url value="/res/assets/assets-for-demo/demo.css"/>" rel="stylesheet"/>
-    <link href="<c:url value="/res/assets/assets-for-demo/vertical-nav.css"/>" rel="stylesheet"/>
+    <%--<!-- CSS Just for demo purpose, don't include it in your project -->--%>
+    <%--<link href="<c:url value="/res/assets/assets-for-demo/demo.css"/>" rel="stylesheet"/>--%>
+    <%--<link href="<c:url value="/res/assets/assets-for-demo/vertical-nav.css"/>" rel="stylesheet"/>--%>
     <%--<!-- iframe removal -->--%>
     <%--<script type="text/javascript">--%>
-        <%--if (document.readyState === 'complete') {--%>
-            <%--if (window.location != window.parent.location) {--%>
-                <%--const elements = document.getElementsByClassName("iframe-extern");--%>
-                <%--while (elemnts.lenght > 0) elements[0].remove();--%>
-                <%--// $(".iframe-extern").remove();--%>
-            <%--}--%>
-        <%--}--%>
-        <%--;--%>
+    <%--if (document.readyState === 'complete') {--%>
+    <%--if (window.location != window.parent.location) {--%>
+    <%--const elements = document.getElementsByClassName("iframe-extern");--%>
+    <%--while (elemnts.lenght > 0) elements[0].remove();--%>
+    <%--// $(".iframe-extern").remove();--%>
+    <%--}--%>
+    <%--}--%>
+    <%--;--%>
     <%--</script>--%>
 </head>
 
@@ -89,7 +89,8 @@
      id="sectionsNav">
     <div class="container">
         <div class="navbar-translate">
-            <a class="navbar-brand" href="../index.html">Material Kit PRO </a>
+            <a class="navbar-brand" href="<c:url value="/home"/>">
+                <jsp:getProperty name="constants" property="webSiteName"/><i class="material-icons">home</i></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false"
                     aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -101,85 +102,11 @@
             <ul class="navbar-nav ml-auto">
                 <li class="dropdown nav-item">
                     <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
-                        <i class="material-icons">apps</i> Components
+                        <i class="material-icons">help</i> Help
                     </a>
                     <div class="dropdown-menu dropdown-with-icons">
-                        <a href="../index.html" class="dropdown-item">
-                            <i class="material-icons">layers</i> All Components
-                        </a>
-                        <a href="../docs/2.0/getting-started/introduction.html" class="dropdown-item">
-                            <i class="material-icons">content_paste</i> Documentation
-                        </a>
-                    </div>
-                </li>
-                <li class="dropdown nav-item">
-                    <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
-                        <i class="material-icons">view_day</i> Sections
-                    </a>
-                    <div class="dropdown-menu dropdown-with-icons">
-                        <a href="../sections.html#headers" class="dropdown-item">
-                            <i class="material-icons">dns</i> Headers
-                        </a>
-                        <a href="../sections.html#features" class="dropdown-item">
-                            <i class="material-icons">build</i> Features
-                        </a>
-                        <a href="../sections.html#blogs" class="dropdown-item">
-                            <i class="material-icons">list</i> Blogs
-                        </a>
-                        <a href="../sections.html#teams" class="dropdown-item">
-                            <i class="material-icons">people</i> Teams
-                        </a>
-                        <a href="../sections.html#projects" class="dropdown-item">
-                            <i class="material-icons">assignment</i> Projects
-                        </a>
-                        <a href="../sections.html#pricing" class="dropdown-item">
-                            <i class="material-icons">monetization_on</i> Pricing
-                        </a>
-                        <a href="../sections.html#testimonials" class="dropdown-item">
-                            <i class="material-icons">chat</i> Testimonials
-                        </a>
-                        <a href="../sections.html#contactus" class="dropdown-item">
-                            <i class="material-icons">call</i> Contacts
-                        </a>
-                    </div>
-                </li>
-                <li class="dropdown nav-item">
-                    <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
-                        <i class="material-icons">view_carousel</i> Examples
-                    </a>
-                    <div class="dropdown-menu dropdown-with-icons">
-                        <a href="about-us.html" class="dropdown-item">
-                            <i class="material-icons">account_balance</i> About Us
-                        </a>
-                        <a href="blog-post.html" class="dropdown-item">
-                            <i class="material-icons">art_track</i> Blog Post
-                        </a>
-                        <a href="blog-posts.html" class="dropdown-item">
-                            <i class="material-icons">view_quilt</i> Blog Posts
-                        </a>
-                        <a href="contact-us.html" class="dropdown-item">
-                            <i class="material-icons">location_on</i> Contact Us
-                        </a>
-                        <a href="landing-page.html" class="dropdown-item">
-                            <i class="material-icons">view_day</i> Landing Page
-                        </a>
-                        <a href="login-page.html" class="dropdown-item">
-                            <i class="material-icons">fingerprint</i> Login Page
-                        </a>
-                        <a href="pricing.html" class="dropdown-item">
-                            <i class="material-icons">attach_money</i> Pricing Page
-                        </a>
-                        <a href="ecommerce.html" class="dropdown-item">
-                            <i class="material-icons">store</i> Ecommerce Page
-                        </a>
-                        <a href="product-page.html" class="dropdown-item">
-                            <i class="material-icons">shopping_cart</i> Product Page
-                        </a>
-                        <a href="profile-page.html" class="dropdown-item">
-                            <i class="material-icons">account_circle</i> Profile Page
-                        </a>
-                        <a href="signup-page.html" class="dropdown-item">
-                            <i class="material-icons">person_add</i> Signup Page
+                        <a href="#" class="dropdown-item">
+                            <i class="material-icons">account_balance</i> Reset Password
                         </a>
                     </div>
                 </li>
@@ -189,7 +116,8 @@
 </nav>
 
 <div class="page-header header-filter"
-     style="background-image: url(<c:url value="/res/img/head/headBackGround.png"/>); background-size: cover; background-position: top center;">
+     style="background-image: url(<c:url
+             value="/res/img/head/headBackGround.png"/>); background-size: cover; background-position: top center;">
     <div class="container">
         <div class="row">
             <div class="col-md-4 col-sm-6 ml-auto mr-auto">
@@ -254,7 +182,6 @@
     </div>
 </div>
 
-<jsp:include page="footerTop.jsp"/>
 <!--   Core JS Files   -->
 <script src="<c:url value="/res/script/core/jquery.min.js"/>"></script>
 <script src="<c:url value="/res/script/core/popper.min.js"/>"></script>
@@ -286,50 +213,50 @@
 
 <%--<script>--%>
 
-    <%--var _gaq = _gaq || [];--%>
-    <%--_gaq.push(['_setAccount', 'UA-46172202-12']);--%>
-    <%--_gaq.push(['_trackPageview']);--%>
+<%--var _gaq = _gaq || [];--%>
+<%--_gaq.push(['_setAccount', 'UA-46172202-12']);--%>
+<%--_gaq.push(['_trackPageview']);--%>
 
-    <%--(function () {--%>
-        <%--var ga = document.createElement('script');--%>
-        <%--ga.type = 'text/javascript';--%>
-        <%--ga.async = true;--%>
-        <%--ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';--%>
-        <%--var s = document.getElementsByTagName('script')[0];--%>
-        <%--s.parentNode.insertBefore(ga, s);--%>
-    <%--})();--%>
+<%--(function () {--%>
+<%--var ga = document.createElement('script');--%>
+<%--ga.type = 'text/javascript';--%>
+<%--ga.async = true;--%>
+<%--ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';--%>
+<%--var s = document.getElementsByTagName('script')[0];--%>
+<%--s.parentNode.insertBefore(ga, s);--%>
+<%--})();--%>
 
-    <%--// Facebook Pixel Code Don't Delete--%>
-    <%--!function (f, b, e, v, n, t, s) {--%>
-        <%--if (f.fbq) return;--%>
-        <%--n = f.fbq = function () {--%>
-            <%--n.callMethod ?--%>
-                <%--n.callMethod.apply(n, arguments) : n.queue.push(arguments)--%>
-        <%--};--%>
-        <%--if (!f._fbq) f._fbq = n;--%>
-        <%--n.push = n;--%>
-        <%--n.loaded = !0;--%>
-        <%--n.version = '2.0';--%>
-        <%--n.queue = [];--%>
-        <%--t = b.createElement(e);--%>
-        <%--t.async = !0;--%>
-        <%--t.src = v;--%>
-        <%--s = b.getElementsByTagName(e)[0];--%>
-        <%--s.parentNode.insertBefore(t, s)--%>
-    <%--}(window,--%>
-        <%--document, 'script', '../../../../connect.facebook.net/en_US/fbevents.js');--%>
+<%--// Facebook Pixel Code Don't Delete--%>
+<%--!function (f, b, e, v, n, t, s) {--%>
+<%--if (f.fbq) return;--%>
+<%--n = f.fbq = function () {--%>
+<%--n.callMethod ?--%>
+<%--n.callMethod.apply(n, arguments) : n.queue.push(arguments)--%>
+<%--};--%>
+<%--if (!f._fbq) f._fbq = n;--%>
+<%--n.push = n;--%>
+<%--n.loaded = !0;--%>
+<%--n.version = '2.0';--%>
+<%--n.queue = [];--%>
+<%--t = b.createElement(e);--%>
+<%--t.async = !0;--%>
+<%--t.src = v;--%>
+<%--s = b.getElementsByTagName(e)[0];--%>
+<%--s.parentNode.insertBefore(t, s)--%>
+<%--}(window,--%>
+<%--document, 'script', '../../../../connect.facebook.net/en_US/fbevents.js');--%>
 
-    <%--try {--%>
-        <%--fbq('init', '111649226022273');--%>
-        <%--fbq('track', "PageView");--%>
+<%--try {--%>
+<%--fbq('init', '111649226022273');--%>
+<%--fbq('track', "PageView");--%>
 
-    <%--} catch (err) {--%>
-        <%--console.log('Facebook Track Error:', err);--%>
-    <%--}--%>
+<%--} catch (err) {--%>
+<%--console.log('Facebook Track Error:', err);--%>
+<%--}--%>
 <%--</script>--%>
 <%--<noscript>--%>
-    <%--<img height="1" width="1" style="display:none"--%>
-         <%--src="../../../../www.facebook.com/tr5c3c.gif?id=111649226022273&amp;ev=PageView&amp;noscript=1"/>--%>
+<%--<img height="1" width="1" style="display:none"--%>
+<%--src="../../../../www.facebook.com/tr5c3c.gif?id=111649226022273&amp;ev=PageView&amp;noscript=1"/>--%>
 <%--</noscript>--%>
 </body>
 
