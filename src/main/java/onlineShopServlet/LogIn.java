@@ -28,7 +28,12 @@ public class LogIn extends HttpServlet {
 ////
 ////            }
 //////                printWriter.println(req.getParameter(parameterNames.nextElement()));
-        resp.getWriter().print("true");
+//        Enumeration<String> parameterNames = req.getParameterNames();
+//        String res="";
+//        while (parameterNames.hasMoreElements()){
+//            res=res+(parameterNames.nextElement()+": "+req.getParameter(parameterNames.nextElement())+"\n");
+//        }
+        resp.getWriter().print("ajax returned");
     }
 
     @Override

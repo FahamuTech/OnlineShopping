@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!--
 Author: W3layouts
 Author URL: http://w3layouts.com
@@ -5,8 +6,10 @@ License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 <%@ page contentType="text/html; charset=UTF-8" language="java" %>
+<jsp:useBean id="constant" class="utils.Constants"/>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>contacts</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,17 +22,19 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         window.scrollTo(0, 1);
     } </script>
     <!-- Custom Theme files -->
-    <link href="../style/bootstrap.css" rel="stylesheet" type="text/css" media="all"/>
-    <link href="../style/style.css" rel="stylesheet" type="text/css" media="all"/>
-    <link href="../style/animate.min.css" rel="stylesheet" type="text/css" media="all"/><!-- animation -->
-    <link href="../style/menu.css" rel="stylesheet" type="text/css" media="all"/> <!-- menu style -->
+    <link href="<c:url value="/res/style/bootstrap.css"/>" rel="stylesheet" type="text/css" media="all"/>
+    <link href="<c:url value="/res/style/style.css"/>" rel="stylesheet" type="text/css" media="all"/>
+    <link href="<c:url value="/res/style/animate.min.css"/>" rel="stylesheet" type="text/css" media="all"/>
+    <!-- animation -->
+    <link href="<c:url value="/res/style/menu.css"/>" rel="stylesheet" type="text/css" media="all"/> <!-- menu style -->
     <!-- //Custom Theme files -->
     <!-- font-awesome icons -->
-    <link href="../style/font-awesome.css" rel="stylesheet">
+    <link href="<c:url value="/res/style/font-awesome.css"/>" rel="stylesheet">
     <!-- //font-awesome icons -->
     <!-- js -->
-    <script src="../script/jquery-2.2.3.min.js"></script>
-    <script src="../script/jquery-scrolltofixed-min.js" type="text/javascript"></script><!-- fixed nav js -->
+    <script src="<c:url value="/res/script/jquery-2.2.3.min.js"/>"></script>
+    <script src="<c:url value="/res/script/jquery-scrolltofixed-min.js"/>" type="text/javascript"></script>
+    <!-- fixed nav js -->
     <script>
         $(document).ready(function () {
 
@@ -58,8 +63,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <link href='https://fonts.googleapis.com/css?family=Offside' rel='stylesheet' type='text/css'>
     <!-- web-fonts -->
     <!-- start-smooth-scrolling -->
-    <script type="text/javascript" src="../script/move-top.js"></script>
-    <script type="text/javascript" src="../script/easing.js"></script>
+    <script type="text/javascript" src="<c:url value="/res/script/move-top.js"/>"></script>
+    <script type="text/javascript" src="<c:url value="/res/script/easing.js"/>"></script>
     <script type="text/javascript">
         jQuery(document).ready(function ($) {
             $(".scroll").click(function (event) {
@@ -86,6 +91,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     </script>
     <!-- //smooth-scrolling-of-move-up -->
 </head>
+
 <body>
 <!-- header -->
 <jsp:include page="head.jsp"/>
@@ -95,35 +101,26 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <div class="container">
         <h3 class="w3ls-title w3ls-title1">Contact Us</h3>
         <div class="map-info">
+
             <div class="col-md-6 map-grids">
-                <h4>Our Smart bazaar Store1</h4>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.9503398796587!2d-73.9940307!3d40.719109700000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a27e2f24131%3A0x64ffc98d24069f02!2sCANADA!5e0!3m2!1sen!2sin!4v1441710758555"></iframe>
+                <h4><jsp:getProperty name="constant" property="webSiteName"/></h4>
+                <iframe src="<jsp:getProperty name="constant" property="shopMap"/>"></iframe>
             </div>
-            <div class="col-md-6 map-grids">
-                <h4>Our Smart bazaar Store2</h4>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23778.253788067046!2d-87.77626504212625!3d41.84376259112007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e33967c81db8f%3A0xbc5872c77c003120!2sCicero%2C+IL!5e0!3m2!1sen!2sin!4v1470650895897"></iframe>
-            </div>
-            <div class="col-md-6 map-grids">
-                <h4>Our Smart bazaar Store3</h4>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4851.135123262741!2d105.86847248902144!3d58.25136049196456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5cf6e6f5eed7e5eb%3A0xfec064728556bbad!2sTokma%2C+Irkutsk+Oblast%2C+Russia%2C+666639!5e0!3m2!1sen!2sin!4v1470650971228"></iframe>
-            </div>
-            <div class="col-md-6 map-grids">
-                <h4>Our Smart bazaar Store4</h4>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.9503398796587!2d-73.9940307!3d40.719109700000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a27e2f24131%3A0x64ffc98d24069f02!2sCANADA!5e0!3m2!1sen!2sin!4v1441710758555"
-                        allowfullscreen=""></iframe>
-            </div>
+
             <div class="clearfix"></div>
         </div>
         <div class="contact-form-row">
-            <h3 class="w3ls-title w3ls-title1">Drop Us a line</h3>
+            <h3 class="w3ls-title w3ls-title1">Leave your message</h3>
             <div class="col-md-7 contact-left">
-                <form action="#" method="post">
-                    <input type="text" name="Name" placeholder="Name" required="">
-                    <input class="email" type="text" name="Email" placeholder="Email" required="">
-                    <textarea placeholder="Message" name="Message" required=""></textarea>
+                <form action="<c:url value="/contacts"/> " method="post">
+                    <input type="text" name="name" placeholder="Name" required="">
+                    <input class="email" type="text" name="email" placeholder="Email" required="">
+                    <textarea placeholder="Message" name="message" required=""></textarea>
                     <input type="submit" value="SUBMIT">
                 </form>
             </div>
+
+            <!--
             <div class="col-md-4 contact-right">
                 <div class="cnt-w3agile-row">
                     <div class="col-md-3 contact-w3icon">
@@ -153,7 +150,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <div class="clearfix"></div>
                 </div>
             </div>
+            -->
+
             <div class="clearfix"></div>
+
         </div>
     </div>
 </div>
@@ -166,6 +166,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="../script/bootstrap.js"></script>
+<script src="<c:url value="/res/script/bootstrap.js"/>"></script>
 </body>
+
 </html>

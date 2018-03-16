@@ -17,7 +17,7 @@
     <nav class="navbar navbar-inverse" style="border-radius: 0">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand " href="#">UPTO $50 OFF ON LAPTOPS</a>
+                <a class="navbar-brand " href="<c:url value="products"/>">UPTO $50 OFF ON LAPTOPS</a>
             </div>
             <ul class="nav navbar-nav navbar-left">
                 <li class="dropdown head-dpdn active">
@@ -53,37 +53,27 @@
                 <%--<li><a href="offers.jsp">View Balance</a></li>--%>
                 <%--</ul>--%>
                 <%--</li>--%>
-                <li class="dropdown head-dpdn">
-                    <a href="contact.jsp" class="dropdown-toggle"><i class="fa fa-map-marker"
-                                                                     aria-hidden="true"></i>
-                        Store Finder</a>
-                </li>
+                <%--<li class="dropdown head-dpdn">--%>
+                    <%--<a href="contact.jsp" class="dropdown-toggle"><i class="fa fa-map-marker"--%>
+                                                                     <%--aria-hidden="true"></i>--%>
+                        <%--Store Finder</a>--%>
+                <%--</li>--%>
                 <%--<li class="dropdown head-dpdn">--%>
                 <%--<a href="../../card.jsp" class="dropdown-toggle"><i class="fa fa-credit-card-alt"--%>
                 <%--aria-hidden="true"></i>--%>
                 <%--Credit Card</a>--%>
                 <%--</li>--%>
                 <li class="dropdown head-dpdn">
-                    <a href="help.jsp" class="dropdown-toggle"><i class="fa fa-question-circle"
+                    <a href="<c:url value="/about"/> " class="dropdown-toggle"><i class="fa fa-question-circle"
                                                                   aria-hidden="true"></i>
                         Help</a>
                 </li>
             </ul>
         </div>
     </nav>
-    <%--<div class="w3ls-header-right">--%>
-    <%--<ul>--%>
 
-    <%--</ul>--%>
-    <%--</div>--%>
     <div class="clearfix"></div>
-    <%--<div class="w3ls-header">--%>
-    <%--<!--header-one-->--%>
-    <%--&lt;%&ndash;<div class="w3ls-header-left">&ndash;%&gt;--%>
-    <%--&lt;%&ndash;<p><a href="products.jsp">UPTO $50 OFF ON LAPTOPS | USE COUPON CODE LAPPY </a></p>&ndash;%&gt;--%>
-    <%--&lt;%&ndash;</div>&ndash;%&gt;--%>
-    <%----%>
-    <%--</div>--%>
+
     <div class="header-two"><!-- header-two -->
         <div class="container">
             <div class="header-logo">
@@ -94,8 +84,8 @@
                 </h5>
             </div>
             <div class="header-search">
-                <form action="#" method="post">
-                    <input type="search" name="Search" placeholder="Search for a Product..." required="">
+                <form action="<c:url value="/products"/> " method="post">
+                    <input type="search" name="search" placeholder="Search for a Product..." required="">
                     <button type="submit" class="btn btn-default" aria-label="Left Align">
                         <i class="fa fa-search" aria-hidden="true"> </i>
                     </button>
@@ -103,7 +93,7 @@
             </div>
             <div class="header-cart">
                 <div class="my-account">
-                    <a href="<c:url value="/about"/> "><i class="fa fa-map-marker" aria-hidden="true"></i> CONTACT
+                    <a href="<c:url value="/contacts"/> "><i class="fa fa-map-marker" aria-hidden="true"></i> CONTACT
                         US</a>
                 </div>
                 <div class="cart">

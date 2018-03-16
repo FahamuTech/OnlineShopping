@@ -6,6 +6,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.Enumeration;
 
 
 @WebServlet(urlPatterns = {"/signup"})
@@ -22,6 +23,11 @@ public class SignUp extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        super.doPost(req, resp);
+//        Enumeration<String> parameterNames = req.getParameterNames();
+//        String res="";
+//        while (parameterNames.hasMoreElements()){
+//            res=res+(parameterNames.nextElement()+"\n");
+//        }
+        resp.getWriter().print("ajax return");
     }
 }

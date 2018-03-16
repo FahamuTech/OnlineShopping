@@ -115,49 +115,49 @@
         }
 
         function login(form) {
-            if (form.username.value == "") {
-                id("usernameError")//.textContent = "please enter the username";
+            if (form.username.value === "") {
+                id("usernameError");//.textContent = "please enter the username";
                 form.username.focus();
-                alert("Please enter username")
+                alert("Please enter username");
                 return;
             }
-            else
-                id("usernameError").textContent = "";
-            if (form.email.value == "") {
-                id("emailError")//.textContent = "please enter the email";
+
+
+            if (form.email.value === "" || !form.email.value.includes("@")) {
+                id("emailError");//.textContent = "please enter the email";
                 form.email.focus();
-                alert("Please enter the email");
+                alert("Please enter valid email");
                 return;
             }
-            else
-                id("emailError").textContent = "";
-            if (form.password.value == "") {
-                id("passwordError")//.textContent = "Please enter the password";
+
+            if (form.password.value === "") {
+                id("passwordError");//.textContent = "Please enter the password";
                 form.password.focus();
                 alert("Please enter the password");
                 return;
-            } else
-                id("passwordError").textContent = "";
+            }
 
             var ajax = new XMLHttpRequest();
             ajax.onreadystatechange = function () {
-                if (this.readyState == 4 && this.status == 200) {
+                if (this.readyState === 4 && this.status === 200) {
                     var check = this.responseText;
-                    alert(check);
-                    if (check == "true") {
+
+                    if (check === "true") {
                         setCookie('username', form.username.value, 10);
-                        location.replace("/home");
+                        alert("successful");
+                        //location.replace("/home");
                     }
-                    else if (check == "false") {
-                        id("response").textContent = "wrong username or password";
+                    else if (check === "false") {
+                        //id("response").textContent = "wrong username or password";
                         return;
                     }
                     else {
-                        id("response").textContent = "...error";
+                        //id("response").textContent = "...error";
+                        alert(check);
                         return;
                     }
                 }
-            }
+            };
 
             ajax.open("POST", "<c:url value="/login"/>");
             ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
@@ -241,7 +241,7 @@
                                             <i class="material-icons">mail</i>
                                         </span>
                                 </div>
-                                <input type="email" name="email" class="form-control" placeholder="Email...">
+                                <input type="email" name="email" class="form-control" placeholder="Email..." >
                                 <span id="emailError" style="display: none;"></span><br/>
                             </div>
                             <div class="input-group">
@@ -266,7 +266,7 @@
                         </div>
                         <div class="footer text-center">
                             <input onclick="login(this.form)" class="btn btn-primary btn-round" type="button"
-                                   value="Get Started">
+                                   value="LogIn">
                             </input>
                         </div>
                     </form>

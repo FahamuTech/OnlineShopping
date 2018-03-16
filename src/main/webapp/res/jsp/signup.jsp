@@ -1,25 +1,19 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
-Implemented bu FahamuTech
--->
+
 <%@ page contentType="text/html; charset=UTF-8" language="java" %>
 <jsp:useBean id="constant" class="utils.Constants"/>
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <!-- Favicons -->
     <link rel="apple-touch-icon" href="../assets/img/kit/free/apple-icon.png">
     <link rel="icon" href="../assets/img/kit/free/favicon.png">
     <title>
-        Signup
+        <jsp:getProperty name="constant" property="webSiteName"/>
     </title>
     <!--
     <!-- Extra details for Live View on GitHub Pages
@@ -62,8 +56,7 @@ Implemented bu FahamuTech
     <!--     Fonts and icons     -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
           rel="stylesheet">
-    <link rel="stylesheet" type="text/css"
-          href="href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons"/>
+    <link rel="stylesheet" type="text/css" href="href='https://fonts.googleapis.com/css?family=Roboto"/>
     <link rel="stylesheet" href="<c:url value="/res/style/font-awesome.min.css"/>"/>
     <link rel="stylesheet" href="<c:url value="/res/style/material-kit.min40a0.css?v=2.0.2"/>"/>
     <!-- Documentation extras -->
@@ -94,63 +87,71 @@ Implemented bu FahamuTech
         }
 
         function login(form) {
-            if (form.username.value == "") {
-                id("usernameError")//.textContent = "Please enter the username";
+            if (form.username.value === "") {
+                //id("usernameError");//.textContent = "Please enter the username";
                 form.username.focus();
+                alert("Please enter full name");
                 return;
-            }
-            else
-                id("usernameError").textContent = "";
-
-            if (form.password.value == "") {
-                id("passwordError")//.textContent = "Please enter the password";
+            } else if (form.email.value === "" || !form.email.value.includes("@")) {
+                //id("emailError").textContent = "Please enter the email";
+                form.email.focus();
+                alert("Please enter valid email");
+                return;
+            } else if (form.password.value === "") {
+                id("passwordError");//.textContent = "Please enter the password";
                 form.password.focus();
                 alert("Please enter the password");
                 return;
-            }
-            else
-                id("passwordError").textContent = "";
-
-            if (form.confirmPassword.value == "") {
-                id("").textContent = "Please enter the confirm password";
+            } else if (form.confirmPassword.value === "") {
+                //id("confirmPasswordError").textContent = "Please enter the confirm password";
                 form.confirmPassword.focus();
                 alert("Please enter the confirm password");
                 return;
-            }
-            else
-                id("note2").textContent = "";
-
-            if (form.email.value == "") {
-                id("emailError").textContent = "Please enter the email";
-                form.email.focus();
-                alert("Please enter the email");
+            } else if (form.password.value !== form.confirmPassword.value) {
+                //id("emailError");
+                alert("Password don't Match");
+                form.password.textContent = "";
+                form.confirmPassword.textContent = "";
+                form.password.focus();
+                return;
+            } else if (!document.getElementById("termCheckBox").checked) {
+                alert("You must accept terms and condition");
                 return;
             }
-            else
-                id("emailError").textContent = "";
+
+            // if (form.password.value.length()<4 && form.confirmPassword.length()<4){
+            //     alert("Password must be grater then 4 character");
+            //     form.password.focus();
+            //     return;
+            // }
 
             var ajax = new XMLHttpRequest();
             ajax.onreadystatechange = function () {
-                if (this.readyState == 4 && this.status == 200) {
+                if (this.readyState === 4 && this.status === 200) {
                     var check = this.responseText;
-                    alert(check);
-                    if (check == "true") {
+
+                    if (check === "true") {
                         setCookie('username', form.username.value, 10);
-                        location.replace("index.html");
+                        //to be implemented
+                        //location.replace("index.html");
+                        alert("successful");
                     }
-                    else if (check == "false") {
-                        id("response").textContent = "wrong username or password";
+                    else if (check === "false") {
+                        //id("emailError");//.textContent = "wrong username or password";
+                        alert("false");
                         return;
                     }
                     else {
-                        id("response").textContent = "...error";
+                        //id("emailError");//.textContent = "...error";
+                        alert(check);
                         return;
                     }
                 }
-            }
-            ajax.open("POST", "<c:url value="/login"/>");
+            };
+            ajax.open("POST", "<c:url value="/signup"/>");
             ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-            ajax.send("username=" + form.username.value + "&password=" + form.password.value);
+            ajax.send("username=" + form.username.value + "&password="
+                + form.password.value + "&confirmPassword=" + form.confirmPassword.value + "&email=" + form.email.value);
         }
 
     </script>
@@ -306,7 +307,7 @@ Implemented bu FahamuTech
                                     <div class="form-check">
                                         <label class="form-check-label">
                                             <input class="form-check-input" type="checkbox" name="check" value=""
-                                                   checked>
+                                                   id="termCheckBox" checked>
                                             <span class="form-check-sign">
                                                     <span class="check"></span>
                                                 </span>
@@ -318,7 +319,7 @@ Implemented bu FahamuTech
                                     </div>
                                     <div class="text-center">
                                         <input type="button" onclick="login(this.form)"
-                                               class="btn btn-primary btn-round">Get Started</input>
+                                               class="btn btn-primary btn-round" value="Get Started"/>
                                     </div>
                                 </form>
 

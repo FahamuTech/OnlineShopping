@@ -1,6 +1,7 @@
 package utils;
 
 public class Constants {
+
     public static final String DB_CATEGORIES = "categories";
     public static final String PRODUCTS_BY_CATEGORY = "which_product";
     public static final String ALL_PRODUCT = "all_product";
@@ -9,7 +10,7 @@ public class Constants {
     public static final String SESSION_USER_KEY = "SESSION_USER_KEY";
     public static final String CALLBACK_URL_KEY = "CALLBACK_URL_KEY";
 
-    //register left campaign headers and description;
+    //register left campaign headers and description in signup page;
     public String head1 = "Marketing";
     public String head2 = "Full Support";
     public String head3 = "Cash Back";
@@ -21,12 +22,17 @@ public class Constants {
     public String webSiteName = "Online Shopping";
     public String webSiteDescription = "Shop Fast with us";
     public String termAndConditionUrl = "#"; //url to term and condition
+    //change to your location this is a demo
+    public String shopMap="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4851.135123262741!2d105.86847248902144!3d58.25136049196456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5cf6e6f5eed7e5eb%3A0xfec064728556bbad!2sTokma%2C+Irkutsk+Oblast%2C+Russia%2C+666639!5e0!3m2!1sen!2sin!4v1470650971228";
 
 
     public Constants(){
 
     }
 
+    public String getShopMap() {
+        return shopMap;
+    }
 
     public String getHead1() {
         return head1;
@@ -100,5 +106,7 @@ public class Constants {
         this.head3Description = head3Description;
     }
 
-
+    public void setShopMap(String shopMap) {
+        this.shopMap = shopMap;
+    }
 }
