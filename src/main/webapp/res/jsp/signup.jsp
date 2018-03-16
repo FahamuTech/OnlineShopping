@@ -81,6 +81,79 @@ Implemented bu FahamuTech
     <%--}--%>
     <%--;--%>
     <%--</script>--%>
+    <script type="text/javascript">
+        function id(id) {
+            return document.getElementById(id);
+        }
+
+        function setCookie(c_name, value, expiredays) {
+            var exdate = new Date();
+            exdate.setDate(exdate.getDate() + expiredays);
+            document.cookie = c_name + "=" + escape(value) +
+                ((expiredays == null) ? "" : ";expires=" + exdate.toUTCString());
+        }
+
+        function login(form) {
+            if (form.username.value == "") {
+                id("usernameError")//.textContent = "Please enter the username";
+                form.username.focus();
+                return;
+            }
+            else
+                id("usernameError").textContent = "";
+
+            if (form.password.value == "") {
+                id("passwordError")//.textContent = "Please enter the password";
+                form.password.focus();
+                alert("Please enter the password");
+                return;
+            }
+            else
+                id("passwordError").textContent = "";
+
+            if (form.confirmPassword.value == "") {
+                id("").textContent = "Please enter the confirm password";
+                form.confirmPassword.focus();
+                alert("Please enter the confirm password");
+                return;
+            }
+            else
+                id("note2").textContent = "";
+
+            if (form.email.value == "") {
+                id("emailError").textContent = "Please enter the email";
+                form.email.focus();
+                alert("Please enter the email");
+                return;
+            }
+            else
+                id("emailError").textContent = "";
+
+            var ajax = new XMLHttpRequest();
+            ajax.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    var check = this.responseText;
+                    alert(check);
+                    if (check == "true") {
+                        setCookie('username', form.username.value, 10);
+                        location.replace("index.html");
+                    }
+                    else if (check == "false") {
+                        id("response").textContent = "wrong username or password";
+                        return;
+                    }
+                    else {
+                        id("response").textContent = "...error";
+                        return;
+                    }
+                }
+            }
+            ajax.open("POST", "<c:url value="/login"/>");
+            ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            ajax.send("username=" + form.username.value + "&password=" + form.password.value);
+        }
+
+    </script>
 </head>
 
 <body class="signup-page ">
@@ -131,7 +204,9 @@ Implemented bu FahamuTech
                                         <i class="material-icons">timeline</i>
                                     </div>
                                     <div class="description">
-                                        <h4 class="info-title"><jsp:getProperty name="constant" property="head1"/></h4>
+                                        <h4 class="info-title">
+                                            <jsp:getProperty name="constant" property="head1"/>
+                                        </h4>
                                         <p class="description">
                                             <jsp:getProperty name="constant" property="head1Description"/>
                                         </p>
@@ -142,9 +217,11 @@ Implemented bu FahamuTech
                                         <i class="material-icons">code</i>
                                     </div>
                                     <div class="description">
-                                        <h4 class="info-title"><jsp:getProperty name="constant" property="head2"/></h4>
+                                        <h4 class="info-title">
+                                            <jsp:getProperty name="constant" property="head2"/>
+                                        </h4>
                                         <p class="description">
-                                           <jsp:getProperty name="constant" property="head2Description"/>
+                                            <jsp:getProperty name="constant" property="head2Description"/>
                                         </p>
                                     </div>
                                 </div>
@@ -153,7 +230,9 @@ Implemented bu FahamuTech
                                         <i class="material-icons">group</i>
                                     </div>
                                     <div class="description">
-                                        <h4 class="info-title"><jsp:getProperty name="constant" property="head3"/></h4>
+                                        <h4 class="info-title">
+                                            <jsp:getProperty name="constant" property="head3"/>
+                                        </h4>
                                         <p class="description">
                                             <jsp:getProperty name="constant" property="head3Description"/>
                                         </p>
@@ -182,8 +261,9 @@ Implemented bu FahamuTech
                                                         <i class="material-icons">face</i>
                                                     </span>
                                             </div>
-                                            <input type="text" name="username" id="usernameError" class="form-control"
-                                                   placeholder="Full Name...">
+                                            <input type="text" name="username" class="form-control"
+                                                   placeholder="Full Name..."><span id="usernameError"
+                                                                                    style="display:none"></span>
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -193,8 +273,9 @@ Implemented bu FahamuTech
                                                         <i class="material-icons">mail</i>
                                                     </span>
                                             </div>
-                                            <input type="text" name="email" id="emailError" class="form-control"
-                                                   placeholder="Email...">
+                                            <input type="text" name="email" class="form-control"
+                                                   placeholder="Email..."><span id="emailError"
+                                                                                style="display: none;"></span>
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -204,8 +285,9 @@ Implemented bu FahamuTech
                                                         <i class="material-icons">lock_outline</i>
                                                     </span>
                                             </div>
-                                            <input type="password" name="password" id="passwordError"
+                                            <input type="password" name="password"
                                                    placeholder="Password..." class="form-control"/>
+                                            <span id="passwordError" style="display: none;"></span>
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -216,26 +298,29 @@ Implemented bu FahamuTech
                                                     </span>
                                             </div>
                                             <input type="password" placeholder="Confirm Password..."
-                                                   name="confirmPassword" id="confirmPasswordError"
+                                                   name="confirmPassword"
                                                    class="form-control"/>
+                                            <span id="confirmPasswordError" style="display: none"></span>
                                         </div>
                                     </div>
                                     <div class="form-check">
                                         <label class="form-check-label">
-                                            <input class="form-check-input" type="checkbox" value="" checked>
+                                            <input class="form-check-input" type="checkbox" name="check" value=""
+                                                   checked>
                                             <span class="form-check-sign">
                                                     <span class="check"></span>
                                                 </span>
+                                            <span id="checkError" style="display: none;"></span>
                                             I agree to the
                                             <a href="<jsp:getProperty name="constant" property="termAndConditionUrl"/>">terms
                                                 and conditions</a>.
                                         </label>
                                     </div>
                                     <div class="text-center">
-                                        <a href="#pablo" class="btn btn-primary btn-round">Get Started</a>
+                                        <input type="button" onclick="login(this.form)"
+                                               class="btn btn-primary btn-round">Get Started</input>
                                     </div>
                                 </form>
-
 
                             </div>
                         </div>
