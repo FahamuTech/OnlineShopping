@@ -1,6 +1,6 @@
-<%@ page import="java.util.ArrayList" %>
-<%@ page import="utils.ProductModel" %>
 <%@ page import="utils.Constants" %>
+<%@ page import="utils.ProductModel" %>
+<%@ page import="java.util.ArrayList" %>
 <!--
 Author: W3layouts
 Author URL: http://w3layouts.com
@@ -121,19 +121,11 @@ Implemented by FahamuTech
 <!--get attribute-->
 <%
     ArrayList<ProductModel.ProductByCategory> productsByCategory = null;
-    ArrayList<ProductModel.AllProducts> allProducts = null;
     try {
-        productsByCategory = (ArrayList<ProductModel.ProductByCategory>) request.getAttribute(Constants.PRODUCTS_BY_CATEGORY);
+        productsByCategory = (ArrayList<ProductModel.ProductByCategory>) request.getAttribute(Constants.PRODUCTS);
     } catch (Throwable ignore) {
     }
-    try {
-        allProducts = (ArrayList<ProductModel.AllProducts>) request.getAttribute(Constants.ALL_PRODUCT);
-    } catch (Throwable ignore) {
-    }
-    String query = request.getQueryString();
-    if (query != null) {
-        if (query.contains("%20")) query = query.replace("%20", " ");
-    }
+    String query = (String) request.getAttribute("query");
 %>
 <!-- header -->
 <jsp:include page="head.jsp"/>
@@ -146,19 +138,15 @@ Implemented by FahamuTech
             <!-- breadcrumbs -->
             <ol class="breadcrumb breadcrumb1">
                 <li><a href="<c:url value="/home"/>">Home</a></li>
-                <%if (query != null) {%>
                 <li>Products</li>
                 <li class="active"><%=query%>
                 </li>
-                <%} else {%>
-                <li class="active">Products</li>
-                <%}%>
             </ol>
             <div class="clearfix"></div>
             <!-- //breadcrumbs -->
 
             <div class="product-top">
-                <%if (query != null) {%>
+                <%if (query != "") {%>
                 <h4><%=query%>
                 </h4>
                 <%} else {%>
@@ -168,59 +156,74 @@ Implemented by FahamuTech
             </div>
 
             <div class="products-row">
-                <div class="col-md-3 product-grids">
-                    <div class="agile-products">
-                        <%if (productsByCategory != null) {%>
+                <script>
+                    $(document).ready(function () {
+                        $("#owl-products").owlCarousel({
+
+                            autoPlay: 3000, //Set AutoPlay to 3 seconds
+
+                            items: 1,
+                            itemsDesktop: [640, 5],
+                            itemsDesktopSmall: [414, 4],
+                            navigation: true
+
+                        });
+
+                    });
+                </script>
+                <div id="owl-products" class="owl-carousel">
+                    <div class="item">
                         <%for (ProductModel.ProductByCategory product : productsByCategory) {%>
-                        <div class="new-tag"><h6>50%<br>Off</h6></div>
-                        <a href="<c:url value="/single?<%=product.getId()%>"/>"><img
-                                src="<c:url value="<%=product.getImage()%>"/>"
-                                class="img-responsive" alt="img"></a>
-                        <div class="agile-product-text">
-                            <h5><a href="<c:url value="/single?<%=product.getId()%>"/>"><%=product.getProduct()%>
-                            </a></h5>
-                            <h6>
-                                <del><%=product.getSell() * 2%>TZS</del>
-                                <%=product.getSell()%>TZS
-                            </h6>
-                            <form action="#" method="post">
-                                <input type="hidden" name="cmd" value="_cart"/>
-                                <input type="hidden" name="add" value="1"/>
-                                <input type="hidden" name="w3ls_item" value="<%=product.getProduct()%>"/>
-                                <input type="hidden" name="amount" value="<%=product.getSell()%>"/>
-                                <button type="submit" class="w3ls-cart pw3ls-cart"><i class="fa fa-cart-plus"
-                                                                                      aria-hidden="true"></i> Add to
-                                    cart
-                                </button>
-                            </form>
+                        <div class="col-md-3 product-grids">
+                            <div class="agile-products">
+                                <div class="new-tag"><h6>50%<br>Off</h6></div>
+                                <a href="<c:url value="/single?id="/>"<%=product.getId()%>><img
+                                        src="<c:url value="<%=product.getImage()%>"/>"
+                                        class="img-responsive" alt="img"></a>
+                                <div class="agile-product-text">
+                                    <h5>
+                                        <a href="<c:url value="/single?id=<%=product.getId()%>"/>"><%=product.getProduct()%>
+                                        </a></h5>
+                                    <h6>
+                                        <del><%=product.getSell() * 2%>TZS</del>
+                                        <%=product.getSell()%>TZS
+                                    </h6>
+                                    <form action="#" method="post">
+                                        <input type="hidden" name="cmd" value="_cart"/>
+                                        <input type="hidden" name="add" value="1"/>
+                                        <input type="hidden" name="w3ls_item" value="<%=product.getProduct()%>"/>
+                                        <input type="hidden" name="amount" value="<%=product.getSell()%>"/>
+                                        <button type="submit" class="w3ls-cart pw3ls-cart"><i class="fa fa-cart-plus"
+                                                                                              aria-hidden="true"></i>
+                                            Add to
+                                            cart
+                                        </button>
+                                    </form>
+                                </div>
+
+
+                            </div>
                         </div>
                         <%}%>
-                        <%}else {%>
-                        <%for (ProductModel.AllProducts product : allProducts) {%>
-                        <div class="new-tag"><h6>50%<br>Off</h6></div>
-                        <a href="<c:url value="/single?<%=product.getId()%>"/>"><img
-                                src="<c:url value="<%=product.getImage()%>"/>"
-                                class="img-responsive" alt="img"></a>
-                        <div class="agile-product-text">
-                            <h5><a href="<c:url value="/single?<%=product.getId()%>"/>"><%=product.getProduct()%>
-                            </a></h5>
-                            <h6>
-                                <del><%=product.getSell() * 2%>TZS</del>
-                                <%=product.getSell()%>TZS
-                            </h6>
-                            <form action="#" method="post">
-                                <input type="hidden" name="cmd" value="_cart"/>
-                                <input type="hidden" name="add" value="1"/>
-                                <input type="hidden" name="w3ls_item" value="<%=product.getProduct()%>"/>
-                                <input type="hidden" name="amount" value="<%=product.getSell()%>"/>
-                                <button type="submit" class="w3ls-cart pw3ls-cart"><i class="fa fa-cart-plus"
-                                                                                      aria-hidden="true"></i> Add to
-                                    cart
-                                </button>
-                            </form>
+                    </div>
+                    <div class="item">
+                        <div class="glry-w3agile-grids agileits">
+                            <a href="products.jsp"><img src="images/e4.png" alt="img"></a>
+                            <div class="view-caption agileits-w3layouts">
+                                <h4><a href="products.jsp">Digital Camera</a></h4>
+                                <p>Lorem ipsum dolor sit amet consectetur</p>
+                                <h5>$80</h5>
+                                <form action="#" method="post">
+                                    <input type="hidden" name="cmd" value="_cart"/>
+                                    <input type="hidden" name="add" value="1"/>
+                                    <input type="hidden" name="w3ls_item" value="Digital Camera"/>
+                                    <input type="hidden" name="amount" value="100.00"/>
+                                    <button type="submit" class="w3ls-cart"><i class="fa fa-cart-plus"
+                                                                               aria-hidden="true"></i> Add to cart
+                                    </button>
+                                </form>
+                            </div>
                         </div>
-                        <%}%>
-                        <%}%>
                     </div>
                 </div>
 
@@ -238,6 +241,7 @@ Implemented by FahamuTech
 
         <!--side bar view -->
         <div class="col-md-3 rsidebar">
+            <!--
             <div class="rsidebar-top">
                 <div class="slider-left">
                     <h4>Filter By Price</h4>
@@ -251,7 +255,7 @@ Implemented by FahamuTech
                         <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>More</label>
                     </div>
                 </div>
-
+-->
                 <div class="sidebar-row">
                     <h4>DISCOUNTS</h4>
                     <div class="row row1 scroll-pane">
@@ -320,6 +324,7 @@ Implemented by FahamuTech
                     </div>
                 </div>
                 <div class="item">
+
                     <div class="glry-w3agile-grids agileits">
                         <a href="products.jsp"><img src="images/e4.png" alt="img"></a>
                         <div class="view-caption agileits-w3layouts">
@@ -337,6 +342,7 @@ Implemented by FahamuTech
                             </form>
                         </div>
                     </div>
+
                 </div>
                 <div class="item">
                     <div class="glry-w3agile-grids agileits">
@@ -475,366 +481,3 @@ Implemented by FahamuTech
 </body>
 </html>
 
-
-<%--<div class="related-row">--%>
-<%--<h4>Related Searches</h4>--%>
-<%--<ul>--%>
-<%--<li><a href="products.jsp">Air conditioner </a></li>--%>
-<%--<li><a href="products.jsp">Gaming</a></li>--%>
-<%--<li><a href="products.jsp">Monitors</a></li>--%>
-<%--<li><a href="products.jsp">Pc </a></li>--%>
-<%--<li><a href="products.jsp">Food Processors</a></li>--%>
-<%--<li><a href="products.jsp">Oven</a></li>--%>
-<%--<li><a href="products.jsp">Purifiers</a></li>--%>
-<%--<li><a href="products.jsp">Oven</a></li>--%>
-<%--<li><a href="products.jsp">Cleaners</a></li>--%>
-<%--<li><a href="products.jsp">Small devices</a></li>--%>
-<%--</ul>--%>
-<%--</div>--%>
-
-
-<%--<div class="col-md-3 product-grids">--%>
-<%--<div class="agile-products">--%>
-<%--<div class="new-tag"><h6>New</h6></div>--%>
-<%--<a href="single.jsp"><img src="images/fridge.png" class="img-responsive" alt="img"></a>--%>
-<%--<div class="agile-product-text">--%>
-<%--<h5><a href="single.jsp">Refrigerator</a></h5>--%>
-<%--<h6>--%>
-<%--<del>$700</del>--%>
-<%--$300--%>
-<%--</h6>--%>
-<%--<form action="#" method="post">--%>
-<%--<input type="hidden" name="cmd" value="_cart"/>--%>
-<%--<input type="hidden" name="add" value="1"/>--%>
-<%--<input type="hidden" name="w3ls_item" value="Refrigerator"/>--%>
-<%--<input type="hidden" name="amount" value="300.00"/>--%>
-<%--<button type="submit" class="w3ls-cart pw3ls-cart"><i class="fa fa-cart-plus"--%>
-<%--aria-hidden="true"></i> Add to--%>
-<%--cart--%>
-<%--</button>--%>
-<%--</form>--%>
-<%--</div>--%>
-<%--</div>--%>
-<%--</div>--%>
-<%--<div class="col-md-3 product-grids">--%>
-<%--<div class="agile-products">--%>
-<%--<div class="new-tag"><h6>5% <br> Off</h6></div>--%>
-<%--<a href="single.jsp"><img src="images/smart.png" class="img-responsive" alt="img"></a>--%>
-<%--<div class="agile-product-text">--%>
-<%--<h5><a href="single.jsp">Smart Phone</a></h5>--%>
-<%--<h6>--%>
-<%--<del>$100</del>--%>
-<%--$70--%>
-<%--</h6>--%>
-<%--<form action="#" method="post">--%>
-<%--<input type="hidden" name="cmd" value="_cart"/>--%>
-<%--<input type="hidden" name="add" value="1"/>--%>
-<%--<input type="hidden" name="w3ls_item" value="Smart Phone"/>--%>
-<%--<input type="hidden" name="amount" value="70.00"/>--%>
-<%--<button type="submit" class="w3ls-cart pw3ls-cart"><i class="fa fa-cart-plus"--%>
-<%--aria-hidden="true"></i> Add to--%>
-<%--cart--%>
-<%--</button>--%>
-<%--</form>--%>
-<%--</div>--%>
-<%--</div>--%>
-<%--</div>--%>
-<%--<div class="col-md-3 product-grids">--%>
-<%--<div class="agile-products">--%>
-<%--<div class="new-tag"><h6>New</h6></div>--%>
-<%--<a href="single.jsp"><img src="images/camera.png" class="img-responsive" alt="img"></a>--%>
-<%--<div class="agile-product-text">--%>
-<%--<h5><a href="single.jsp">Digital Camera</a></h5>--%>
-<%--<h6>--%>
-<%--<del>$100</del>--%>
-<%--$80--%>
-<%--</h6>--%>
-<%--<form action="#" method="post">--%>
-<%--<input type="hidden" name="cmd" value="_cart"/>--%>
-<%--<input type="hidden" name="add" value="1"/>--%>
-<%--<input type="hidden" name="w3ls_item" value="Digital Camera"/>--%>
-<%--<input type="hidden" name="amount" value="80.00"/>--%>
-<%--<button type="submit" class="w3ls-cart pw3ls-cart"><i class="fa fa-cart-plus"--%>
-<%--aria-hidden="true"></i> Add to--%>
-<%--cart--%>
-<%--</button>--%>
-<%--</form>--%>
-<%--</div>--%>
-<%--</div>--%>
-<%--</div>--%>
-<%--<div class="col-md-3 product-grids">--%>
-<%--<div class="agile-products">--%>
-<%--<div class="new-tag"><h6>New</h6></div>--%>
-<%--<a href="single.jsp"><img src="images/camera.png" class="img-responsive" alt="img"></a>--%>
-<%--<div class="agile-product-text">--%>
-<%--<h5><a href="single.jsp">Digital Camera</a></h5>--%>
-<%--<h6>--%>
-<%--<del>$100</del>--%>
-<%--$80--%>
-<%--</h6>--%>
-<%--<form action="#" method="post">--%>
-<%--<input type="hidden" name="cmd" value="_cart"/>--%>
-<%--<input type="hidden" name="add" value="1"/>--%>
-<%--<input type="hidden" name="w3ls_item" value="Digital Camera"/>--%>
-<%--<input type="hidden" name="amount" value="80.00"/>--%>
-<%--<button type="submit" class="w3ls-cart pw3ls-cart"><i class="fa fa-cart-plus"--%>
-<%--aria-hidden="true"></i> Add to--%>
-<%--cart--%>
-<%--</button>--%>
-<%--</form>--%>
-<%--</div>--%>
-<%--</div>--%>
-<%--</div>--%>
-<%--<div class="col-md-3 product-grids">--%>
-<%--<div class="agile-products">--%>
-<%--<div class="new-tag"><h6>5% <br> Off</h6></div>--%>
-<%--<a href="single.jsp"><img src="images/smart.png" class="img-responsive" alt="img"></a>--%>
-<%--<div class="agile-product-text">--%>
-<%--<h5><a href="single.jsp">Smart Phone</a></h5>--%>
-<%--<h6>--%>
-<%--<del>$100</del>--%>
-<%--$70--%>
-<%--</h6>--%>
-<%--<form action="#" method="post">--%>
-<%--<input type="hidden" name="cmd" value="_cart"/>--%>
-<%--<input type="hidden" name="add" value="1"/>--%>
-<%--<input type="hidden" name="w3ls_item" value="Smart Phone"/>--%>
-<%--<input type="hidden" name="amount" value="70.00"/>--%>
-<%--<button type="submit" class="w3ls-cart pw3ls-cart"><i class="fa fa-cart-plus"--%>
-<%--aria-hidden="true"></i> Add to--%>
-<%--cart--%>
-<%--</button>--%>
-<%--</form>--%>
-<%--</div>--%>
-<%--</div>--%>
-<%--</div>--%>
-<%--<div class="col-md-3 product-grids">--%>
-<%--<div class="agile-products">--%>
-<%--<div class="new-tag"><h6>20%<br>Off</h6></div>--%>
-<%--<a href="single.jsp"><img src="images/subwoffer.png" class="img-responsive" alt="img"></a>--%>
-<%--<div class="agile-product-text">--%>
-<%--<h5><a href="single.jsp">Audio speaker</a></h5>--%>
-<%--<h6>--%>
-<%--<del>$200</del>--%>
-<%--$100--%>
-<%--</h6>--%>
-<%--<form action="#" method="post">--%>
-<%--<input type="hidden" name="cmd" value="_cart"/>--%>
-<%--<input type="hidden" name="add" value="1"/>--%>
-<%--<input type="hidden" name="w3ls_item" value="Audio speaker"/>--%>
-<%--<input type="hidden" name="amount" value="100.00"/>--%>
-<%--<button type="submit" class="w3ls-cart pw3ls-cart"><i class="fa fa-cart-plus"--%>
-<%--aria-hidden="true"></i> Add to--%>
-<%--cart--%>
-<%--</button>--%>
-<%--</form>--%>
-<%--</div>--%>
-<%--</div>--%>
-<%--</div>--%>
-<%--<div class="col-md-3 product-grids">--%>
-<%--<div class="agile-products">--%>
-<%--<div class="new-tag"><h6>New</h6></div>--%>
-<%--<a href="single.jsp"><img src="images/fridge.png" class="img-responsive" alt="img"></a>--%>
-<%--<div class="agile-product-text">--%>
-<%--<h5><a href="single.jsp">Refrigerator</a></h5>--%>
-<%--<h6>--%>
-<%--<del>$700</del>--%>
-<%--$300--%>
-<%--</h6>--%>
-<%--<form action="#" method="post">--%>
-<%--<input type="hidden" name="cmd" value="_cart"/>--%>
-<%--<input type="hidden" name="add" value="1"/>--%>
-<%--<input type="hidden" name="w3ls_item" value="Refrigerator"/>--%>
-<%--<input type="hidden" name="amount" value="300.00"/>--%>
-<%--<button type="submit" class="w3ls-cart pw3ls-cart"><i class="fa fa-cart-plus"--%>
-<%--aria-hidden="true"></i> Add to--%>
-<%--cart--%>
-<%--</button>--%>
-<%--</form>--%>
-<%--</div>--%>
-<%--</div>--%>
-<%--</div>--%>
-<%--<div class="col-md-3 product-grids">--%>
-<%--<div class="agile-products">--%>
-<%--<div class="new-tag"><h6>20%<br>Off</h6></div>--%>
-<%--<a href="single.jsp"><img src="images/subwoffer.png" class="img-responsive" alt="img"></a>--%>
-<%--<div class="agile-product-text">--%>
-<%--<h5><a href="single.jsp">Audio speaker</a></h5>--%>
-<%--<h6>--%>
-<%--<del>$200</del>--%>
-<%--$100--%>
-<%--</h6>--%>
-<%--<form action="#" method="post">--%>
-<%--<input type="hidden" name="cmd" value="_cart"/>--%>
-<%--<input type="hidden" name="add" value="1"/>--%>
-<%--<input type="hidden" name="w3ls_item" value="Audio speaker"/>--%>
-<%--<input type="hidden" name="amount" value="100.00"/>--%>
-<%--<button type="submit" class="w3ls-cart pw3ls-cart"><i class="fa fa-cart-plus"--%>
-<%--aria-hidden="true"></i> Add to--%>
-<%--cart--%>
-<%--</button>--%>
-<%--</form>--%>
-<%--</div>--%>
-<%--</div>--%>
-<%--</div>--%>
-<%--<div class="col-md-3 product-grids">--%>
-<%--<div class="agile-products">--%>
-<%--<div class="new-tag"><h6>New</h6></div>--%>
-<%--<a href="single.jsp"><img src="images/fridge.png" class="img-responsive" alt="img"></a>--%>
-<%--<div class="agile-product-text">--%>
-<%--<h5><a href="single.jsp">Refrigerator</a></h5>--%>
-<%--<h6>--%>
-<%--<del>$700</del>--%>
-<%--$300--%>
-<%--</h6>--%>
-<%--<form action="#" method="post">--%>
-<%--<input type="hidden" name="cmd" value="_cart"/>--%>
-<%--<input type="hidden" name="add" value="1"/>--%>
-<%--<input type="hidden" name="w3ls_item" value="Refrigerator"/>--%>
-<%--<input type="hidden" name="amount" value="300.00"/>--%>
-<%--<button type="submit" class="w3ls-cart pw3ls-cart"><i class="fa fa-cart-plus"--%>
-<%--aria-hidden="true"></i> Add to--%>
-<%--cart--%>
-<%--</button>--%>
-<%--</form>--%>
-<%--</div>--%>
-<%--</div>--%>
-<%--</div>--%>
-<%--<div class="col-md-3 product-grids">--%>
-<%--<div class="agile-products">--%>
-<%--<div class="new-tag"><h6>5% <br> Off</h6></div>--%>
-<%--<a href="single.jsp"><img src="images/smart.png" class="img-responsive" alt="img"></a>--%>
-<%--<div class="agile-product-text">--%>
-<%--<h5><a href="single.jsp">Smart Phone</a></h5>--%>
-<%--<h6>--%>
-<%--<del>$100</del>--%>
-<%--$70--%>
-<%--</h6>--%>
-<%--<form action="#" method="post">--%>
-<%--<input type="hidden" name="cmd" value="_cart"/>--%>
-<%--<input type="hidden" name="add" value="1"/>--%>
-<%--<input type="hidden" name="w3ls_item" value="Smart Phone"/>--%>
-<%--<input type="hidden" name="amount" value="70.00"/>--%>
-<%--<button type="submit" class="w3ls-cart pw3ls-cart"><i class="fa fa-cart-plus"--%>
-<%--aria-hidden="true"></i> Add to--%>
-<%--cart--%>
-<%--</button>--%>
-<%--</form>--%>
-<%--</div>--%>
-<%--</div>--%>
-<%--</div>--%>
-<%--<div class="col-md-3 product-grids">--%>
-<%--<div class="agile-products">--%>
-<%--<div class="new-tag"><h6>New</h6></div>--%>
-<%--<a href="single.jsp"><img src="images/camera.png" class="img-responsive" alt="img"></a>--%>
-<%--<div class="agile-product-text">--%>
-<%--<h5><a href="single.jsp">Digital Camera</a></h5>--%>
-<%--<h6>--%>
-<%--<del>$100</del>--%>
-<%--$80--%>
-<%--</h6>--%>
-<%--<form action="#" method="post">--%>
-<%--<input type="hidden" name="cmd" value="_cart"/>--%>
-<%--<input type="hidden" name="add" value="1"/>--%>
-<%--<input type="hidden" name="w3ls_item" value="Digital Camera"/>--%>
-<%--<input type="hidden" name="amount" value="80.00"/>--%>
-<%--<button type="submit" class="w3ls-cart pw3ls-cart"><i class="fa fa-cart-plus"--%>
-<%--aria-hidden="true"></i> Add to--%>
-<%--cart--%>
-<%--</button>--%>
-<%--</form>--%>
-<%--</div>--%>
-<%--</div>--%>
-<%--</div>--%>
-<%--<div class="col-md-3 product-grids">--%>
-<%--<div class="agile-products">--%>
-<%--<div class="new-tag"><h6>New</h6></div>--%>
-<%--<a href="single.jsp"><img src="images/camera.png" class="img-responsive" alt="img"></a>--%>
-<%--<div class="agile-product-text">--%>
-<%--<h5><a href="single.jsp">Digital Camera</a></h5>--%>
-<%--<h6>--%>
-<%--<del>$100</del>--%>
-<%--$80--%>
-<%--</h6>--%>
-<%--<form action="#" method="post">--%>
-<%--<input type="hidden" name="cmd" value="_cart"/>--%>
-<%--<input type="hidden" name="add" value="1"/>--%>
-<%--<input type="hidden" name="w3ls_item" value="Digital Camera"/>--%>
-<%--<input type="hidden" name="amount" value="80.00"/>--%>
-<%--<button type="submit" class="w3ls-cart pw3ls-cart"><i class="fa fa-cart-plus"--%>
-<%--aria-hidden="true"></i> Add to--%>
-<%--cart--%>
-<%--</button>--%>
-<%--</form>--%>
-<%--</div>--%>
-<%--</div>--%>
-<%--</div>--%>
-<%--<div class="col-md-3 product-grids">--%>
-<%--<div class="agile-products">--%>
-<%--<div class="new-tag"><h6>5% <br> Off</h6></div>--%>
-<%--<a href="single.jsp"><img src="images/smart.png" class="img-responsive" alt="img"></a>--%>
-<%--<div class="agile-product-text">--%>
-<%--<h5><a href="single.jsp">Smart Phone</a></h5>--%>
-<%--<h6>--%>
-<%--<del>$100</del>--%>
-<%--$70--%>
-<%--</h6>--%>
-<%--<form action="#" method="post">--%>
-<%--<input type="hidden" name="cmd" value="_cart"/>--%>
-<%--<input type="hidden" name="add" value="1"/>--%>
-<%--<input type="hidden" name="w3ls_item" value="Smart Phone"/>--%>
-<%--<input type="hidden" name="amount" value="70.00"/>--%>
-<%--<button type="submit" class="w3ls-cart pw3ls-cart"><i class="fa fa-cart-plus"--%>
-<%--aria-hidden="true"></i> Add to--%>
-<%--cart--%>
-<%--</button>--%>
-<%--</form>--%>
-<%--</div>--%>
-<%--</div>--%>
-<%--</div>--%>
-<%--<div class="col-md-3 product-grids">--%>
-<%--<div class="agile-products">--%>
-<%--<div class="new-tag"><h6>20%<br>Off</h6></div>--%>
-<%--<a href="single.jsp"><img src="images/subwoffer.png" class="img-responsive" alt="img"></a>--%>
-<%--<div class="agile-product-text">--%>
-<%--<h5><a href="single.jsp">Audio speaker</a></h5>--%>
-<%--<h6>--%>
-<%--<del>$200</del>--%>
-<%--$100--%>
-<%--</h6>--%>
-<%--<form action="#" method="post">--%>
-<%--<input type="hidden" name="cmd" value="_cart"/>--%>
-<%--<input type="hidden" name="add" value="1"/>--%>
-<%--<input type="hidden" name="w3ls_item" value="Audio speaker"/>--%>
-<%--<input type="hidden" name="amount" value="100.00"/>--%>
-<%--<button type="submit" class="w3ls-cart pw3ls-cart"><i class="fa fa-cart-plus"--%>
-<%--aria-hidden="true"></i> Add to--%>
-<%--cart--%>
-<%--</button>--%>
-<%--</form>--%>
-<%--</div>--%>
-<%--</div>--%>
-<%--</div>--%>
-<%--<div class="col-md-3 product-grids">--%>
-<%--<div class="agile-products">--%>
-<%--<div class="new-tag"><h6>New</h6></div>--%>
-<%--<a href="single.jsp"><img src="images/fridge.png" class="img-responsive" alt="img"></a>--%>
-<%--<div class="agile-product-text">--%>
-<%--<h5><a href="single.jsp">Refrigerator</a></h5>--%>
-<%--<h6>--%>
-<%--<del>$700</del>--%>
-<%--$300--%>
-<%--</h6>--%>
-<%--<form action="#" method="post">--%>
-<%--<input type="hidden" name="cmd" value="_cart"/>--%>
-<%--<input type="hidden" name="add" value="1"/>--%>
-<%--<input type="hidden" name="w3ls_item" value="Refrigerator"/>--%>
-<%--<input type="hidden" name="amount" value="300.00"/>--%>
-<%--<button type="submit" class="w3ls-cart pw3ls-cart"><i class="fa fa-cart-plus"--%>
-<%--aria-hidden="true"></i> Add to--%>
-<%--cart--%>
-<%--</button>--%>
-<%--</form>--%>
-<%--</div>--%>
-<%--</div>--%>
-<%--</div>--%>

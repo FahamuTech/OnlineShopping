@@ -72,7 +72,7 @@ public class  ProductModel {
         }
     }
 
-    public static class AllProducts{
+    public static class Products {
 
         public SimpleIntegerProperty id;
         public SimpleStringProperty product;
@@ -81,7 +81,7 @@ public class  ProductModel {
         public SimpleStringProperty category;
         public SimpleFloatProperty sell;
 
-        public AllProducts(int id,String product,String model,String image,String category,float sell){
+        public Products(int id, String product, String model, String image, String category, float sell) {
             this.id=new SimpleIntegerProperty(id);
             this.product=new SimpleStringProperty(product);
             this.model=new SimpleStringProperty(model);

@@ -11,13 +11,13 @@ import java.util.ArrayList;
 public class ProductsData extends BaseDataClass {
 
     //private ProductModel productModel=new ProductModel();
-    public ArrayList<ProductModel.ProductByCategory> getProductsByCategory(String category) {
+    public ArrayList<ProductModel.ProductByCategory> getProducts(String category) {
         Connection connection = null;
         ArrayList<ProductModel.ProductByCategory> products = null;
         if (category != null) {
             try {
                 products = new ArrayList<>();
-                String query = "SELECT id,product,model,image,sell FROM stock WHERE category=\'" + category + "\' AND quantity>0";
+                String query = "SELECT id,product,model,image,sell,category FROM stock WHERE category=\'" + category + "\' AND quantity>0";
                 connection = getConnection();
                 Statement statement = connection.createStatement();
                 ResultSet resultSet = statement.executeQuery(query);
@@ -27,7 +27,7 @@ public class ProductsData extends BaseDataClass {
                             resultSet.getString("product"),
                             resultSet.getString("model"),
                             resultSet.getString("image"),
-                            null,
+                            resultSet.getString("category"),
                             resultSet.getFloat("sell")
                     ));
                 }
@@ -82,9 +82,9 @@ public class ProductsData extends BaseDataClass {
         return products;
     }
 
-    public ArrayList<ProductModel.AllProducts> getAllProducts() {
+    public ArrayList<ProductModel.ProductByCategory> getProducts() {
         Connection connection = null;
-        ArrayList<ProductModel.AllProducts> allProducts = null;
+        ArrayList<ProductModel.ProductByCategory> allProducts = null;
         try {
             allProducts = new ArrayList<>();
             String query = "SELECT * FROM stock ";
@@ -92,7 +92,7 @@ public class ProductsData extends BaseDataClass {
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery(query);
             while (resultSet.next()) {
-                allProducts.add(new ProductModel.AllProducts(
+                allProducts.add(new ProductModel.ProductByCategory(
                         resultSet.getInt("id"),
                         resultSet.getString("product"),
                         resultSet.getString("model"),

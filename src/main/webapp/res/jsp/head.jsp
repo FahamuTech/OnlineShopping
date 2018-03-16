@@ -1,5 +1,3 @@
-<%@ page import="java.util.ArrayList" %>
-<%@ page import="utils.Constants" %>
 <%@ page import="dataFactory.HomePageData" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%! private HomePageData homePageData=new HomePageData();%>
@@ -78,10 +76,10 @@
         <div class="container">
             <div class="header-logo">
                 <h1><a href="<c:url value="/home"/>">
-                    <span>O</span>nline <i>Shopping</i></a></h1>
-                <h5>
-                    <jsp:getProperty name="constants" property="webSiteDescription"/>
-                </h5>
+                    <span>O</span>nline<i>Shopping</i></a>
+                </h1>
+                <%--<h5><jsp:getProperty name="constants" property="webSiteDescription"/>--%>
+                <%--</h5>--%>
             </div>
             <div class="header-search">
                 <form action="<c:url value="/products"/> " method="post">
@@ -120,7 +118,7 @@
                             <li><br></li>
                             <%for (String arrayList : homePageData.getCategories()) {%>
                             <li>
-                                <a href="<c:url value="/products?"/><%=arrayList%>">
+                                <a href="<c:url value="/products?category="/><%=arrayList%>">
                                     <%=arrayList%>
                                 </a>
                             </li>
@@ -130,6 +128,7 @@
                     </nav> <!-- .cd-dropdown -->
                 </div> <!-- .cd-dropdown-wrapper -->
             </div>
+
             <div class="move-text">
                 <div class="marquee"><a href="<c:url value="/offers"/> "> New collections are available here......
                     <span>Get extra 10% off on everything | no extra taxes </span>
