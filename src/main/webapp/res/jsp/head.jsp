@@ -8,10 +8,10 @@
   User: olive
   Date: 3/8/18
   Time: 1:07 PM
-  To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <jsp:useBean id="constants" class="utils.Constants"/>
+
 <!-- header -->
 <div class="header ">
     <nav class="navbar navbar-inverse" style="border-radius: 0">
@@ -63,11 +63,11 @@
                 <%--aria-hidden="true"></i>--%>
                 <%--Credit Card</a>--%>
                 <%--</li>--%>
-                <li class="dropdown head-dpdn">
-                    <a href="<c:url value="/about"/> " class="dropdown-toggle"><i class="fa fa-question-circle"
-                                                                  aria-hidden="true"></i>
-                        Help</a>
-                </li>
+                <%--<li class="dropdown head-dpdn">--%>
+                    <%--<a href="<c:url value="/about"/> " class="dropdown-toggle"><i class="fa fa-question-circle"--%>
+                                                                  <%--aria-hidden="true"></i>--%>
+                        <%--Help</a>--%>
+                <%--</li>--%>
             </ul>
         </div>
     </nav>

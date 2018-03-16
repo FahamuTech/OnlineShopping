@@ -731,7 +731,7 @@ Implemented by FahamuTech
                 <ul>
                     <li><a href="marketplace.jsp">Marketplace</a></li>
                     <li><a href="values.jsp">Core Values</a></li>
-                    <li><a href="privacy.jsp">Privacy Policy</a></li>
+                    <li><a href="404.jsp">Privacy Policy</a></li>
                 </ul>
             </div>
             <div class="col-md-4 sitemap-text-grids">

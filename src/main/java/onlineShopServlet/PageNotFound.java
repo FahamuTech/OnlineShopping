@@ -23,7 +23,7 @@ public class PageNotFound extends HttpServlet {
 //        out.println("go back to<a href=\"/home\">Home</a>");
 //        out.println("</body>");
 //        out.println("<html>");
-        //resp.sendRedirect("/index.jsp");
+        req.getRequestDispatcher("/res/jsp/404.jsp").forward(req,resp);
     }
 
     @Override
