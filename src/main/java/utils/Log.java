@@ -7,7 +7,7 @@ public class Log{
 
 ////public class Log {
 ////
-////    private  BaseDataClass baseDataClass=new BaseDataClass();
+////    private  BaseMySqlNormal baseDataClass=new BaseMySqlNormal();
 ////
 ////    public  <A extends Throwable>void record(A error){
 ////        Connection connection=null;

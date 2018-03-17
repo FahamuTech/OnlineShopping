@@ -1,6 +1,6 @@
 package onlineShopServlet;
 
-import dataFactory.ProductsData;
+import hibernateEntityManager.ProductsData;
 import utils.Constants;
 
 import javax.servlet.ServletException;

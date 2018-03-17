@@ -4,7 +4,7 @@
     <facet type="hibernate" name="Hibernate">
       <configuration>
         <datasource-map>
-          <unit-entry name=".idea:modules:hibernate.cfg.xml" />
+          <unit-entry name=".idea:modules:hibernate.cfg.xml" value="2a581180-7d9f-4952-aba1-93e65bd00309" />
         </datasource-map>
         <naming-strategy-map />
         <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/hibernate.cfg.xml" />
@@ -19,9 +19,6 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="Hibernate 5.2.14-5.2.14" level="project" />
-    <orderEntry type="library" name="webfont" level="application" />
-    <orderEntry type="library" name="html5shiv" level="application" />
-    <orderEntry type="library" name="respond" level="application" />
+    <orderEntry type="library" name="Gradle: org.hibernate:hibernate-core:5.2.15.Final" level="project" />
   </component>
 </module>

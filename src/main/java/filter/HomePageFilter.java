@@ -1,7 +1,6 @@
 package filter;
 
-import dataFactory.HomePageData;
-import utils.Constants;
+import hibernateEntityManager.HomePageData;
 
 import javax.servlet.*;
 import java.io.IOException;

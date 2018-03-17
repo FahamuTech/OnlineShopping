@@ -1,6 +1,6 @@
 package onlineShopServlet;
 
-import dataFactory.ProductsData;
+import hibernateEntityManager.ProductsData;
 import utils.Constants;
 
 import javax.servlet.ServletException;
@@ -19,7 +19,7 @@ public class Main extends HttpServlet {
                          HttpServletResponse response) throws IOException, ServletException {
 
            request.setAttribute(Constants.FEATURES_PRODUCT,productsData.getFeatureProducts(1));
-           request.getRequestDispatcher("/index.jsp").forward(request,response);
+        request.getRequestDispatcher("/jsp/home.jsp").forward(request, response);
 
     }
 
