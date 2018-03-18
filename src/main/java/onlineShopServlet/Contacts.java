@@ -22,6 +22,6 @@ public class Contacts extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.getRequestDispatcher("/res/jsp/contact.jsp").forward(req,resp);
+        req.getRequestDispatcher("/jsp/contact-us.jsp").forward(req, resp);
     }
 }

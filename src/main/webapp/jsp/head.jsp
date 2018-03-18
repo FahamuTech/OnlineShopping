@@ -14,6 +14,7 @@
 <!-- Favicons -->
 <link rel="apple-touch-icon" href="<c:url value="/assets/img/kit/free/apple-icon.png"/>"/>
 <link rel="icon" href="<c:url value="/assets/img/kit/free/favicon.png"/>"/>
+
 <title>
     <jsp:getProperty name="constant" property="webSiteName"/>
 </title>

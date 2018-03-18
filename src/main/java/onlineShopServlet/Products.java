@@ -26,7 +26,7 @@ public class Products extends HttpServlet{
             req.setAttribute(Constants.PRODUCTS, productsData.getProducts());
             req.setAttribute("query", "");
         }
-        req.getRequestDispatcher("/res/jsp/products.jsp").forward(req,resp);
+        req.getRequestDispatcher("/jsp/products.jsp").forward(req, resp);
     }
 
     @Override

@@ -2,7 +2,7 @@
 <html lang="en">
 
 
-<!-- Mirrored from demos.creative-tim.com/marketplace/material-kit-pro/examples/pricing.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Mar 2018 20:11:59 GMT -->
+<!-- Mirrored from demos.creative-tim.com/marketplace/material-kit-pro/examples/contact-us.jsp by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Mar 2018 20:11:21 GMT -->
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"/>
@@ -11,7 +11,7 @@
     <link rel="apple-touch-icon" href="../assets/img/kit/free/apple-icon.png">
     <link rel="icon" href="../assets/img/kit/free/favicon.png">
     <title>
-        Pricing &#45; Material Kit PRO by Creative Tim
+        Contact Us &#45; Material Kit PRO by Creative Tim
     </title>
     <!-- Extra details for Live View on GitHub Pages -->
     <!-- Canonical SEO -->
@@ -72,9 +72,8 @@
     </script>
 </head>
 
-<body class="pricing ">
-<nav class="navbar navbar-color-on-scroll navbar-transparent    fixed-top  navbar-expand-lg " color-on-scroll="100"
-     id="sectionsNav">
+<body class="contact-us ">
+<nav class="navbar    fixed-top  navbar-expand-lg bg-dark" color-on-scroll="100" id="sectionsNav">
     <div class="container">
         <div class="navbar-translate">
             <a class="navbar-brand" href="../index.jsp">Material Kit PRO </a>
@@ -136,7 +135,7 @@
                         <i class="material-icons">view_carousel</i> Examples
                     </a>
                     <div class="dropdown-menu dropdown-with-icons">
-                        <a href="about-us.html" class="dropdown-item">
+                        <a href="about-us.jsp" class="dropdown-item">
                             <i class="material-icons">account_balance</i> About Us
                         </a>
                         <a href="blog-post.html" class="dropdown-item">
@@ -145,7 +144,7 @@
                         <a href="blog-posts.html" class="dropdown-item">
                             <i class="material-icons">view_quilt</i> Blog Posts
                         </a>
-                        <a href="contact-us.html" class="dropdown-item">
+                        <a href="contact-us.jsp" class="dropdown-item">
                             <i class="material-icons">location_on</i> Contact Us
                         </a>
                         <a href="home.jsp" class="dropdown-item">
@@ -157,10 +156,10 @@
                         <a href="pricing.html" class="dropdown-item">
                             <i class="material-icons">attach_money</i> Pricing Page
                         </a>
-                        <a href="ecommerce.html" class="dropdown-item">
+                        <a href="products.jsp" class="dropdown-item">
                             <i class="material-icons">store</i> Ecommerce Page
                         </a>
-                        <a href="product-page.html" class="dropdown-item">
+                        <a href="product-page.jsp" class="dropdown-item">
                             <i class="material-icons">shopping_cart</i> Product Page
                         </a>
                         <a href="profile-page.html" class="dropdown-item">
@@ -175,174 +174,77 @@
         </div>
     </div>
 </nav>
-<div class="page-header header-filter header-small" data-parallax="true"
-     style="background-image: url(%26apos%3b/assets/img/material-kit/bg2.html);">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8 ml-auto mr-auto text-center">
-                <h1 class="title">Let&apos;s get started</h1>
-                <h4>To get started, you will need to choose a plan for your needs. You can opt in for the monthly of
-                    annual options and go with one fo the three listed below.</h4>
-            </div>
-        </div>
-    </div>
-</div>
+<div id="contactUsMap" class="big-map"></div>
 <div class="main main-raised">
-    <div class="container">
-        <div class="pricing-2">
+    <div class="contact-content">
+        <div class="container">
+            <h2 class="title">Send us a message</h2>
             <div class="row">
-                <div class="col-md-6 ml-auto mr-auto text-center">
-                    <ul class="nav nav-pills nav-pills-rose">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#pill1" data-toggle="tab">Monthly</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#pill2" data-toggle="tab">Yearly</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card card-pricing card-plain">
-                        <div class="card-body">
-                            <h6 class="card-category text-info">Free</h6>
-                            <h1 class="card-title">
-                                <small>$</small>
-                                0
-                                <small>/mo</small>
-                            </h1>
-                            <ul>
-                                <li>
-                                    <b>1</b> Project
-                                </li>
-                                <li>
-                                    <b>5</b> Team Members
-                                </li>
-                                <li>
-                                    <b>55</b> Personal Contacts
-                                </li>
-                                <li>
-                                    <b>5.000</b> Messages
-                                </li>
-                            </ul>
-                            <a href="#pablo" class="btn btn-rose btn-raised btn-round">
-                                Get Started
-                            </a>
+                <div class="col-md-6">
+                    <p class="description">You can contact us with anything related to our Products. We&apos;ll get in
+                        touch with you as soon as possible.
+                        <br>
+                        <br>
+                    </p>
+                    <form role="form" id="contact-form" method="post">
+                        <div class="form-group">
+                            <label for="name" class="bmd-label-floating">Your name</label>
+                            <input type="text" class="form-control" id="name">
                         </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card card-pricing card-raised bg-rose">
-                        <div class="card-body">
-                            <h6 class="card-category text-info">Premium</h6>
-                            <h1 class="card-title">
-                                <small>$</small>
-                                89
-                                <small>/mo</small>
-                            </h1>
-                            <ul>
-                                <li>
-                                    <b>500</b> Projects
-                                </li>
-                                <li>
-                                    <b>50</b> Team Members
-                                </li>
-                                <li>
-                                    <b>125</b> Personal Contacts
-                                </li>
-                                <li>
-                                    <b>15.000</b> Messages
-                                </li>
-                            </ul>
-                            <a href="#pablo" class="btn btn-white btn-raised btn-round">
-                                Get Started
-                            </a>
+                        <div class="form-group">
+                            <label for="exampleInputEmails" class="bmd-label-floating">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmails">
+                            <span class="bmd-help">We'll never share your email with anyone else.</span>
                         </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card card-pricing card-plain">
-                        <div class="card-body">
-                            <h6 class="card-category text-info">Platinum</h6>
-                            <h1 class="card-title">
-                                <small>$</small>
-                                199
-                                <small>/mo</small>
-                            </h1>
-                            <ul>
-                                <li>
-                                    <b>1000</b> Projects
-                                </li>
-                                <li>
-                                    <b>100</b> Team Members
-                                </li>
-                                <li>
-                                    <b>550</b> Personal Contacts
-                                </li>
-                                <li>
-                                    <b>50.000</b> Messages
-                                </li>
-                            </ul>
-                            <a href="#pablo" class="btn btn-rose btn-raised btn-round">
-                                Get Started
-                            </a>
+                        <div class="form-group">
+                            <label for="phone" class="bmd-label-floating">Phone</label>
+                            <input type="text" class="form-control" id="phone">
                         </div>
-                    </div>
+                        <div class="form-group label-floating">
+                            <label class="form-control-label bmd-label-floating" for="message"> Your message</label>
+                            <textarea class="form-control" rows="6" id="message"></textarea>
+                        </div>
+                        <div class="submit text-center">
+                            <input type="submit" class="btn btn-primary btn-raised btn-round" value="Contact Us">
+                        </div>
+                    </form>
                 </div>
-            </div>
-        </div>
-        <hr>
-        <div class="features-2">
-            <div class="text-center">
-                <h3 class="title">Frequently Asked Questions</h3>
-            </div>
-            <div class="row">
                 <div class="col-md-4 ml-auto">
                     <div class="info info-horizontal">
-                        <div class="icon icon-info">
-                            <i class="material-icons">card_membership</i>
+                        <div class="icon icon-primary">
+                            <i class="material-icons">pin_drop</i>
                         </div>
                         <div class="description">
-                            <h4 class="info-title">Can I cancel my subscription?</h4>
-                            <p>Yes, you can cancel and perform other actions on your subscriptions via the My Account
-                                page. </p>
+                            <h4 class="info-title">Find us at the office</h4>
+                            <p> Bld Mihail Kogalniceanu, nr. 8,
+                                <br> 7652 Bucharest,
+                                <br> Romania
+                            </p>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4 mr-auto">
                     <div class="info info-horizontal">
-                        <div class="icon icon-success">
-                            <i class="material-icons">card_giftcard</i>
+                        <div class="icon icon-primary">
+                            <i class="material-icons">phone</i>
                         </div>
                         <div class="description">
-                            <h4 class="info-title">Is there any discount for an annual subscription?</h4>
-                            <p>Yes, we offer a 40% discount if you choose annual subscription for any plan.</p>
+                            <h4 class="info-title">Give us a ring</h4>
+                            <p> Michael Jordan
+                                <br> +40 762 321 762
+                                <br> Mon - Fri, 8:00-22:00
+                            </p>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4 ml-auto">
                     <div class="info info-horizontal">
-                        <div class="icon icon-success">
-                            <i class="material-icons">attach_money</i>
+                        <div class="icon icon-primary">
+                            <i class="material-icons">business_center</i>
                         </div>
                         <div class="description">
-                            <h4 class="info-title">Which payment methods do you take?</h4>
-                            <p>WooCommerce comes bundled with PayPal (for accepting credit card and PayPal account
-                                payments), BACS, and cash on delivery for accepting payments. </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mr-auto">
-                    <div class="info info-horizontal">
-                        <div class="icon icon-rose">
-                            <i class="material-icons">question_answer</i>
-                        </div>
-                        <div class="description">
-                            <h4 class="info-title">Any other questions we can answer?</h4>
-                            <p>We are happy to help you. Contact us.</p>
+                            <h4 class="info-title">Legal Information</h4>
+                            <p> Creative Tim Ltd.
+                                <br> VAT &#xB7; EN2341241
+                                <br> IBAN &#xB7; EN8732ENGB2300099123
+                                <br> Bank &#xB7; Great Britain Bank
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -391,7 +293,8 @@
 <script src="../assets/js/core/popper.min.js"></script>
 <script src="../assets/js/bootstrap-material-design.min.js"></script>
 <!--  Google Maps Plugin  -->
-<!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2Yno10-YTnLjjn_Vtk0V8cdcY5lC4plU"></script> -->
+<script type="text/javascript"
+        src="../../../../maps.googleapis.com/maps/api/jsa54a?key=AIzaSyB2Yno10-YTnLjjn_Vtk0V8cdcY5lC4plU"></script>
 <!--  Plugin for Date Time Picker and Full Calendar Plugin  -->
 <script src="../assets/js/plugins/moment.min.js"></script>
 <!--	Plugin for the Datepicker, full documentation here: https://github.com/Eonasdan/bootstrap-datetimepicker -->
@@ -413,7 +316,12 @@
 <script src="../assets/js/material-kit.min40a0.js?v=2.0.2"></script>
 <!-- Fixed Sidebar Nav - js With initialisations For Demo Purpose, Don't Include it in your project -->
 <script src="../assets/assets-for-demo/js/material-kit-demo.js"></script>
-
+<script>
+    $().ready(function () {
+        // the body of this function is in assets/material-kit.js
+        materialKitDemo.initContactUsMap();
+    });
+</script>
 <script>
 
     var _gaq = _gaq || [];
@@ -464,5 +372,5 @@
 </body>
 
 
-<!-- Mirrored from demos.creative-tim.com/marketplace/material-kit-pro/examples/pricing.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Mar 2018 20:12:01 GMT -->
+<!-- Mirrored from demos.creative-tim.com/marketplace/material-kit-pro/examples/contact-us.jsp by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Mar 2018 20:11:21 GMT -->
 </html>

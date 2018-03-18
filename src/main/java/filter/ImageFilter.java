@@ -1,21 +1,15 @@
 package filter;
 
-import java.io.File;
-import java.io.IOException;
-
-import javax.servlet.Filter;
-import javax.servlet.FilterChain;
-import javax.servlet.FilterConfig;
-import javax.servlet.ServletException;
-import javax.servlet.ServletRequest;
-import javax.servlet.ServletResponse;
+import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
 import javax.servlet.annotation.WebInitParam;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.File;
+import java.io.IOException;
 
 @WebFilter(urlPatterns = {"*.png", "*.jpg", "*.gif"}, initParams = {
-        @WebInitParam(name = "notFoundImage", value = "/res/img/not-found.png")})
+        @WebInitParam(name = "notFoundImage", value = "/img/not-found.png")})
 public class ImageFilter implements Filter {
 
     private String notFoundImage;

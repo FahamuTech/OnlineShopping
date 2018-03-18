@@ -1,198 +1,37 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en">
 
 
-<!-- Mirrored from demos.creative-tim.com/marketplace/material-kit-pro/examples/ecommerce.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Mar 2018 20:12:01 GMT -->
+<!-- Mirrored from demos.creative-tim.com/marketplace/material-kit-pro/examples/products.jsp by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Mar 2018 20:12:01 GMT -->
 <head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <!-- Favicons -->
-    <link rel="apple-touch-icon" href="../assets/img/kit/free/apple-icon.png">
-    <link rel="icon" href="../assets/img/kit/free/favicon.png">
-    <title>
-        Ecommerce &#45; Material Kit PRO by Creative Tim
-    </title>
-    <!-- Extra details for Live View on GitHub Pages -->
-    <!-- Canonical SEO -->
-    <link rel="canonical" href="../../../../www.creative-tim.com/product/material-kit-pro.html"/>
-    <!--  Social tags      -->
-    <meta name="keywords"
-          content="creative tim, html kit, html css template, web template, bootstrap, css3 template, frontend, responsive bootstrap template, bootstrap 4 ui kit, premium bootstrap kit, responsive ui kit">
-    <meta name="description"
-          content="Start Your Development With A Badass Bootstrap 4 UI Kit inspired by Material Design.">
-    <!-- Schema.org markup for Google+ -->
-    <meta itemprop="name" content="Material Kit PRO by Creative Tim">
-    <meta itemprop="description"
-          content="Start Your Development With A Badass Bootstrap 4 UI Kit inspired by Material Design.">
-    <meta itemprop="image"
-          content="../../../../s3.amazonaws.com/creativetim_bucket/products/46/original/opt_mkp_thumbnail.jpg">
-    <!-- Twitter Card data -->
-    <meta name="twitter:card" content="product">
-    <meta name="twitter:site" content="@creativetim">
-    <meta name="twitter:title" content="Material Kit PRO by Creative Tim">
-    <meta name="twitter:description"
-          content="Start Your Development With A Badass Bootstrap 4 UI Kit inspired by Material Design.">
-    <meta name="twitter:creator" content="@creativetim">
-    <meta name="twitter:image"
-          content="../../../../s3.amazonaws.com/creativetim_bucket/products/46/original/opt_mkp_thumbnail.jpg">
-    <meta name="twitter:data1" content="Material Kit PRO by Creative Tim">
-    <meta name="twitter:label1" content="Product Type">
-    <meta name="twitter:data2" content="$79">
-    <meta name="twitter:label2" content="Price">
-    <!-- Open Graph data -->
-    <meta property="fb:app_id" content="655968634437471">
-    <meta property="og:title" content="Material Kit PRO by Creative Tim"/>
-    <meta property="og:type" content="article"/>
-    <meta property="og:url" content="../../../material-kit-pro/presentation.html"/>
-    <meta property="og:image"
-          content="../../../../s3.amazonaws.com/creativetim_bucket/products/46/original/opt_mkp_thumbnail.jpg"/>
-    <meta property="og:description"
-          content="Start Your Development With A Badass Bootstrap 4 UI Kit inspired by Material Design."/>
-    <meta property="og:site_name" content="Creative Tim"/>
-    <!--     Fonts and icons     -->
-    <link rel="stylesheet" type="text/css"
-          href="../../../../fonts.googleapis.com/css8393.css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons"/>
-    <link rel="stylesheet" href="../../../../maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css"/>
-    <link rel="stylesheet" href="../assets/css/material-kit.min40a0.css?v=2.0.2">
-    <!-- Documentation extras -->
-    <!-- CSS Just for demo purpose, don't include it in your project -->
-    <link href="../assets/assets-for-demo/demo.css" rel="stylesheet"/>
-    <link href="../assets/assets-for-demo/vertical-nav.css" rel="stylesheet"/>
-    <!-- iframe removal -->
-    <script type="text/javascript">
-        if (document.readyState === 'complete') {
-            if (window.location != window.parent.location) {
-                const elements = document.getElementsByClassName("iframe-extern");
-                while (elemnts.lenght > 0) elements[0].remove();
-                // $(".iframe-extern").remove();
-            }
-        }
-        ;
-    </script>
+    <jsp:include page="head.jsp"/>
 </head>
 
 <body class="ecommerce ">
-<nav class="navbar navbar-color-on-scroll navbar-transparent    fixed-top  navbar-expand-lg " color-on-scroll="100"
-     id="sectionsNav">
-    <div class="container">
-        <div class="navbar-translate">
-            <a class="navbar-brand" href="../index.jsp">Material Kit PRO </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                <span class="navbar-toggler-icon"></span>
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        </div>
-        <div class="collapse navbar-collapse">
-            <ul class="navbar-nav ml-auto">
-                <li class="dropdown nav-item">
-                    <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
-                        <i class="material-icons">apps</i> Components
-                    </a>
-                    <div class="dropdown-menu dropdown-with-icons">
-                        <a href="../index.jsp" class="dropdown-item">
-                            <i class="material-icons">layers</i> All Components
-                        </a>
-                        <a href="../docs/2.0/getting-started/introduction.html" class="dropdown-item">
-                            <i class="material-icons">content_paste</i> Documentation
-                        </a>
-                    </div>
-                </li>
-                <li class="dropdown nav-item">
-                    <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
-                        <i class="material-icons">view_day</i> Sections
-                    </a>
-                    <div class="dropdown-menu dropdown-with-icons">
-                        <a href="sections.html#headers" class="dropdown-item">
-                            <i class="material-icons">dns</i> Headers
-                        </a>
-                        <a href="sections.html#features" class="dropdown-item">
-                            <i class="material-icons">build</i> Features
-                        </a>
-                        <a href="sections.html#blogs" class="dropdown-item">
-                            <i class="material-icons">list</i> Blogs
-                        </a>
-                        <a href="sections.html#teams" class="dropdown-item">
-                            <i class="material-icons">people</i> Teams
-                        </a>
-                        <a href="sections.html#projects" class="dropdown-item">
-                            <i class="material-icons">assignment</i> Projects
-                        </a>
-                        <a href="sections.html#pricing" class="dropdown-item">
-                            <i class="material-icons">monetization_on</i> Pricing
-                        </a>
-                        <a href="sections.html#testimonials" class="dropdown-item">
-                            <i class="material-icons">chat</i> Testimonials
-                        </a>
-                        <a href="sections.html#contactus" class="dropdown-item">
-                            <i class="material-icons">call</i> Contacts
-                        </a>
-                    </div>
-                </li>
-                <li class="dropdown nav-item">
-                    <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
-                        <i class="material-icons">view_carousel</i> Examples
-                    </a>
-                    <div class="dropdown-menu dropdown-with-icons">
-                        <a href="about-us.html" class="dropdown-item">
-                            <i class="material-icons">account_balance</i> About Us
-                        </a>
-                        <a href="blog-post.html" class="dropdown-item">
-                            <i class="material-icons">art_track</i> Blog Post
-                        </a>
-                        <a href="blog-posts.html" class="dropdown-item">
-                            <i class="material-icons">view_quilt</i> Blog Posts
-                        </a>
-                        <a href="contact-us.html" class="dropdown-item">
-                            <i class="material-icons">location_on</i> Contact Us
-                        </a>
-                        <a href="home.jsp" class="dropdown-item">
-                            <i class="material-icons">view_day</i> Landing Page
-                        </a>
-                        <a href="login-page.html" class="dropdown-item">
-                            <i class="material-icons">fingerprint</i> Login Page
-                        </a>
-                        <a href="pricing.html" class="dropdown-item">
-                            <i class="material-icons">attach_money</i> Pricing Page
-                        </a>
-                        <a href="ecommerce.html" class="dropdown-item">
-                            <i class="material-icons">store</i> Ecommerce Page
-                        </a>
-                        <a href="product-page.html" class="dropdown-item">
-                            <i class="material-icons">shopping_cart</i> Product Page
-                        </a>
-                        <a href="profile-page.html" class="dropdown-item">
-                            <i class="material-icons">account_circle</i> Profile Page
-                        </a>
-                        <a href="signup-page.html" class="dropdown-item">
-                            <i class="material-icons">person_add</i> Signup Page
-                        </a>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
+
+<jsp:include page="navBar.jsp"/>
+
 <div class="page-header header-filter header-small" data-parallax="true"
-     style="background-image: url(%26apos%3b/assets/img/kit/pro/examples/clark-street-merc.html);">
+     style="background-image: url(
+     <c:url value="/assets/img/kit/bg3.jpg"/> );">
     <div class="container">
         <div class="row">
             <div class="col-md-8 ml-auto mr-auto text-center">
                 <div class="brand">
-                    <h1 class="title">Ecommerce Page!</h1>
-                    <h4>Free global delivery for all products. Use coupon
-                        <b>25summer</b> for an extra 25% Off</h4>
+                    <h1 class="title">Our Products</h1>
+                    <h4>Free global delivery for all products.</h4>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
 <div class="main main-raised">
+
+
     <div class="section">
         <div class="container">
-            <h2 class="section-title">Latest Offers</h2>
             <div class="row">
                 <div class="col-md-4">
                     <div class="card card-product card-plain">
@@ -278,6 +117,8 @@
         </div>
     </div>
     <!-- section -->
+
+
     <div class="section">
         <div class="container">
             <h2 class="section-title">Find what you need</h2>
@@ -929,6 +770,7 @@
     </div>
     <!-- section -->
 </div>
+
 <!-- end-main-raised -->
 <div class="section section-blog">
     <div class="container">
@@ -995,155 +837,14 @@
     </div>
 </div>
 <!-- section -->
-<div class="subscribe-line subscribe-line-image" data-parallax="true"
-     style="background-image: url(%26apos%3b/assets/img/kit/pro/examples/ecommerce-header.html);">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 ml-auto mr-auto">
-                <div class="text-center">
-                    <h3 class="title">Subscribe to our Newsletter</h3>
-                    <p class="description">
-                        Join our newsletter and get news in your inbox every week! We hate spam too, so no worries about
-                        this.
-                    </p>
-                </div>
-                <div class="card card-raised card-form-horizontal">
-                    <div class="card-body">
-                        <form method="" action="#">
-                            <div class="row">
-                                <div class="col-sm-8">
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-                                                <span class="input-group-text">
-                                                    <i class="material-icons">mail</i>
-                                                </span>
-                                        </div>
-                                        <input type="text" class="form-control" placeholder="Your Email...">
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <button type="button" class="btn btn-rose btn-block">Subscribe</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<footer class="footer footer-black footer-big">
-    <div class="container">
-        <div class="content">
-            <div class="row">
-                <div class="col-md-4">
-                    <h5>About Us</h5>
-                    <p>Creative Tim is a startup that creates design tools that make the web development process faster
-                        and easier. </p>
-                    <p>We love the web and care deeply for how users interact with a digital product. We power
-                        businesses and individuals to create better looking web projects around the world. </p>
-                </div>
-                <div class="col-md-4">
-                    <h5>Social Feed</h5>
-                    <div class="social-feed">
-                        <div class="feed-line">
-                            <i class="fa fa-twitter"></i>
-                            <p>How to handle ethical disagreements with your clients.</p>
-                        </div>
-                        <div class="feed-line">
-                            <i class="fa fa-twitter"></i>
-                            <p>The tangible benefits of designing at 1x pixel density.</p>
-                        </div>
-                        <div class="feed-line">
-                            <i class="fa fa-facebook-square"></i>
-                            <p>A collection of 25 stunning sites that you can use for inspiration.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <h5>Instagram Feed</h5>
-                    <div class="gallery-feed">
-                        <img src="../assets/img/kit/pro/faces/card-profile6-square.jpg" class="img img-raised rounded"
-                             alt="">
-                        <img src="../assets/img/kit/pro/faces/christian.jpg" class="img img-raised rounded" alt="">
-                        <img src="../assets/img/kit/pro/faces/card-profile4-square.jpg" class="img img-raised rounded"
-                             alt="">
-                        <img src="../assets/img/kit/pro/faces/card-profile1-square.jpg" class="img img-raised rounded"
-                             alt="">
-                        <img src="../assets/img/kit/pro/faces/marc.jpg" class="img img-raised rounded" alt="">
-                        <img src="../assets/img/kit/pro/faces/kendall.jpg" class="img img-raised rounded" alt="">
-                        <img src="../assets/img/kit/pro/faces/card-profile5-square.jpg" class="img img-raised rounded"
-                             alt="">
-                        <img src="../assets/img/kit/pro/faces/card-profile2-square.jpg" class="img img-raised rounded"
-                             alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <hr>
-        <ul class="float-left">
-            <li>
-                <a href="#pablo">
-                    Blog
-                </a>
-            </li>
-            <li>
-                <a href="#pablo">
-                    Presentation
-                </a>
-            </li>
-            <li>
-                <a href="#pablo">
-                    Discover
-                </a>
-            </li>
-            <li>
-                <a href="#pablo">
-                    Payment
-                </a>
-            </li>
-            <li>
-                <a href="#pablo">
-                    Contact Us
-                </a>
-            </li>
-        </ul>
-        <div class="copyright float-right">
-            Copyright &#xA9;
-            <script>
-                document.write(new Date().getFullYear())
-            </script>
-            Creative Tim All Rights Reserved.
-        </div>
-    </div>
-</footer>
+
+<jsp:include page="subscribe.jsp"/>
+
+<jsp:include page="footer.jsp"/>
+
 <!--   Core JS Files   -->
-<script src="../assets/js/core/jquery.min.js"></script>
-<script src="../assets/js/core/popper.min.js"></script>
-<script src="../assets/js/bootstrap-material-design.min.js"></script>
-<!--  Google Maps Plugin  -->
-<!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2Yno10-YTnLjjn_Vtk0V8cdcY5lC4plU"></script> -->
-<!--  Plugin for Date Time Picker and Full Calendar Plugin  -->
-<script src="../assets/js/plugins/moment.min.js"></script>
-<!--	Plugin for the Datepicker, full documentation here: https://github.com/Eonasdan/bootstrap-datetimepicker -->
-<script src="../assets/js/plugins/bootstrap-datetimepicker.min.js"></script>
-<!--	Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
-<script src="../assets/js/plugins/nouislider.min.js"></script>
-<!--	Plugin for Select, full documentation here: http://silviomoreto.github.io/bootstrap-select -->
-<script src="../assets/js/plugins/bootstrap-selectpicker.js"></script>
-<!--	Plugin for Tags, full documentation here: http://xoxco.com/projects/code/tagsinput/  -->
-<script src="../assets/js/plugins/bootstrap-tagsinput.js"></script>
-<!--	Plugin for Fileupload, full documentation here: http://www.jasny.net/bootstrap/javascript/#fileinput -->
-<script src="../assets/js/plugins/jasny-bootstrap.min.js"></script>
-<!--	Plugin for Small Gallery in Product Page -->
-<script src="../assets/js/plugins/jquery.flexisel.js"></script>
-<!-- Plugins for presentation and navigation  -->
-<script src="../assets/assets-for-demo/js/modernizr.js"></script>
-<script src="../assets/assets-for-demo/js/vertical-nav.js"></script>
-<!-- Material Kit Core initialisations of plugins and Bootstrap Material Design Library -->
-<script src="../assets/js/material-kit.min40a0.js?v=2.0.2"></script>
-<!-- Fixed Sidebar Nav - js With initialisations For Demo Purpose, Don't Include it in your project -->
-<script src="../assets/assets-for-demo/js/material-kit-demo.js"></script>
+<jsp:include page="coreScript.jsp"/>
+
 <script>
     $(document).ready(function () {
 
@@ -1169,56 +870,9 @@
             }
         });
     });
+
 </script>
 
-<script>
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-46172202-12']);
-    _gaq.push(['_trackPageview']);
-
-    (function () {
-        var ga = document.createElement('script');
-        ga.type = 'text/javascript';
-        ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(ga, s);
-    })();
-
-    // Facebook Pixel Code Don't Delete
-    !function (f, b, e, v, n, t, s) {
-        if (f.fbq) return;
-        n = f.fbq = function () {
-            n.callMethod ?
-                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-        };
-        if (!f._fbq) f._fbq = n;
-        n.push = n;
-        n.loaded = !0;
-        n.version = '2.0';
-        n.queue = [];
-        t = b.createElement(e);
-        t.async = !0;
-        t.src = v;
-        s = b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t, s)
-    }(window,
-        document, 'script', '../../../../connect.facebook.net/en_US/fbevents.js');
-
-    try {
-        fbq('init', '111649226022273');
-        fbq('track', "PageView");
-
-    } catch (err) {
-        console.log('Facebook Track Error:', err);
-    }
-</script>
-<noscript>
-    <img height="1" width="1" style="display:none"
-         src="../../../../www.facebook.com/tr5c3c.gif?id=111649226022273&amp;ev=PageView&amp;noscript=1"/>
-</noscript>
 </body>
 
-
-<!-- Mirrored from demos.creative-tim.com/marketplace/material-kit-pro/examples/ecommerce.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Mar 2018 20:13:39 GMT -->
 </html>

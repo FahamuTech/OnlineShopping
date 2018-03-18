@@ -13,77 +13,10 @@
 
 <body class="landing-page ">
 
-<nav class="navbar navbar-color-on-scroll navbar-transparent    fixed-top  navbar-expand-lg " color-on-scroll="90"
-     id="sectionsNav">
-    <div class="container">
-        <div class="navbar-translate">
-            <a class="navbar-brand" href="<c:url value="/home"/>">
-                <i class="material-icons">home</i>
-                <jsp:getProperty name="constant" property="webSiteName"/>
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                <span class="navbar-toggler-icon"></span>
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        </div>
-
-        <div class="collapse navbar-collapse">
-            <ul class="navbar-nav ml-auto">
-                <li class="dropdown nav-item">
-                    <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
-                        <i class="material-icons">apps</i> My Account
-                    </a>
-                    <div class="dropdown-menu dropdown-with-icons">
-                        <a href="<c:url value="/login"/>" class="dropdown-item">
-                            <i class="material-icons">face</i> Login
-                        </a>
-                        <a href="<c:url value="/signup"/>" class="dropdown-item">
-                            <i class="material-icons">content_paste</i> Register
-                        </a>
-                    </div>
-                </li>
-
-                <li class="dropdown nav-item">
-                    <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
-                        <i class="material-icons">view_day</i> Categories
-                    </a>
-                    <!--auto update the categori list-->
-                    <div class="dropdown-menu dropdown-with-icons">
-                        <a href="sections.html#headers" class="dropdown-item">
-                            <i class="material-icons">dns</i> Headers
-                        </a>
-                        <a href="sections.html#features" class="dropdown-item">
-                            <i class="material-icons">build</i> Features
-                        </a>
-                        <a href="sections.html#blogs" class="dropdown-item">
-                            <i class="material-icons">list</i> Blogs
-                        </a>
-                        <a href="sections.html#teams" class="dropdown-item">
-                            <i class="material-icons">people</i> Teams
-                        </a>
-                        <a href="sections.html#projects" class="dropdown-item">
-                            <i class="material-icons">assignment</i> Projects
-                        </a>
-                        <a href="sections.html#pricing" class="dropdown-item">
-                            <i class="material-icons">monetization_on</i> Pricing
-                        </a>
-                        <a href="sections.html#testimonials" class="dropdown-item">
-                            <i class="material-icons">chat</i> Testimonials
-                        </a>
-                        <a href="sections.html#contactus" class="dropdown-item">
-                            <i class="material-icons">call</i> Contacts
-                        </a>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
+<jsp:include page="navBar.jsp"/>
 
 <div class="page-header header-filter" data-parallax="true"
-     style=" background-image: url('<c:url value="/assets/img/kit/pro/bg8.jpg"/>');">
+     style=" background-image: url('<c:url value="/assets/img/kit/8.jpg"/>');">
     <div class="container">
         <div class="row">
             <div class="col-md-6">
@@ -103,37 +36,36 @@
         <div class="section text-center">
             <div class="features">
                 <h2 class="title">Recommended</h2>
+                <%for (int i = 0; i < 4; i++) {%>
                 <div class="row">
+                    <%for (int j = 0; j < 3; j++) {%>
                     <div class="col-md-4">
                         <div class="info">
                             <div class="rotating-card-container">
                                 <div class="card card-rotate card-background">
                                     <div class="front front-background"
+                                    <%--product image--%>
                                          style="background-image:url('
-                                         <c:url value="/assets/img/kit/bg3.jpg"/> ');">
+                                         <c:url value="/assets/img/kit/subwoffer.png"/> ');">
                                         <div class="card-body">
-                                            <h6 class="card-category">Full Background Card</h6>
-                                            <a href="#pablo">
-                                                <h3 class="card-title">This Background Card Will Rotate on Hover</h3>
-                                            </a>
+                                            <h3 class="card-title">Product Name</h3>
                                             <p class="card-description">
-                                                Don't be scared of the truth because we need to restart the human
-                                                foundation in truth And I love you like Kanye loves Kanye I love Rick
-                                                Owens’ bed design but the back is...
+                                                Product Model
                                             </p>
                                         </div>
                                     </div>
 
                                     <div class="back back-background"
+                                    <%--product image--%>
                                          style="background-image: url('
-                                         <c:url value="/assets/img/kit/bg3.jpg"/> ');">
+                                         <c:url value="/assets/img/kit/subwoffer.png"/> ');">
                                         <div class="card-body">
                                             <h5 class="card-title">
-                                                Product Name
+                                                Product Price
                                             </h5>
                                             <p class="card-description">Product Description</p>
                                             <div class="footer text-center">
-                                                <a href="<c:url value="/products"/> "
+                                                <a href="<c:url value="/single?id="/> "
                                                    class="btn btn-info btn-just-icon btn-fill btn-round">
                                                     <i class="material-icons">add_shopping_cart</i>
                                                 </a>
@@ -144,100 +76,14 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="info">
-                            <div class="rotating-card-container">
-                                <div class="card card-rotate card-background">
-                                    <div class="front front-background"
-                                         style="background-image:url('https://images.unsplash.com/photo-1493787039806-2edcbe808750?auto=format&fit=crop&w=750&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D');">
-                                        <div class="card-body">
-                                            <h6 class="card-category">Full Background Card</h6>
-                                            <a href="#pablo">
-                                                <h3 class="card-title">This Background Card Will Rotate on Hover</h3>
-                                            </a>
-                                            <p class="card-description">
-                                                Don't be scared of the truth because we need to restart the human
-                                                foundation in truth And I love you like Kanye loves Kanye I love Rick
-                                                Owens’ bed design but the back is...
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div class="back back-background"
-                                         style="background-image: url('https://images.unsplash.com/photo-1493787039806-2edcbe808750?auto=format&fit=crop&w=750&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D');">
-                                        <div class="card-body">
-                                            <h5 class="card-title">
-                                                Manage Post
-                                            </h5>
-                                            <p class="card-description">As an Admin, you have shortcuts to edit, view or
-                                                delete the posts.</p>
-                                            <div class="footer text-center">
-                                                <a href="#pablo" class="btn btn-info btn-just-icon btn-fill btn-round">
-                                                    <i class="material-icons">subject</i>
-                                                </a>
-                                                <a href="#pablo"
-                                                   class="btn btn-success btn-just-icon btn-fill btn-round btn-wd">
-                                                    <i class="material-icons">mode_edit</i>
-                                                </a>
-                                                <a href="#pablo"
-                                                   class="btn btn-danger btn-just-icon btn-fill btn-round">
-                                                    <i class="material-icons">delete</i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="info">
-                            <div class="rotating-card-container">
-                                <div class="card card-rotate card-background">
-                                    <div class="front front-background"
-                                         style="background-image:url('https://images.unsplash.com/photo-1493787039806-2edcbe808750?auto=format&fit=crop&w=750&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D');">
-                                        <div class="card-body">
-                                            <h6 class="card-category">Full Background Card</h6>
-                                            <a href="#pablo">
-                                                <h3 class="card-title">This Background Card Will Rotate on Hover</h3>
-                                            </a>
-                                            <p class="card-description">
-                                                Don't be scared of the truth because we need to restart the human
-                                                foundation in truth And I love you like Kanye loves Kanye I love Rick
-                                                Owens’ bed design but the back is...
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div class="back back-background"
-                                         style="background-image: url('https://images.unsplash.com/photo-1493787039806-2edcbe808750?auto=format&fit=crop&w=750&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D');">
-                                        <div class="card-body">
-                                            <h5 class="card-title">
-                                                Manage Post
-                                            </h5>
-                                            <p class="card-description">As an Admin, you have shortcuts to edit, view or
-                                                delete the posts.</p>
-                                            <div class="footer text-center">
-                                                <a href="#pablo" class="btn btn-info btn-just-icon btn-fill btn-round">
-                                                    <i class="material-icons">subject</i>
-                                                </a>
-                                                <a href="#pablo"
-                                                   class="btn btn-success btn-just-icon btn-fill btn-round btn-wd">
-                                                    <i class="material-icons">mode_edit</i>
-                                                </a>
-                                                <a href="#pablo"
-                                                   class="btn btn-danger btn-just-icon btn-fill btn-round">
-                                                    <i class="material-icons">delete</i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <%}%>
                 </div>
+                <% }%>
             </div>
+
+            <a href="<c:url value="/products"/>">
+                <button class="btn btn-primary btn-round">See More</button>
+            </a>
 
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <h2 class="title">Recent Offers</h2>
@@ -250,13 +96,19 @@
 
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img class="d-block w-100" src="<c:url value="/assets/img/kit/bg3.jpg"/> " alt="First slide">
+                        <a href="<c:url value="/products"/>"><img class="d-block w-100"
+                                                                  src="<c:url value="/assets/img/kit/3.jpg"/> "
+                                                                  alt="First slide"></a>
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100" src="<c:url value="/assets/img/kit/bg.jpg"/>" alt="Second slide">
+                        <a href="<c:url value="/products"/>"><img class="d-block w-100"
+                                                                  src="<c:url value="/assets/img/kit/5.jpg"/>"
+                                                                  alt="Second slide"></a>
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100" src="<c:url value="/assets/img/kit/bg2.jpg"/>" alt="Third slide">
+                        <a href="<c:url value="/products"/>"><img class="d-block w-100"
+                                                                  src="<c:url value="/assets/img/kit/8.jpg"/>"
+                                                                  alt="Third slide"></a>
                     </div>
                 </div>
 
@@ -274,9 +126,8 @@
 
         </div>
 
-
         <div class="section text-center">
-            <h2 class="title">Here is our team</h2>
+            <h2 class="title"> Our team</h2>
             <div class="team">
                 <div class="row">
                     <div class="col-md-6">
@@ -424,7 +275,14 @@
     </div>
 </div>
 
-<jsp:include page="footer.jsp"/>
+<div style="margin-top: 50px">
+
+    <jsp:include page="subscribe.jsp"/>
+
+    <jsp:include page="footer.jsp"/>
+
+</div>
+
 <jsp:include page="coreScript.jsp"/>
 
 </body>

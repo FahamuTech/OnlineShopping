@@ -11,22 +11,22 @@
 <script src="<c:url value="/assets/js/core/jquery.min.js"/>"></script>
 <script src="<c:url value="/assets/js/core/popper.min.js"/>"></script>
 <script src="<c:url value="/assets/js/bootstrap-material-design.min.js"/>"></script>
-<%--<!--  Google Maps Plugin  -->--%>
-<%--<!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2Yno10-YTnLjjn_Vtk0V8cdcY5lC4plU"></script> -->--%>
-<%--<!--  Plugin for Date Time Picker and Full Calendar Plugin  -->--%>
-<%--<script src="../assets/js/plugins/moment.min.js"></script>--%>
-<%--<!--	Plugin for the Datepicker, full documentation here: https://github.com/Eonasdan/bootstrap-datetimepicker -->--%>
-<%--<script src="../assets/js/plugins/bootstrap-datetimepicker.min.js"></script>--%>
-<%--<!--	Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->--%>
-<%--<script src="../assets/js/plugins/nouislider.min.js"></script>--%>
-<%--<!--	Plugin for Select, full documentation here: http://silviomoreto.github.io/bootstrap-select -->--%>
-<%--<script src="../assets/js/plugins/bootstrap-selectpicker.js"></script>--%>
-<%--<!--	Plugin for Tags, full documentation here: http://xoxco.com/projects/code/tagsinput/  -->--%>
-<%--<script src="../assets/js/plugins/bootstrap-tagsinput.js"></script>--%>
-<%--<!--	Plugin for Fileupload, full documentation here: http://www.jasny.net/bootstrap/javascript/#fileinput -->--%>
-<%--<script src="../assets/js/plugins/jasny-bootstrap.min.js"></script>--%>
-<%--<!--	Plugin for Small Gallery in Product Page -->--%>
-<%--<script src="../assets/js/plugins/jquery.flexisel.js"></script>--%>
+<!-- Google Maps Plugin -->
+<!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2Yno10-YTnLjjn_Vtk0V8cdcY5lC4plU"></script> -->
+<!-- Plugin for Date Time Picker and Full Calendar Plugin -->
+<script src="<c:url value="/assets/js/plugins/moment.min.js"/>"></script>
+<!-- Plugin for the Datepicker, full documentation here: https://github.com/Eonasdan/bootstrap-datetimepicker -->
+<script src="<c:url value="/assets/js/plugins/bootstrap-datetimepicker.min.js"/>"></script>
+<!-- Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+<script src="<c:url value="/assets/js/plugins/nouislider.min.js"/>"></script>
+<!-- Plugin for Select, full documentation here: http://silviomoreto.github.io/bootstrap-select -->
+<script src="<c:url value="/assets/js/plugins/bootstrap-selectpicker.js"/>"></script>
+<!-- Plugin for Tags, full documentation here: http://xoxco.com/projects/code/tagsinput/ -->
+<script src="<c:url value="/assets/js/plugins/bootstrap-tagsinput.js"/>"></script>
+<!-- Plugin for Fileupload, full documentation here: http://www.jasny.net/bootstrap/javascript/#fileinput -->
+<script src="<c:url value="/assets/js/plugins/jasny-bootstrap.min.js"/>"></script>
+<!-- Plugin for Small Gallery in Product Page -->
+<script src="<c:url value="/assets/js/plugins/jquery.flexisel.js"/>"></script>
 <%--<!-- Plugins for presentation and navigation  -->--%>
 <%--<script src="../assets/assets-for-demo/js/modernizr.js"></script>--%>
 <%--<script src="../assets/assets-for-demo/js/vertical-nav.js"></script>--%>
