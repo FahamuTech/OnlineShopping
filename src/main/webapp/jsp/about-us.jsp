@@ -31,7 +31,7 @@
         <div class="about-team team-1">
             <div class="row">
                 <div class="col-md-8 ml-auto mr-auto text-center">
-                    <h2 class="title">We are nerd rockstars</h2>
+                    <h2 class="title">We are ready to serve</h2>
                     <h5 class="description">This is the paragraph where you can write more details about your team. Keep
                         you user engaged by providing meaningful information.</h5>
                 </div>
