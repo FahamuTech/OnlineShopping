@@ -45,8 +45,8 @@
                                 <div class="card card-rotate card-background">
                                     <div class="front front-background"
                                     <%--product image--%>
-                                         style="background-image:url('
-                                         <c:url value="/assets/img/kit/subwoffer.png"/> ');">
+                                         style="background-image:
+                                                 url('<c:url value="/assets/img/kit/subwoffer.png"/> ');">
                                         <div class="card-body">
                                             <h3 class="card-title">Product Name</h3>
                                             <p class="card-description">
@@ -57,8 +57,8 @@
 
                                     <div class="back back-background"
                                     <%--product image--%>
-                                         style="background-image: url('
-                                         <c:url value="/assets/img/kit/subwoffer.png"/> ');">
+                                         style="background-image:
+                                                 url('<c:url value="/assets/img/kit/subwoffer.png"/> ');">
                                         <div class="card-body">
                                             <h5 class="card-title">
                                                 Product Price

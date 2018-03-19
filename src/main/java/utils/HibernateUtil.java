@@ -1,32 +1,39 @@
 package utils;
 
 import org.hibernate.SessionFactory;
-import org.hibernate.cfg.AnnotationConfiguration;
+import org.hibernate.boot.Metadata;
+import org.hibernate.boot.MetadataSources;
+import org.hibernate.boot.registry.StandardServiceRegistry;
+import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
+
+import java.io.File;
 
 public class HibernateUtil {
-    private static SessionFactory sessionFactory;
+    private static final SessionFactory sessionFactory = buildSessionFactory();
 
-    HibernateUtil(Class annotatedClass) {
-        sessionFactory = buildSessionFactory(annotatedClass);
-    }
 
-    private SessionFactory buildSessionFactory(Class annotatedClass) {
+    private static SessionFactory buildSessionFactory() {
+        String property = System.getProperty("user.dir");
         try {
-            // Create the SessionFactoryZ
-            return new AnnotationConfiguration().configure().addAnnotatedClass(annotatedClass).buildSessionFactory();
+            StandardServiceRegistry standardRegistry =
+                    new StandardServiceRegistryBuilder().configure(new File("hibernate.cfg.xml")).build();
+            Metadata metaData =
+                    new MetadataSources(standardRegistry).getMetadataBuilder().build();
+            return metaData.getSessionFactoryBuilder().build();
+        } catch (Throwable th) {
 
-        } catch (Throwable ex) {
-            // Make sure you log the exception, as it might be swallowed
-            System.err.println("Initial SessionFactory creation failed." + ex);
-            throw new ExceptionInInitializerError(ex);
+            System.err.println("Initial SessionFactory creation failed" + th);
+            throw new ExceptionInInitializerError(th);
+
         }
     }
 
-    public SessionFactory getSessionFactory(Class annotatedClass) {
-        return sessionFactory = buildSessionFactory(annotatedClass);
+
+    public static SessionFactory getSessionFactory() {
+        return sessionFactory;
     }
 
-    public void shutdown() {
+    public static void shutdown() {
         if (sessionFactory != null) {
             sessionFactory.close();
         } else System.err.println("Session is null");

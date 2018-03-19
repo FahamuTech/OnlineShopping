@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
-@Table(name = "purchaseStock", schema = "OnlineShopping")
+@Table(name = "purchase_stock", schema = "OnlineShopping")
 public class Purchase implements Serializable {
     @Id
     @GeneratedValue
@@ -23,11 +23,11 @@ public class Purchase implements Serializable {
     @Embedded
     private Stock stock;
 
-    Purchase() {
+    public Purchase() {
 
     }
 
-    Purchase(String productName, String productModel, float productPurchaseCost, Stock stock) {
+    public Purchase(String productName, String productModel, float productPurchaseCost, Stock stock) {
         this.productName = productName;
         this.productModel = productModel;
         this.productPurchaseCost = productPurchaseCost;

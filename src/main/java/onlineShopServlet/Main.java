@@ -1,7 +1,6 @@
 package onlineShopServlet;
 
-import hibernateEntityManager.ProductsData;
-import utils.Constants;
+import hibernateEntityManager.HomePage;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -13,13 +12,13 @@ import java.io.IOException;
 @WebServlet(urlPatterns = {"/home"})
 public class Main extends HttpServlet {
     private static final long serialVersionUID = 1L;
-    private ProductsData productsData=new ProductsData();
+
     @Override
     protected void doGet(HttpServletRequest request,
                          HttpServletResponse response) throws IOException, ServletException {
 
-           request.setAttribute(Constants.FEATURES_PRODUCT,productsData.getFeatureProducts(1));
-        request.getRequestDispatcher("/jsp/home.jsp").forward(request, response);
+        response.getWriter().print(HomePage.main());
+//        request.getRequestDispatcher("/jsp/home.jsp").forward(request, response);
 
     }
 

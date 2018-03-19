@@ -16,14 +16,27 @@ public class HomeSlide implements Serializable {
     private String nameImage;
     @Column(name = "image_url")
     private String imageUrl;
+    @ManyToOne
+    @JoinColumn(name = "web_id", nullable = false)
+    private WebSiteProperty webSiteProperty;
+
 
     public HomeSlide() {
 
     }
 
-    public HomeSlide(String nameImage, String imageUrl) {
+    public HomeSlide(String nameImage, String imageUrl, WebSiteProperty webSiteProperty) {
         this.nameImage = nameImage;
         this.imageUrl = imageUrl;
+        this.webSiteProperty = webSiteProperty;
+    }
+
+    public WebSiteProperty getWebSiteProperty() {
+        return webSiteProperty;
+    }
+
+    public void setWebSiteProperty(WebSiteProperty webSiteProperty) {
+        this.webSiteProperty = webSiteProperty;
     }
 
     public int getId() {
@@ -50,20 +63,4 @@ public class HomeSlide implements Serializable {
         this.nameImage = nameImage;
     }
 
-    public boolean equals(Object obj) {
-        if (obj == null) return false;
-        if (!this.getClass().equals(obj.getClass())) return false;
-
-        HomeSlide obj2 = (HomeSlide) obj;
-        if ((this.id == obj2.getId()) && (this.nameImage.equals(obj2.getNameImage())) && this.imageUrl == obj2.getImageUrl()) {
-            return true;
-        }
-        return false;
-    }
-
-    public int hashCode() {
-        int tmp = 0;
-        tmp = (id + nameImage + imageUrl).hashCode();
-        return tmp;
-    }
 }

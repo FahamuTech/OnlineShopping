@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.bytecode.use_reflection_optimizer">false</property>
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.password">joshua5715</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost/OnlineShopping?createDatabaseIfNotExist=true
+        </property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+        <property name="show_sql">true</property>
+        <property name="hibernate.hbm2ddl.auto">create-drop</property>
+        <property name="connection.autocommit">true</property>
+
+        <!-- DB schema will be updated if needed -->
+        <!-- <property name="hbm2ddl.auto">update</property> -->
+        <mapping class="hibernateEntity.Purchase"/>
+        <mapping class="hibernateEntity.User"/>
+        <mapping class="hibernateEntity.Categories"/>
+        <mapping class="hibernateEntity.HomeSlide"/>
+        <mapping class="hibernateEntity.OurTeam"/>
+        <mapping class="hibernateEntity.Recommended"/>
+        <mapping class="hibernateEntity.WebSiteProperty"/>
+    </session-factory>
+</hibernate-configuration>
+

@@ -2,7 +2,7 @@ package hibernateEntity;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.Set;
+import java.util.List;
 
 @Entity
 @Table(name = "web_property", schema = "OnlineShopping")
@@ -17,28 +17,23 @@ public class WebSiteProperty implements Serializable {
     private String webSiteDescription;
     @Column(name = "home_title")
     private String homePageTitle;
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "web_property")
-    private Set<Categories> categories;
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "web_property")
-    private Set<HomeSlide> homeSlides;
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "web_property")
-    private Set<OurTeam> ourTeams;
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "web_property")
-    private Set<Recommended> recommendeds;
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "webSiteProperty", cascade = {CascadeType.ALL})
+    private List<Categories> categories;
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "webSiteProperty", cascade = {CascadeType.ALL})
+    private List<HomeSlide> homeSlides;
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "webSiteProperty", cascade = {CascadeType.ALL})
+    private List<OurTeam> ourTeams;
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "webSiteProperty", cascade = {CascadeType.ALL})
+    private List<Recommended> recommends;
 
     public WebSiteProperty() {
 
     }
 
-    public WebSiteProperty(String webSiteName, String webSiteDescription, String homePageTitle, Set<Categories> categories,
-                           Set<HomeSlide> homeSlides, Set<OurTeam> ourTeams, Set<Recommended> recommendeds) {
+    public WebSiteProperty(String webSiteName, String webSiteDescription, String homePageTitle) {
         this.webSiteName = webSiteName;
         this.webSiteDescription = webSiteDescription;
         this.homePageTitle = homePageTitle;
-        this.categories = categories;
-        this.homeSlides = homeSlides;
-        this.ourTeams = ourTeams;
-        this.recommendeds = recommendeds;
     }
 
     public int getWebSiteId() {
@@ -65,27 +60,27 @@ public class WebSiteProperty implements Serializable {
         this.webSiteName = webSiteName;
     }
 
-    public Set<Categories> getCategories() {
+    public List<Categories> getCategories() {
         return categories;
     }
 
-    public void setCategories(Set<Categories> categories) {
+    public void setCategories(List<Categories> categories) {
         this.categories = categories;
     }
 
-    public Set<HomeSlide> getHomeSlides() {
+    public List<HomeSlide> getHomeSlides() {
         return homeSlides;
     }
 
-    public void setHomeSlides(Set<HomeSlide> homeSlides) {
+    public void setHomeSlides(List<HomeSlide> homeSlides) {
         this.homeSlides = homeSlides;
     }
 
-    public Set<OurTeam> getOurTeams() {
+    public List<OurTeam> getOurTeams() {
         return ourTeams;
     }
 
-    public void setOurTeams(Set<OurTeam> ourTeams) {
+    public void setOurTeams(List<OurTeam> ourTeams) {
         this.ourTeams = ourTeams;
     }
 
@@ -97,12 +92,12 @@ public class WebSiteProperty implements Serializable {
         this.homePageTitle = homePageTitle;
     }
 
-    public Set<Recommended> getRecommendeds() {
-        return recommendeds;
+    public List<Recommended> getRecommends() {
+        return recommends;
     }
 
-    public void setRecommendeds(Set<Recommended> recommendeds) {
-        this.recommendeds = recommendeds;
+    public void setRecommends(List<Recommended> recommends) {
+        this.recommends = recommends;
     }
 
 }
