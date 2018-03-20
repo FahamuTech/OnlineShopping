@@ -18,6 +18,8 @@ public class Recommended implements Serializable {
     private String productModel;
     @Column(name = "product_price")
     private float productPrice;
+    @Column(name = "image")
+    private String imageUrl;
     @ManyToOne
     @JoinColumn(name = "web_id", nullable = false)
     private WebSiteProperty webSiteProperty;
@@ -26,11 +28,23 @@ public class Recommended implements Serializable {
 
     }
 
-    public Recommended(String productName, String productDescription, String productModel, float productPrice, WebSiteProperty webSiteProperty) {
+    public Recommended(String productName, String productDescription, String productModel,
+                       float productPrice,
+                       String imageUrl,
+                       WebSiteProperty webSiteProperty) {
         this.productName = productName;
         this.productDescription = productDescription;
         this.productModel = productModel;
         this.webSiteProperty = webSiteProperty;
+        this.imageUrl=imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
     }
 
     public WebSiteProperty getWebSiteProperty() {

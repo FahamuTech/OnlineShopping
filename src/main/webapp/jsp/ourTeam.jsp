@@ -16,7 +16,7 @@
                         <div class="col-md-5">
                             <div class="card-header card-header-image">
                                 <a href="#pablo">
-                                    <img class="img" src="../assets/img/kit/faces/card-profile1-square.jpg">
+                                    <img class="img" src="../assets/img/kit/faces/pic1.jpg">
                                 </a>
                             </div>
                         </div>
@@ -50,7 +50,7 @@
                         <div class="col-md-5">
                             <div class="card-header card-header-image">
                                 <a href="#pablo">
-                                    <img class="img" src="../assets/img/kit/faces/card-profile6-square.jpg">
+                                    <img class="img" src="../assets/img/kit/faces/pic4.jpg">
                                 </a>
                             </div>
                         </div>
@@ -87,7 +87,7 @@
                         <div class="col-md-5">
                             <div class="card-header card-header-image">
                                 <a href="#pablo">
-                                    <img class="img" src="../assets/img/kit/faces/card-profile4-square.jpg">
+                                    <img class="img" src="../assets/img/kit/faces/pic3.jpg">
                                 </a>
                             </div>
                         </div>
@@ -120,7 +120,7 @@
                         <div class="col-md-5">
                             <div class="card-header card-header-image">
                                 <a href="#pablo">
-                                    <img class="img" src="../assets/img/kit/faces/card-profile2-square.jpg">
+                                    <img class="img" src="../assets/img/kit/faces/pic2.jpg">
                                 </a>
                             </div>
                         </div>

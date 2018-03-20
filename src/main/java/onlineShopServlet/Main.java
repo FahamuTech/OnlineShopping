@@ -1,5 +1,6 @@
 package onlineShopServlet;
 
+import hibernateEntity.WebSiteProperty;
 import hibernateEntityManager.HomePage;
 
 import javax.servlet.ServletException;
@@ -12,13 +13,16 @@ import java.io.IOException;
 @WebServlet(urlPatterns = {"/home"})
 public class Main extends HttpServlet {
     private static final long serialVersionUID = 1L;
+    WebSiteProperty main = new HomePage().main();
 
     @Override
     protected void doGet(HttpServletRequest request,
                          HttpServletResponse response) throws IOException, ServletException {
 
-        response.getWriter().print(HomePage.main());
-//        request.getRequestDispatcher("/jsp/home.jsp").forward(request, response);
+        request.setAttribute("home",main);
+        request.getRequestDispatcher("/jsp/home.jsp").forward(request, response);
+
+//        response.getWriter().println(main.getRecommends().size());
 
     }
 

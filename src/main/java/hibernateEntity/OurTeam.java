@@ -19,6 +19,8 @@ public class OurTeam implements Serializable {
     private String aboutPerson;
     @Column(name = "facebook")
     private String facebookUrl;
+    @Column(name = "picture")
+    private String profileImageUrl;
     @ManyToOne
     @JoinColumn(name = "web_id", nullable = false)
     private WebSiteProperty webSiteProperty;
@@ -27,12 +29,15 @@ public class OurTeam implements Serializable {
 
     }
 
-    public OurTeam(String personName, String positionOfPerson, String aboutPerson, String facebookUrl, WebSiteProperty webSiteProperty) {
+    public OurTeam(String personName, String positionOfPerson, String aboutPerson, String facebookUrl,
+                   String profileImageUrl,
+                   WebSiteProperty webSiteProperty) {
         this.personName = personName;
         this.positionOfPerson = positionOfPerson;
         this.aboutPerson = aboutPerson;
         this.facebookUrl = facebookUrl;
         this.webSiteProperty = webSiteProperty;
+        this.profileImageUrl=profileImageUrl;
     }
 
     public int getId() {
@@ -41,6 +46,14 @@ public class OurTeam implements Serializable {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public void setProfileImageUrl(String profileImageUrl) {
+        this.profileImageUrl = profileImageUrl;
+    }
+
+    public String getProfileImageUrl() {
+        return profileImageUrl;
     }
 
     public WebSiteProperty getWebSiteProperty() {

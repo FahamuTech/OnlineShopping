@@ -14,7 +14,6 @@ repositories {
 }
 
 
-
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.11'
     testCompile group: 'junit', name: 'junit', version: '4.12'
@@ -27,9 +26,11 @@ dependencies {
     // https://mvnrepository.com/artifact/org.hibernate/hibernate-core
     compile group: 'org.hibernate', name: 'hibernate-core', version: '5.2.15.Final'
     // https://mvnrepository.com/artifact/org.hibernate/hibernate-annotations
-    compile group: 'org.hibernate', name: 'hibernate-annotations', version: '3.5.6-Final'
-    // https://mvnrepository.com/artifact/org.hibernate/hibernate-commons-annotations
-    compile group: 'org.hibernate', name: 'hibernate-commons-annotations', version: '3.2.0.Final'
+//    compile group: 'org.hibernate', name: 'hibernate-annotations', version: '3.5.6-Final'
+//    // https://mvnrepository.com/artifact/org.hibernate/hibernate-commons-annotations
+//    compile group: 'org.hibernate', name: 'hibernate-commons-annotations', version: '3.2.0.Final'
+    // https://mvnrepository.com/artifact/org.hibernate.common/hibernate-commons-annotations
+    compile group: 'org.hibernate.common', name: 'hibernate-commons-annotations', version: '5.0.2.Final'
     // https://mvnrepository.com/artifact/dom4j/dom4j
     compile group: 'dom4j', name: 'dom4j', version: '1.6.1'
     // https://mvnrepository.com/artifact/commons-logging/commons-logging
@@ -37,9 +38,26 @@ dependencies {
     // https://mvnrepository.com/artifact/org.apache.commons/commons-collections4
     compile group: 'org.apache.commons', name: 'commons-collections4', version: '4.1'
     // https://mvnrepository.com/artifact/cglib/cglib
-    compile group: 'cglib', name: 'cglib', version: '3.2.5'
+    compile group: 'cglib', name: 'cglib', version: '3.2.6'
     // https://mvnrepository.com/artifact/javax.transaction/jta
     compile group: 'javax.transaction', name: 'jta', version: '1.1'
     compile fileTree(dir: 'lib', include: ['*.jar'])
+//    // https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-slf4j-impl
+//    compile group: 'org.apache.logging.log4j', name: 'log4j-slf4j-impl', version: '2.11.0'
+    // https://mvnrepository.com/artifact/org.slf4j/slf4j-api
+    compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.25'
+//    // https://mvnrepository.com/artifact/org.slf4j/slf4j-nop
+//    compile group: 'org.slf4j', name: 'slf4j-nop', version: '1.7.25'
+    // https://mvnrepository.com/artifact/org.slf4j/slf4j-simple
+    compile group: 'org.slf4j', name: 'slf4j-simple', version: '1.8.0-beta1'
+//    // https://mvnrepository.com/artifact/org.slf4j/slf4j-log4j12
+//    compile group: 'org.slf4j', name: 'slf4j-log4j12', version: '1.8.0-beta1'
+//    // https://mvnrepository.com/artifact/org.slf4j/slf4j-jdk14
+//    compile group: 'org.slf4j', name: 'slf4j-jdk14', version: '1.8.0-beta1'
+
+
+
+
+
 
 }
