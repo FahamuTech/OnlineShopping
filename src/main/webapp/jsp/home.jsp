@@ -6,8 +6,6 @@
 <%
     WebSiteProperty homePage= (WebSiteProperty) request.getAttribute("home");
 %>
-<jsp:useBean id="constant" class="utils.Constants"/>
-<jsp:useBean id="home" class="hibernateEntity.WebSiteProperty"/>
 
 
 <!DOCTYPE html>
@@ -27,10 +25,10 @@
         <div class="row">
             <div class="col-md-6">
                 <h1 class="title">
-                    <jsp:getProperty name="home" property="homePageTitle"/>
+                    <%=homePage.getHomePageTitle()%>
                 </h1>
                 <h4>
-                    <jsp:getProperty name="home" property="webSiteDescription"/>
+                   <%=homePage.getWebSiteDescription()%>
                 </h4>
                 <br>
             </div>

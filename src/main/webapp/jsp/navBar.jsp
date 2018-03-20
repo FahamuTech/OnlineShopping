@@ -1,3 +1,4 @@
+<%@ page import="hibernateEntity.WebSiteProperty" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
@@ -8,6 +9,9 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <jsp:useBean id="constant" class="utils.Constants"/>
+<%
+    WebSiteProperty homePage= (WebSiteProperty) request.getAttribute("home");
+%>
 
 <nav class="navbar navbar-color-on-scroll navbar-transparent    fixed-top  navbar-expand-lg bg-dark "
      color-on-scroll="100"
@@ -17,7 +21,7 @@
         <div class="navbar-translate">
             <a class="navbar-brand" href="<c:url value="/home"/>">
                 <i class="material-icons">home</i>
-                <jsp:getProperty name="constant" property="webSiteName"/>
+                <%=homePage.getWebSiteName()%>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -50,9 +54,10 @@
 
                     <!--auto update the categori list-->
                     <div class="dropdown-menu dropdown-with-icons">
-                        <%for (int i = 0; i < 10; i++) {%>
+                        <%for (int i = 0; i < homePage.getCategories().size(); i++) {%>
                         <a href="<c:url value="/products?q="/>" class="dropdown-item">
-                            <i class="material-icons">dns</i> Category
+                            <i class="material-icons"><%=homePage.getCategories().get(i).getIconName()%></i>
+                            <%=homePage.getCategories().get(i).getCategoryName()%>
                         </a>
                         <%}%>
 

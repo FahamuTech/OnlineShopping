@@ -48,30 +48,30 @@ public class HomePage extends HibernateUtil{
 
 
         recommendeds.add(new Recommended("Subwoffer", "With bluetooth capability",
-                "seapiano 567", 150000, "/assets/img/kit/subwoffer.png",webSiteProperty));
+                "seapiano 567", 150000f, "/assets/img/kit/subwoffer.png",webSiteProperty));
         recommendeds.add(new Recommended("brouse", "product description",
-                "from korea", 20000,"/assets/img/kit/pro/product1.jpg", webSiteProperty));
+                "from korea", 20000f,"/assets/img/kit/pro/product1.jpg", webSiteProperty));
         recommendeds.add(new Recommended("product", "product description",
-                "some model", 5500, "/assets/img/kit/pro/product2.jpg",webSiteProperty));
+                "some model", 5500f, "/assets/img/kit/pro/product2.jpg",webSiteProperty));
         recommendeds.add(new Recommended("Car battery", "some description",
-                "liquid", 350000, "/assets/img/kit/bettry.png",webSiteProperty));
+                "liquid", 350000f, "/assets/img/kit/bettry.png",webSiteProperty));
         recommendeds.add(new Recommended("helment", "product description",
-                "from korea", 20000,"/assets/img/kit/pro/helment.jpg", webSiteProperty));
+                "from korea", 20000f,"/assets/img/kit/helment.jpg", webSiteProperty));
         recommendeds.add(new Recommended("preston", "product description",
-                "some model", 5500, "/assets/img/kit/pro/preston.jpg",webSiteProperty));
+                "some model", 5500f, "/assets/img/kit/preston.jpg",webSiteProperty));
 
         recommendeds.add(new Recommended("Fridge", "some description",
-                "liquid", 350000, "/assets/img/kit/fridge.png",webSiteProperty));
+                "liquid", 350000f, "/assets/img/kit/fridge.png",webSiteProperty));
         recommendeds.add(new Recommended("camera", "product description",
-                "from korea", 29000,"/assets/img/kit/pro/camera.jpg", webSiteProperty));
+                "from korea", 29000f,"/assets/img/kit/camera.jpg", webSiteProperty));
         recommendeds.add(new Recommended("Tire", "product description",
-                "some model", 5500, "/assets/img/kit/pro/tire.jpg",webSiteProperty));
+                "some model", 5500f, "/assets/img/kit/tire.jpg",webSiteProperty));
         recommendeds.add(new Recommended("Product", "some description",
                 "liquid", 350000f, "/assets/img/kit/h5.png",webSiteProperty));
         recommendeds.add(new Recommended("Shaver", "product description",
-                "from korea", 20000,"/assets/img/kit/pro/shaver.jpg", webSiteProperty));
+                "from korea", 20000f,"/assets/img/kit/shaver.jpg", webSiteProperty));
         recommendeds.add(new Recommended("Smart", "product description",
-                "some model", 5500, "/assets/img/kit/pro/smart.jpg",webSiteProperty));
+                "some model", 5500f, "/assets/img/kit/smart.jpg",webSiteProperty));
 
 
 

@@ -37,6 +37,7 @@ public class Recommended implements Serializable {
         this.productModel = productModel;
         this.webSiteProperty = webSiteProperty;
         this.imageUrl=imageUrl;
+        this.productPrice=productPrice;
     }
 
     public void setImageUrl(String imageUrl) {
